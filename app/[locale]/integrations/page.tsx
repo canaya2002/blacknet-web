@@ -23,6 +23,7 @@ export default async function IntegrationsPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'integrations.hero' });
+  const tStats = await getTranslations({ locale, namespace: 'integrations.stats' });
 
   return (
     <>
@@ -62,18 +63,18 @@ export default async function IntegrationsPage({ params }: Props) {
                     <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
                   </span>
                   <span className="mono text-[10px] uppercase tracking-wider text-[color:var(--color-fg-secondary)]">
-                    28 live
+                    28 {tStats('live')}
                   </span>
                 </div>
                 <div className="flex items-center gap-2 rounded-full border border-[color:var(--color-border)] bg-[color:var(--color-card)] px-3 py-1.5 backdrop-blur">
                   <span className="h-1.5 w-1.5 rounded-full bg-amber-400" />
                   <span className="mono text-[10px] uppercase tracking-wider text-[color:var(--color-fg-secondary)]">
-                    4 soon
+                    4 {tStats('soon')}
                   </span>
                 </div>
                 <div className="flex items-center gap-2 rounded-full border border-[color:var(--color-border)] bg-[color:var(--color-card)] px-3 py-1.5 backdrop-blur">
                   <span className="mono text-[10px] uppercase tracking-wider text-[color:var(--color-fg-secondary)]">
-                    OAuth · official APIs
+                    {tStats('oauth')}
                   </span>
                 </div>
               </div>

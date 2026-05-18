@@ -16,13 +16,27 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 
-export function ContactForm() {
+type InquiryKey = 'demo' | 'pricing' | 'support' | 'enterprise' | 'press' | 'partnership' | 'other';
+const inquiries: InquiryKey[] = ['demo', 'pricing', 'support', 'enterprise', 'press', 'partnership', 'other'];
+
+export function ContactForm({
+  onInquiryChange,
+}: {
+  onInquiryChange?: (value: InquiryKey | '') => void;
+}) {
   const t = useTranslations('contact.form');
   const [hp, setHp] = useState('');
+  const [inquiry, setInquiry] = useState<InquiryKey | ''>('');
   const [role, setRole] = useState<string>('');
   const [newsletter, setNewsletter] = useState(false);
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [isPending, startTransition] = useTransition();
+
+  const handleInquiryChange = (value: string) => {
+    const next = value as InquiryKey;
+    setInquiry(next);
+    onInquiryChange?.(next);
+  };
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -31,6 +45,7 @@ export function ContactForm() {
     const payload = Object.fromEntries(fd.entries());
     payload.newsletter = String(newsletter);
     payload.role = role;
+    payload.inquiry = inquiry;
 
     startTransition(async () => {
       try {
@@ -71,21 +86,57 @@ export function ContactForm() {
         className="sr-only"
       />
 
+      <div className="flex flex-col gap-2">
+        <Label htmlFor="inquiry">{t('inquiryLabel')}</Label>
+        <Select value={inquiry} onValueChange={handleInquiryChange}>
+          <SelectTrigger id="inquiry">
+            <SelectValue placeholder={t('inquiryPlaceholder')} />
+          </SelectTrigger>
+          <SelectContent>
+            {inquiries.map((key) => (
+              <SelectItem key={key} value={key}>
+                {t(`inquiries.${key}`)}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+      </div>
+
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <div className="flex flex-col gap-2">
           <Label htmlFor="name">{t('name')}</Label>
-          <Input id="name" name="name" required autoComplete="name" />
+          <Input
+            id="name"
+            name="name"
+            required
+            autoComplete="name"
+            placeholder={t('namePlaceholder')}
+          />
         </div>
         <div className="flex flex-col gap-2">
           <Label htmlFor="email">{t('email')}</Label>
-          <Input id="email" name="email" type="email" required autoComplete="email" />
+          <Input
+            id="email"
+            name="email"
+            type="email"
+            required
+            autoComplete="email"
+            placeholder={t('emailPlaceholder')}
+          />
+          <p className="text-[11px] text-[color:var(--color-fg-tertiary)]">{t('emailHelper')}</p>
         </div>
       </div>
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <div className="flex flex-col gap-2">
           <Label htmlFor="company">{t('company')}</Label>
-          <Input id="company" name="company" required autoComplete="organization" />
+          <Input
+            id="company"
+            name="company"
+            required
+            autoComplete="organization"
+            placeholder={t('companyPlaceholder')}
+          />
         </div>
         <div className="flex flex-col gap-2">
           <Label htmlFor="role">{t('role')}</Label>
@@ -113,17 +164,21 @@ export function ContactForm() {
           required
           rows={5}
         />
+        <p className="text-[11px] text-[color:var(--color-fg-tertiary)]">{t('useCaseHelper')}</p>
       </div>
 
-      <div className="flex items-center gap-2">
+      <div className="flex items-start gap-2">
         <Checkbox
           id="newsletter"
           checked={newsletter}
           onCheckedChange={(c) => setNewsletter(c === true)}
         />
-        <Label htmlFor="newsletter" className="text-[color:var(--color-fg-secondary)]">
-          {t('newsletter')}
-        </Label>
+        <div>
+          <Label htmlFor="newsletter" className="text-[color:var(--color-fg-secondary)]">
+            {t('newsletter')}
+          </Label>
+          <p className="text-[11px] text-[color:var(--color-fg-tertiary)]">{t('newsletterHelper')}</p>
+        </div>
       </div>
 
       <div className="flex items-center justify-between gap-4">
@@ -137,6 +192,9 @@ export function ContactForm() {
           </span>
         )}
       </div>
+      <p className="mono text-[10px] uppercase tracking-wider text-[color:var(--color-fg-tertiary)]">
+        {t('responseTime')}
+      </p>
     </form>
   );
 }

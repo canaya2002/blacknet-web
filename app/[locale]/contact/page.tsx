@@ -1,9 +1,8 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Mail, MessageCircle, MapPin, CalendarClock } from 'lucide-react';
+import { Mail, MessageCircle, MapPin, CalendarClock, Timer } from 'lucide-react';
 import { PageHero } from '@/components/layout/page-hero';
 import { ContactForm } from '@/components/forms/contact-form';
 import { FadeInOnScroll } from '@/components/animations/fade-in-on-scroll';
-import { Button } from '@/components/ui/button';
 import { ContactHeroVisual } from '@/components/hero-visuals/contact';
 import { buildMetadata } from '@/lib/seo';
 
@@ -24,6 +23,15 @@ export default async function ContactPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'contact' });
+  const tRt = await getTranslations({ locale, namespace: 'contact.responseTimes' });
+
+  const responseRows: { key: string; label: string }[] = [
+    { key: 'demo', label: t('form.inquiries.demo') },
+    { key: 'pricing', label: t('form.inquiries.pricing') },
+    { key: 'support', label: t('form.inquiries.support') },
+    { key: 'enterprise', label: t('form.inquiries.enterprise') },
+    { key: 'press', label: t('form.inquiries.press') },
+  ];
 
   return (
     <>
@@ -85,27 +93,41 @@ export default async function ContactPage({ params }: Props) {
               </div>
 
               <div className="rounded-2xl border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-6 backdrop-blur md:p-7">
-                <div className="flex items-start gap-3">
-                  <CalendarClock className="mt-0.5 h-5 w-5 text-[color:var(--color-fg-tertiary)]" />
-                  <div>
-                    <h3 className="text-lg font-semibold text-[color:var(--color-fg)]">
-                      {t('demo.title')}
-                    </h3>
-                    <p className="mt-1 text-sm text-[color:var(--color-fg-secondary)]">
-                      {t('demo.description')}
-                    </p>
-                    <div className="mt-4">
-                      <Button asChild variant="primary" size="md">
-                        <a
-                          href="https://calendly.com/blacknel/demo"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {t('demo.title')}
-                        </a>
-                      </Button>
-                    </div>
-                  </div>
+                <div className="flex items-center gap-2">
+                  <Timer className="h-4 w-4 text-[color:var(--color-fg-tertiary)]" />
+                  <h3 className="text-lg font-semibold text-[color:var(--color-fg)]">
+                    {tRt('title')}
+                  </h3>
+                </div>
+                <ul className="mt-4 flex flex-col gap-3 text-sm">
+                  {responseRows.map((row) => (
+                    <li key={row.key} className="border-l-2 border-[color:var(--color-border-strong)] pl-3">
+                      <p className="text-[color:var(--color-fg)]">{row.label}</p>
+                      <p className="mt-0.5 text-xs text-[color:var(--color-fg-tertiary)]">
+                        {tRt(row.key)}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="rounded-2xl border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-6 backdrop-blur md:p-7">
+                <div className="flex items-center gap-2">
+                  <CalendarClock className="h-5 w-5 text-[color:var(--color-fg-tertiary)]" />
+                  <h3 className="text-lg font-semibold text-[color:var(--color-fg)]">
+                    {t('demo.title')}
+                  </h3>
+                </div>
+                <p className="mt-2 text-sm text-[color:var(--color-fg-secondary)]">
+                  {t('demo.description')}
+                </p>
+                <div className="mt-4 overflow-hidden rounded-xl border border-[color:var(--color-border)] bg-black/40">
+                  <iframe
+                    src="https://calendly.com/blacknel/demo?embed_domain=blacknel.com&background_color=0a0a0a&text_color=ffffff&primary_color=ffffff"
+                    title="Blacknel demo calendar"
+                    loading="lazy"
+                    className="h-[640px] w-full"
+                  />
                 </div>
               </div>
             </div>

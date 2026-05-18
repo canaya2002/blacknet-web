@@ -725,25 +725,52 @@
       "subtitle": "¿Tienes una pregunta, una demo en mente o quieres explorar Enterprise? Escríbenos y respondemos en menos de 24 horas hábiles."
     },
     "form": {
-      "name": "Nombre completo",
-      "email": "Correo de trabajo",
-      "company": "Empresa",
-      "role": "Tu rol",
+      "inquiryLabel": "¿En qué te podemos ayudar? *",
+      "inquiryPlaceholder": "Selecciona un tipo",
+      "inquiries": {
+        "demo": "Quiero ver un demo",
+        "pricing": "Preguntas sobre planes y pricing",
+        "support": "Ayuda con mi cuenta (cliente actual)",
+        "enterprise": "Enterprise / SSO / SLA",
+        "press": "Press / Media inquiry",
+        "partnership": "Partnership",
+        "other": "Otro"
+      },
+      "name": "Nombre completo *",
+      "namePlaceholder": "ej. María Hernández",
+      "email": "Correo de trabajo *",
+      "emailPlaceholder": "tu@empresa.com",
+      "emailHelper": "Usá tu correo corporativo para que podamos responder rápido",
+      "company": "Empresa *",
+      "companyPlaceholder": "Studio Norte / Cafetería Nube / etc.",
+      "role": "Tu rol *",
       "rolePlaceholder": "Selecciona tu rol",
       "roles": {
         "founder": "Founder / CEO",
-        "marketing": "Marketing / Growth",
-        "ops": "Operaciones",
-        "agency": "Agencia",
+        "marketing": "CMO / Marketing Lead",
+        "ops": "Operations Manager",
+        "agency": "Account Manager · Agencia",
         "other": "Otro"
       },
       "useCase": "¿Para qué piensas usar Blacknel?",
-      "useCasePlaceholder": "Cuéntanos un poco sobre tu equipo y objetivo.",
-      "newsletter": "Quiero recibir el newsletter mensual",
+      "useCasePlaceholder": "Contanos brevemente: cuántas marcas operás, qué problemas querés resolver, si ya usás Hootsuite/Sprout/Birdeye, etc.",
+      "useCaseHelper": "Mientras más contexto, mejor respuesta podemos darte",
+      "newsletter": "Quiero recibir el newsletter mensual de Blacknel",
+      "newsletterHelper": "Una vez al mes. Sin spam. Cancelás cuando quieras.",
       "submit": "Enviar mensaje",
       "submitting": "Enviando…",
+      "responseTime": "Respondemos en menos de 24hrs hábiles",
       "success": "Recibido. Te respondemos pronto.",
       "error": "Algo salió mal. Inténtalo de nuevo o escríbenos directo."
+    },
+    "responseTimes": {
+      "title": "Tiempos de respuesta",
+      "demo": "< 4 horas hábiles · equipo de ventas",
+      "pricing": "< 4 horas hábiles · equipo de ventas",
+      "support": "< 1 hora (Growth + Enterprise) · < 4 horas (Standard)",
+      "enterprise": "< 2 horas hábiles · CSM dedicado",
+      "press": "24-48 horas",
+      "default": "24 horas hábiles"
     },
     "info": {
       "title": "Información directa",
@@ -1009,24 +1036,199 @@
     "openRoles": "Posiciones abiertas",
     "noRoles": "No hay posiciones abiertas justo ahora.",
     "apply": "Aplicar",
+    "viewDetails": "Ver detalles",
+    "salary": "Rango salarial",
+    "reportsTo": "Reporta a",
+    "sectionLabels": {
+      "about": "Sobre el rol",
+      "stack": "Stack",
+      "expectations": "Lo que esperamos",
+      "extras": "Lo que valoramos extra",
+      "howWeWork": "Cómo trabajamos",
+      "benefits": "Beneficios",
+      "process": "Proceso"
+    },
+    "notSomething": {
+      "eyebrow": "Honestidad",
+      "title": "Lo que NO somos",
+      "subtitle": "Para ahorrar tiempo a ambos lados.",
+      "items": [
+        {
+          "title": "No somos un cohete-ship a 18 meses",
+          "body": "Estamos construyendo un negocio durable. Si querés hyper-growth path con exit en 18 meses, hay mejores lugares."
+        },
+        {
+          "title": "No tenemos perks performativos",
+          "body": "Sin futbolito, sin cerveza al final del día (excepto que vos quieras), sin discurso de 'we are family'."
+        },
+        {
+          "title": "No hacemos crunch culture",
+          "body": "40 horas/semana es el norm. Si shipeás en 30, ship en 30. Cero glorificación del overtime crónico."
+        },
+        {
+          "title": "No micromanageamos",
+          "body": "Vos sabés cuándo y cómo trabajás mejor. Esperamos outputs visibles, no time-tracking."
+        },
+        {
+          "title": "No somos perfectos",
+          "body": "Hay procesos que duelen, decisiones que vamos a revertir, tickets que se quedan meses sin asignar. Honesto trumps performative."
+        }
+      ]
+    },
     "roles": {
       "engineer": {
         "title": "Senior Full Stack Engineer",
-        "location": "Remoto · LATAM",
+        "location": "Remoto · LATAM (preferencia GMT-3 a GMT-6)",
         "type": "Tiempo completo",
-        "summary": "TypeScript + Next.js + Postgres. Construyes el corazón de la app y el SDK público. Mentor para 1-2 jrs."
+        "salary": "$5,000 - $8,500 USD/mes + equity",
+        "reportsTo": "CTO (Carlos)",
+        "summary": "TypeScript + Next.js + Postgres. Construyes el corazón de la app, el SDK público y la capa de IA. Mentor para 1-2 juniors.",
+        "about": "Vas a construir el corazón de la app Blacknel: la lógica multi-tenant, el sistema de RBAC, los conectores oficiales con Facebook/Instagram/Google Business, y la integración con la capa de IA. También vas a estar involucrado en decisiones de architecture, no solo executing tickets.",
+        "stack": [
+          "Backend: TypeScript + Next.js 16 App Router (Server Actions + API Routes), Postgres con Drizzle ORM, Supabase Auth/Storage",
+          "Frontend: mismo stack — los engineers full-stack tocan ambos",
+          "AI: Anthropic Claude SDK, OpenAI SDK, prompt engineering",
+          "Infra: Vercel deployments, Sentry observability, PostHog analytics, Inngest crons",
+          "Testing: Vitest, Playwright para e2e"
+        ],
+        "expectations": [
+          "5+ años construyendo aplicaciones web complejas (no portfolio sites)",
+          "Comodidad total con TypeScript strict mode",
+          "Experiencia con multi-tenant SaaS architecture",
+          "Postgres avanzado: RLS, triggers, window functions, query optimization",
+          "API design (REST + Webhooks); experiencia con OAuth flows",
+          "Idealmente: experiencia con AI/LLM integrations (Claude, GPT)",
+          "Spanish + English funcional (writing y meetings)"
+        ],
+        "extras": [
+          "Open source contributions",
+          "Trabajo previo con Next.js App Router en producción",
+          "Experiencia construyendo SDKs públicos",
+          "Background en CI/CD y observability"
+        ],
+        "howWeWork": [
+          "Async-first: docs > meetings. Notion + Slack.",
+          "Ship weekly: cada engineer shipea algo cada semana visible en changelog",
+          "Pair programming opcional, no obligatorio",
+          "Code review obligatorio para todo merge a main",
+          "4 días intensos, 1 día para deep work / refactor / OSS"
+        ],
+        "benefits": [
+          "Equity con vesting 4 años (1 año cliff). Tier senior.",
+          "Seguro médico privado premium (México) o stipend equivalente fuera de MX",
+          "25 días PTO mínimo + holidays locales",
+          "$2,000 USD/año stipend para learning (libros, cursos, conferencias)",
+          "$1,500 USD setup home office",
+          "Macbook Pro M3 o stipend equivalente",
+          "Anniversary day off (tu birthday también)"
+        ],
+        "process": [
+          "Initial call con Carlos (45 min) — fit + role context",
+          "Technical conversation (90 min) — discuss past projects, no whiteboard",
+          "Take-home project (4-8 hrs, paid si lo completás): endpoint multi-tenant con RLS + tests",
+          "System design conversation (60 min)",
+          "Reference checks",
+          "Offer · 2-3 semanas desde apply hasta offer"
+        ]
       },
       "designer": {
         "title": "Product Designer",
         "location": "Remoto · LATAM",
         "type": "Tiempo completo",
-        "summary": "Diseño de producto end-to-end. Diseñas con Figma, prototipas en código (no obligatorio pero valorado)."
+        "salary": "$4,000 - $6,500 USD/mes + equity",
+        "reportsTo": "Founder (Carlos)",
+        "summary": "Diseño de producto end-to-end. Figma, prototyping en código opcional pero valorado. Vas a definir cómo se ve Blacknel.",
+        "about": "Vas a owns el diseño de producto de Blacknel: dashboard interno, marketing site, brand system. No es un rol de wireframes — querés diseñar en alta fidelidad desde día uno, conectado a ingeniería con feedback loops cortos.",
+        "stack": [
+          "Figma (auto-layout, variants, design tokens)",
+          "Acceso al repo y dev environment — leer código y pull requests es bienvenido",
+          "Componentes vivos: shadcn/ui + Aceternity + Magic UI",
+          "Sistema de tokens en Tailwind v4",
+          "Linear para tracking, Notion para docs"
+        ],
+        "expectations": [
+          "4+ años diseñando producto en B2B SaaS",
+          "Portfolio con productos shipped — no concept work",
+          "Comodidad colaborando con engineers en context async",
+          "Sentido fuerte de motion design (Motion / Framer)",
+          "Spanish + English fluent",
+          "Atención al detalle a nivel pixel sin atascarte"
+        ],
+        "extras": [
+          "Prototyping en código (React + Tailwind) — no obligatorio",
+          "Experiencia con design systems en producción",
+          "Background en data viz / dashboards complejos"
+        ],
+        "howWeWork": [
+          "Decisiones de diseño documentadas en Notion",
+          "Reviews semanales async + 1 weekly sync con engineering",
+          "Design tokens viven en el repo, no en Figma aislado",
+          "Ship over polish — pero solo lo que ya está claro"
+        ],
+        "benefits": [
+          "Equity con vesting 4 años (1 año cliff)",
+          "Seguro médico privado premium",
+          "25 días PTO mínimo + holidays locales",
+          "$2,000 USD/año stipend para learning",
+          "$1,500 USD setup home office",
+          "Macbook Pro M3"
+        ],
+        "process": [
+          "Initial call (45 min) con Carlos",
+          "Portfolio walkthrough (60 min) — discutir 3 proyectos en detalle",
+          "Design exercise (paid): redesign de un flow real de Blacknel · 5-10 hrs",
+          "Critique conversation (60 min)",
+          "Reference checks",
+          "Offer · 2-3 semanas desde apply hasta offer"
+        ]
       },
       "csm": {
         "title": "Customer Success Manager",
-        "location": "Ciudad de México (híbrido)",
+        "location": "Ciudad de México (híbrido) o remoto LATAM",
         "type": "Tiempo completo",
-        "summary": "Onboarding de cuentas Growth y Enterprise. Spanish + English fluent. Experiencia previa en SaaS B2B."
+        "salary": "$2,500 - $4,500 USD/mes + equity + bonus por NRR",
+        "reportsTo": "Founder (Carlos)",
+        "summary": "Onboarding de cuentas Growth y Enterprise. Spanish + English fluent. Experiencia previa en SaaS B2B requerida.",
+        "about": "Vas a ownear customer success de las primeras cuentas pagas. Eso significa onboarding, soporte de 1ª línea para Growth+, identificación de oportunidades de expansion y feedback loop con product. Trabajás directo con clientes — no atrás de soporte de 2ª línea.",
+        "stack": [
+          "Linear para tickets internos",
+          "Intercom para customer messaging",
+          "Notion para playbooks de onboarding",
+          "PostHog para entender uso real",
+          "Métricas: NRR, CSAT, tiempo a primer valor"
+        ],
+        "expectations": [
+          "3+ años en CSM o roles equivalentes en SaaS B2B",
+          "Experiencia con cuentas mid-market ($1K-$10K MRR)",
+          "Spanish + English fluent — ambos idiomas en escritura formal",
+          "Comodidad con métricas y reporting a executives de cliente",
+          "Background en agencias o marketing operations es enorme plus"
+        ],
+        "extras": [
+          "Experiencia previa con Hootsuite, Sprout, Birdeye u otras (sabés qué problemas migran tus clientes)",
+          "Onboarding técnico de connectors (OAuth, webhooks)"
+        ],
+        "howWeWork": [
+          "Cada cuenta nueva tiene un kickoff doc en Notion",
+          "Quarterly Business Reviews con clientes Growth y Enterprise",
+          "Feedback loop directo con engineering — los CSM file tickets, no esperan",
+          "Async-first pero con disponibilidad para clientes en US biz hours"
+        ],
+        "benefits": [
+          "Equity con vesting 4 años (1 año cliff)",
+          "Seguro médico privado premium (México)",
+          "Bonus trimestral por NRR > 110%",
+          "25 días PTO mínimo + holidays locales",
+          "$1,500 USD/año stipend para learning",
+          "Anniversary day off"
+        ],
+        "process": [
+          "Initial call (45 min) con Carlos",
+          "Role-play exercise: onboarding simulado de una cuenta agencia",
+          "Cliente interview (60 min) — entrevista con un design partner real",
+          "Reference checks",
+          "Offer · 2-3 semanas desde apply hasta offer"
+        ]
       }
     }
   },
@@ -1064,9 +1266,22 @@
     "hero": {
       "eyebrow": "Integraciones",
       "title": "Conecta cada canal que tu equipo ya usa",
-      "subtitle": "30+ integraciones nativas. APIs oficiales. Sin scrapers, sin bots de tercera mano."
+      "subtitle": "+30 integraciones nativas. APIs oficiales. Sin scrapers, sin bots de tercera mano."
     },
     "searchPlaceholder": "Buscar integración…",
+    "stats": {
+      "live": "activas",
+      "soon": "próximamente",
+      "total": "integraciones",
+      "oauth": "OAuth · APIs oficiales",
+      "liveOfficial": "En vivo · API oficial",
+      "noMatch": "Ninguna integración coincide con \"{query}\"",
+      "comingSoonTooltip": "Esperamos lanzar esto en Q2 2026. Suscribite al changelog para enterarte."
+    },
+    "featured": {
+      "eyebrow": "Destacadas",
+      "title": "Las conexiones más usadas"
+    },
     "categories": {
       "all": "Todas",
       "social": "Redes sociales",
@@ -1075,6 +1290,54 @@
       "ads": "Anuncios",
       "crm": "CRM",
       "communication": "Comunicación"
+    },
+    "descriptions": {
+      "Facebook": "Páginas, Reels, Stories, Feed",
+      "Instagram": "Feed, Reels, Stories",
+      "LinkedIn": "Cuentas personales + Company Pages",
+      "Twitter / X": "Posts, replies, DMs",
+      "TikTok": "Posts, comentarios, DMs",
+      "YouTube": "Community + Shorts",
+      "Pinterest": "Pins y boards",
+      "Reddit": "Publishing en subreddits",
+      "Threads": "Posts y replies",
+      "Bluesky": "Posts y replies",
+      "WhatsApp Business": "Cloud API oficial",
+      "Facebook Messenger": "DMs en inbox unificado",
+      "Instagram DM": "DMs en inbox unificado",
+      "Telegram": "Bot API",
+      "Google Business Profile": "Reviews, Q&A, posts",
+      "Yelp": "Monitoreo de reviews",
+      "TripAdvisor": "Monitoreo de reviews",
+      "Trustpilot": "Monitoreo de reviews",
+      "Apple App Store": "Reviews de apps",
+      "Google Play": "Reviews de apps",
+      "Google Ads": "Spend, ROAS, CPA",
+      "Meta Ads": "Facebook + Instagram ads",
+      "LinkedIn Ads": "Sponsored content",
+      "TikTok Ads": "Spark + in-feed",
+      "HubSpot": "Sync de contactos + workflows",
+      "Salesforce": "Sync de contactos",
+      "Pipedrive": "Sync de contactos",
+      "Slack": "Notificaciones + alertas",
+      "Microsoft Teams": "Notificaciones",
+      "Zapier": "Automatización de workflows",
+      "Make": "Automatización de workflows",
+      "n8n": "Automatización self-hosted"
+    },
+    "custom": {
+      "badge": "Enterprise",
+      "title": "¿Necesitás algo custom?",
+      "lead": "REST API + Webhooks vienen incluidos en cada plan Enterprise. Construí contra tu stack con priority support de nuestro equipo.",
+      "apiBase": "Endpoint base: api.blacknel.com/v1/",
+      "apiList": [
+        "+50 endpoints documentados",
+        "Auth via Bearer token (API key en tu workspace)",
+        "Webhooks con HMAC signature verification",
+        "SDKs oficiales: TypeScript, Python (beta), cURL/Postman"
+      ],
+      "sla": "SLA 99.95% garantizado mensualmente. SLA credits automáticos.",
+      "cta": "sales@blacknel.com →"
     }
   },
   "changelog": {
