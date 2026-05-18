@@ -260,84 +260,161 @@
       "title": "Inbox unificado",
       "subtitle": "Conversaciones de cada canal en una sola bandeja",
       "description": "Centraliza Facebook Messenger, Instagram DM, WhatsApp Business, Twitter/X, LinkedIn, TikTok, Google Business, email y formularios. Asigna por equipo, agrega notas internas, usa respuestas guardadas y monitorea SLA en vivo.",
+      "lead": "Cada DM, cada review nueva, cada comentario, cada mensaje de WhatsApp y cada email entrante en un solo lugar. Con asignación inteligente, contexto del cliente y SLA tracking en vivo.",
+      "howTitle": "Cómo funciona",
+      "how": "Conectas Facebook Messenger, Instagram DM, WhatsApp Business, Twitter/X, LinkedIn, TikTok, Google Business y tus formularios web. Blacknel ingiere todos los mensajes en una bandeja unificada, los enriquece con historial del cliente y aplica reglas de asignación por canal, hora, idioma o skill.",
+      "readyTitle": "Lo que viene listo",
       "bullets": [
-        "Asignación automática por reglas o por skill",
-        "Respuestas guardadas con variables dinámicas",
-        "Notas internas y menciones al equipo",
-        "SLA tracking con alertas a Slack",
-        "Historial unificado por cliente"
-      ]
+        "Asignación automática por reglas (canal, hora, idioma, skill)",
+        "Respuestas guardadas con variables dinámicas ({nombre}, {marca}, {ciudad})",
+        "Notas internas y menciones al equipo (@maría)",
+        "SLA tracking con alertas a Slack y email",
+        "Historial unificado por cliente cross-canal",
+        "Etiquetado y categorización con IA",
+        "Modo 'fuera de oficina' con auto-respuestas"
+      ],
+      "forWhomTitle": "Para quién",
+      "forWhom": "Ideal para equipos de servicio al cliente que reciben mensajes en 4+ canales simultáneamente, agencias gestionando múltiples clientes, y marcas con tickets de soporte que crecen 20%+ mensual."
     },
     "publishing": {
       "title": "Social Publishing",
       "subtitle": "Composer único, 10 canales, cero copy-paste",
       "description": "Diseña un post, escoge canales y deja que Blacknel adapte formato, dimensiones y previsualización. Flujos de aprobación, calendario visual y reagendar con drag.",
+      "lead": "Escribís el post una vez. Blacknel adapta formato, dimensiones, variations de copy y previsualización fiel para cada red. Con calendar drag-and-drop, aprobaciones multi-nivel y publishing programado a 10 canales.",
+      "howTitle": "Cómo funciona",
+      "how": "El composer detecta qué canales seleccionas y muestra previsualización exacta de cómo se verá en Instagram Feed vs Reels vs Stories vs Facebook vs LinkedIn vs Twitter/X. Editas variations por canal o publicas idéntico. Programación con calendar visual o publicación inmediata. Si tu rol requiere aprobación, el post va a la cola antes de publicar.",
+      "readyTitle": "Lo que viene listo",
       "bullets": [
-        "Soporta Feed, Reels, Stories, Shorts y Threads",
-        "Brand voice consistency con AI",
-        "Calendario con drag-to-reschedule",
-        "Aprobaciones multi-nivel",
-        "Bulk import desde Google Sheets"
-      ]
+        "Soporte para Feed, Reels, Stories, Shorts y Threads",
+        "Brand voice consistency check con IA antes de publicar",
+        "Calendar con drag-to-reschedule",
+        "Aprobaciones multi-nivel con audit log",
+        "Bulk import desde Google Sheets o CSV",
+        "Auto-tagging por campaña, marca y canal",
+        "Posting óptimo (sugerencia IA del best time to post)",
+        "Recurring posts (semanal, mensual)"
+      ],
+      "forWhomTitle": "Para quién",
+      "forWhom": "Agencias publicando 50+ posts/semana, marcas multi-país necesitando aprobaciones legales por mercado, y equipos in-house que quieren matar el copy-paste entre Buffer/Hootsuite/Notion."
     },
     "reviews": {
       "title": "Reviews & Reputation",
       "subtitle": "Cada reseña en un panel. Cada crisis, detectada antes.",
       "description": "Centraliza Google Business, Yelp, TripAdvisor, Trustpilot, Facebook y stores de apps. Responde con plantillas o IA. Detecta caídas de sentimiento antes que se conviertan en crisis.",
+      "lead": "Cada reseña de Google, Yelp, TripAdvisor, App Store y más en un solo dashboard. Con IA que sugiere respuestas según tu tono y crisis detection que te avisa antes que el problema explote.",
+      "howTitle": "Cómo funciona",
+      "how": "Conectamos Google Business Profile, Yelp, TripAdvisor, Trustpilot, Facebook Reviews, Apple App Store y Google Play. Cada review nueva entra al inbox con sentiment analysis, sugerencia de respuesta IA, y categoría automática. El motor de anomaly detection monitorea sentiment shifts y dispara alertas cuando ve patrones de crisis (caída 30%+ del rating en 7 días, spike de menciones negativas, etc.).",
+      "readyTitle": "Lo que viene listo",
       "bullets": [
-        "Respuestas con IA según brand voice",
-        "Sentiment analysis multilingüe",
-        "NPS embebido en sitio y correos",
-        "Crisis detection con anomaly detection",
-        "Reports de reputación programados"
-      ]
+        "Respuestas IA según brand voice",
+        "Sentiment analysis multilingüe (ES, EN, PT)",
+        "NPS embebido en sitio web y correos",
+        "Crisis detection con thresholds custom",
+        "Reports de reputación programados (PDF semanal/mensual)",
+        "Reputation score consolidado cross-channel",
+        "Comparación rating multi-sucursal",
+        "Auto-respond para reviews 5★ (con approval previo)"
+      ],
+      "forWhomTitle": "Para quién",
+      "forWhom": "Cadenas multi-sucursal con 10+ ubicaciones, restaurantes y hoteles que viven o mueren de reviews, y marcas DTC con presencia en App Store."
     },
     "ai": {
-      "title": "AI nativa",
+      "title": "IA nativa",
       "subtitle": "Copilots entrenados con tu tono y tus reglas",
       "description": "No es ChatGPT envuelto. Blacknel entrena en tus brand voice docs, tu historial y tus respuestas anteriores. Genera copy, sugiere respuestas y detecta crisis.",
+      "lead": "No es ChatGPT envuelto. Blacknel entrena en tus brand voice docs, tu historial de posts, tus respuestas anteriores y tus reglas de negocio. La IA que escribe a nombre de tu marca lee tu marca antes de escribir.",
+      "howTitle": "Cómo funciona",
+      "how": "Subís tu brand voice doc (PDF, Notion, Google Doc) o lo importás directamente desde Brand Hub. Blacknel construye un brand profile vectorial que incluye tu tono, vocabulario prohibido, ejemplos representativos y reglas de compliance. Cuando la IA genera copy, responde un DM, o sugiere optimizaciones, lo hace ANCLADA a ese brand profile — no a un modelo genérico. Powered by Anthropic Claude (default) + OpenAI GPT (fallback).",
+      "readyTitle": "Lo que viene listo",
       "bullets": [
-        "Generación de copy en ES, EN, PT",
-        "Sugerencias contextuales en inbox",
-        "Recomendaciones de optimización de ads",
-        "Detección de crisis automática",
-        "Powered by Claude + GPT con fallback"
-      ]
+        "Generación de copy en ES, EN, PT (otros idiomas en roadmap)",
+        "Sugerencias contextuales en inbox (3 variantes por tono)",
+        "Recomendaciones de optimización de ads con razonamiento",
+        "Detección automática de crisis vía sentiment anomaly",
+        "Auto-categorización de mensajes entrantes",
+        "Translation matching brand tone (no solo Google Translate)",
+        "Powered by Claude Sonnet 4.6 + GPT-4.1 + fallback strategy"
+      ],
+      "forWhomTitle": "Para quién",
+      "forWhom": "Equipos que ya probaron 'GPT en el inbox' y se frustraron porque no respeta el tono. Marcas con compliance estricto que necesitan IA con guardrails reales."
     },
     "ads": {
       "title": "Ads Management",
       "subtitle": "Tu media buying con la fricción que se merece — cero",
       "description": "Conecta Google Ads, Meta, LinkedIn y TikTok. Mira spend, ROAS y CPA cross-channel. Recibe alertas accionables y aplica recomendaciones con un click.",
+      "lead": "Tu media buying con la fricción que se merece — cero. Conectá Google Ads, Meta, LinkedIn y TikTok. Mirá spend, ROAS y CPA cross-channel sin abrir 4 dashboards. Recibí alertas accionables y aplicá recomendaciones IA con approval humano.",
+      "howTitle": "Cómo funciona",
+      "how": "Conectás tus cuentas publicitarias via OAuth oficial. Blacknel sincroniza spend, conversions, ROAS y CPA cada hora. Si una campaña dispara CPA arriba del threshold, o un budget se va a quemar antes de tiempo, recibís alert en Slack/email con la razón y recomendación. Las recomendaciones de optimización (pausar adset, mover budget, ampliar audience) requieren approval humano para ejecutar — nada se hace automático con tu plata.",
+      "readyTitle": "Lo que viene listo",
       "bullets": [
-        "Dashboard unificado de spend y conversiones",
-        "Alertas de budget overrun y CPA spikes",
-        "Recomendaciones AI con approval humano",
-        "Forecasting de spend a 30 días",
-        "Reports cliente-listos"
-      ]
+        "Dashboard unificado de spend y conversions",
+        "Alertas de budget overrun, CPA spikes, CTR drops",
+        "Recomendaciones IA con razonamiento explícito",
+        "Approval queue para optimizaciones costosas",
+        "Forecasting de spend a 30 días con confidence intervals",
+        "Reports cliente-ready (PDF white label para agencias)",
+        "Conversion attribution cross-channel",
+        "A/B testing tracking"
+      ],
+      "forWhomTitle": "Para quién",
+      "forWhom": "Agencias gestionando $50K+ USD/mes de spend, performance marketers de DTC, y CMOs que quieren entender ROAS sin pedir export a su agency."
     },
     "analytics": {
       "title": "Analytics & Reporting",
       "subtitle": "Datos que ejecutivos entienden y agencias presentan",
       "description": "Dashboards custom, benchmarks vs competidores, reports en PDF/CSV programados y export a Slack o email. White label para agencias.",
+      "lead": "Datos que ejecutivos entienden y agencias presentan. Dashboards custom drag-and-drop, benchmarks vs competidores por industria, y reports programados en PDF/CSV con white label para agencias.",
+      "howTitle": "Cómo funciona",
+      "how": "Cada brand tiene su workspace de analytics con dashboards predefinidos (Social, Inbox SLA, Reputation, Ads) y la opción de construir custom dashboards con drag-and-drop. Configurás reports recurrentes (diarios, semanales, mensuales) que se envían en PDF a tu inbox o tu cliente, o se publican a un Slack channel. White label completo: tu logo, tus colores, tus comentarios pre-render.",
+      "readyTitle": "Lo que viene listo",
       "bullets": [
-        "Dashboards drag-and-drop",
-        "Benchmarks por industria",
+        "Dashboards drag-and-drop (widget library: 30+ widgets)",
+        "Benchmarks por industria (food, retail, hotels, agencies, etc.)",
         "Reports programados (PDF, email, Slack)",
         "Export a Excel, CSV, Google Sheets",
-        "White label completo"
-      ]
+        "White label completo (logo, colores, dominio custom)",
+        "Compare periods (this month vs last vs YoY)",
+        "Annotations en charts (deploy, campaña, evento)",
+        "Public share links con password opcional"
+      ],
+      "forWhomTitle": "Para quién",
+      "forWhom": "Agencias que envían reports mensuales a 10+ clientes (este feature solo te ahorra 8 horas/mes), CMOs que necesitan board-ready reports, y operaciones multi-location con KPIs cross-sucursal."
     },
     "listening": {
       "title": "Listening & Competitors",
       "subtitle": "Lo que dicen de ti — y de tu competencia",
       "description": "Monitor de menciones, keywords, hashtags y competidores. Share of voice, sentiment trends y alertas en tiempo real.",
+      "lead": "Lo que dicen de ti — y de tu competencia — en tiempo real. Monitor de menciones, keywords, hashtags y competidores con share of voice, sentiment trends y alertas accionables.",
+      "howTitle": "Cómo funciona",
+      "how": "Definís keywords (tu marca, productos, competidores, industria). Blacknel monitorea Twitter/X, Reddit, news, blogs, foros y Google Trends cada hora. Cada mención se clasifica por sentiment y se cluster en topics. Share of voice te muestra cómo te comparás a competidores. Alerts en tiempo real cuando el volumen de menciones excede thresholds o aparece un topic nuevo.",
+      "readyTitle": "Lo que viene listo",
       "bullets": [
-        "Menciones de marca cross-canal",
+        "Menciones de marca cross-channel",
         "Share of voice vs competencia",
         "Sentiment trends multilingüe",
-        "Alertas en tiempo real",
-        "Topic clustering automático"
+        "Alertas en tiempo real (Slack, email, in-app)",
+        "Topic clustering automático",
+        "Competitor benchmarks (post volume, engagement, sentiment)",
+        "Crisis early-warning con thresholds custom",
+        "Export raw data para análisis externo"
+      ],
+      "forWhomTitle": "Para quién",
+      "forWhom": "Marcas con reputación que defender, equipos PR de empresas medianas/grandes, y growth marketers que quieren entender narrative vs competidores."
+    },
+    "compareTable": {
+      "title": "Compará contra herramientas que ya conocés",
+      "subtitle": "Mismo feature set, distintos enfoques y precios.",
+      "footnote": "Comparación basada en pricing público a Enero 2026. Algunos features de Hootsuite/Sprout solo están en tiers Enterprise.",
+      "columns": ["", "Blacknel", "Hootsuite", "Sprout Social", "Birdeye"],
+      "rows": [
+        { "label": "Inbox unificado", "values": ["✓", "✓", "✓", "—"] },
+        { "label": "Reviews multi-source", "values": ["✓", "—", "—", "✓"] },
+        { "label": "IA con brand voice", "values": ["✓", "Limitado", "Limitado", "—"] },
+        { "label": "Multi-location RBAC", "values": ["✓", "Limitado", "✓", "✓"] },
+        { "label": "Listening + Competitors", "values": ["✓", "$$ extra", "$$ extra", "—"] },
+        { "label": "Ads management", "values": ["✓", "—", "—", "—"] },
+        { "label": "White label", "values": ["✓", "—", "$$$ Enterprise", "✓"] },
+        { "label": "Precio mensual", "values": ["$69-$1,099", "$99-$249+", "$249-$499+", "$299-$999+"] }
       ]
     }
   },
@@ -411,20 +488,28 @@
       "feature": "Funcionalidad",
       "rows": [
         { "feature": "Marcas", "standard": "3", "growth": "10", "enterprise": "Ilimitadas" },
-        { "feature": "Usuarios", "standard": "1", "growth": "5", "enterprise": "Ilimitados" },
+        { "feature": "Usuarios incluidos", "standard": "1", "growth": "5", "enterprise": "Ilimitados" },
+        { "feature": "Usuarios extra", "standard": "$19/mes c/u", "growth": "$19/mes c/u", "enterprise": "Incluidos" },
         { "feature": "Cuentas sociales", "standard": "5", "growth": "25", "enterprise": "Ilimitadas" },
         { "feature": "Inbox unificado", "standard": "✓", "growth": "✓", "enterprise": "✓" },
-        { "feature": "Social publishing", "standard": "✓", "growth": "✓", "enterprise": "✓" },
+        { "feature": "Social publishing (10 redes)", "standard": "✓", "growth": "✓", "enterprise": "✓" },
         { "feature": "Reviews monitoring", "standard": "3 fuentes", "growth": "Todas", "enterprise": "Todas" },
         { "feature": "AI generations", "standard": "50/mes", "growth": "Ilimitadas", "enterprise": "Ilimitadas" },
+        { "feature": "Brand voice training", "standard": "—", "growth": "✓", "enterprise": "✓ + custom models" },
         { "feature": "Ads management", "standard": "—", "growth": "Google + Meta", "enterprise": "Todos" },
         { "feature": "Listening", "standard": "—", "growth": "10 keywords", "enterprise": "Ilimitado" },
+        { "feature": "Competitor tracking", "standard": "—", "growth": "3 competidores", "enterprise": "Ilimitado" },
         { "feature": "Approval workflows", "standard": "—", "growth": "✓", "enterprise": "✓" },
         { "feature": "Dashboards custom", "standard": "—", "growth": "✓", "enterprise": "✓" },
-        { "feature": "SSO / SAML", "standard": "—", "growth": "—", "enterprise": "✓" },
         { "feature": "White label", "standard": "—", "growth": "—", "enterprise": "✓" },
-        { "feature": "API + Webhooks", "standard": "—", "growth": "—", "enterprise": "✓" },
-        { "feature": "SLA", "standard": "—", "growth": "Email biz hours", "enterprise": "99.95%" }
+        { "feature": "SSO / SAML", "standard": "—", "growth": "—", "enterprise": "✓" },
+        { "feature": "Roles custom", "standard": "—", "growth": "—", "enterprise": "✓" },
+        { "feature": "Audit log", "standard": "Basic", "growth": "Standard", "enterprise": "Avanzado" },
+        { "feature": "Retention policies", "standard": "—", "growth": "—", "enterprise": "✓" },
+        { "feature": "API REST + Webhooks", "standard": "—", "growth": "—", "enterprise": "✓" },
+        { "feature": "Slack / Teams integration", "standard": "✓", "growth": "✓", "enterprise": "✓" },
+        { "feature": "Soporte", "standard": "Email", "growth": "Prioritario", "enterprise": "Premium 24/7 + CSM" },
+        { "feature": "SLA", "standard": "Best effort", "growth": "Email biz hours", "enterprise": "99.95% garantizado" }
       ]
     },
     "faq": {
@@ -479,15 +564,29 @@
     },
     "mission": {
       "title": "Misión",
-      "body": "Darle a cada agencia, cadena y marca un cerebro único para su presencia digital — con IA que respeta el contexto y precios que respetan el bolsillo."
+      "paragraphs": [
+        "Le damos a cada agencia, cadena y marca un cerebro único para operar su presencia digital — sin importar cuántas redes use, cuántas marcas opere, o cuántos países cubra.",
+        "No creemos en herramientas que te cobran por cada nueva funcionalidad. Creemos en plataformas que escalan contigo desde 3 marcas hasta 300, con el mismo pricing transparente, el mismo soporte y la misma calidad de UX.",
+        "La IA que ponemos en tu equipo respeta dos cosas: tu tono de marca y tu autonomía. Sugerimos, pero no decidimos por vos. Detectamos crisis, pero no actuamos sin tu approval. Optimizamos tus ads, pero nunca movemos plata sin tu OK.",
+        "Si después de un año usándonos no podés imaginarte volver a Hootsuite, Sprout o las 5 hojas de cálculo, hicimos bien nuestro trabajo."
+      ]
     },
     "vision": {
       "title": "Visión",
-      "body": "Que en 2030, gestionar marcas multi-canal sea tan natural como mandar un correo. Sin spreadsheets paralelas, sin diez logins, sin contratos enterprise abusivos."
+      "paragraphs": [
+        "En 2030, gestionar la presencia digital multi-canal de una marca debería ser tan natural como mandar un correo. Sin spreadsheets paralelas, sin diez logins por equipo, sin contratos enterprise abusivos, sin 'que se conecte tu desarrollador para ver los KPIs'.",
+        "Llegamos a esa visión construyendo cada feature como un ladrillo de un sistema más grande, no como una unidad aislada que se vende standalone. Cada parte de Blacknel existe porque las demás existen.",
+        "Para 2030, queremos que cuando alguien empiece una agencia de marketing, una franquicia, o una marca DTC, la pregunta 'qué herramienta usamos' tenga una respuesta obvia."
+      ]
     },
     "story": {
       "title": "Por qué existimos",
-      "body": "Después de ver al equipo de una agencia perder 30 horas a la semana pegando contenido entre Hootsuite, Sprout y Birdeye, decidimos que era ridículo. Blacknel es la herramienta que queríamos para nosotros mismos."
+      "paragraphs": [
+        "Después de ver al equipo de una agencia perder 30 horas a la semana pegando contenido entre Hootsuite, Sprout y Birdeye, decidimos que era ridículo.",
+        "Blacknel es la herramienta que queríamos para nosotros mismos — y la que creemos que cualquier equipo serio merece tener disponible sin tener que justificar el TCO ante un comité de procurement."
+      ],
+      "quote": "Construimos la herramienta que queríamos para nosotros mismos después de ver a equipos de agencia perder 30 horas a la semana pegando contenido entre cinco plataformas.",
+      "quoteAuthor": "Carlos Anaya Ruiz, Founder"
     },
     "values": {
       "title": "Cómo trabajamos",
@@ -495,16 +594,49 @@
         { "title": "Producto sobre vanity", "body": "No anunciamos lo que no shippeamos. Cada release tiene impacto medible." },
         { "title": "Multi-tenant en serio", "body": "Aislamiento de datos no es un sticker. Es nuestra arquitectura base." },
         { "title": "Precios sin sorpresas", "body": "Lo que ves es lo que pagas. Sin contratos forzados ni paywalls escondidos." },
-        { "title": "AI con humano en loop", "body": "Nuestra IA sugiere. Tu equipo decide. No al revés." }
+        { "title": "IA con humano en loop", "body": "Nuestra IA sugiere. Tu equipo decide. No al revés." }
+      ]
+    },
+    "decisions": {
+      "eyebrow": "Principios",
+      "title": "Cómo decidimos",
+      "subtitle": "Los cinco criterios que ordenan cada decisión de producto, pricing y negocio.",
+      "items": [
+        {
+          "title": "Product over hype",
+          "body": "No anunciamos lo que no shipea. Cada feature en nuestro changelog está en producción para clientes reales. Sin 'coming soon' abusivos en nuestra propia copy."
+        },
+        {
+          "title": "Customer pain > Feature wishlist",
+          "body": "Construimos features cuando 3+ clientes nos piden lo mismo o cuando vemos un pattern de uso que indica gap. No construimos porque 'se vería bien en una demo'."
+        },
+        {
+          "title": "Migration > Lock-in",
+          "body": "Si querés salirte de Blacknel, exportás todos tus datos en CSV/JSON sin contactar soporte. Si nos elegís, queremos que sea porque te servimos, no porque te cuesta irte."
+        },
+        {
+          "title": "Pricing transparent > Hidden fees",
+          "body": "Lo que ves en /pricing es lo que pagás. Sin 'contact sales for pricing' en planes públicos, sin upcharges sorpresa, sin SLA enterrado en una bizarrería contractual."
+        },
+        {
+          "title": "AI respects boundaries",
+          "body": "Nuestra IA tiene tres reglas: no inventar facts, no actuar con plata sin approval, y no escribir nada que tu brand voice doc contradiga. Si rompemos cualquiera de esas, es bug crítico."
+        }
       ]
     },
     "team": {
       "title": "Equipo",
-      "subtitle": "Estamos contratando. Si crees que encajas, escríbenos.",
+      "subtitle": "Estamos contratando 3 roles. Si crees que encajas, escríbenos.",
+      "hiring": "Equipo en formación",
       "founder": {
         "name": "Carlos Anaya Ruiz",
         "role": "Founder & CEO",
-        "bio": "Ingeniero y operador. Construyó equipos de producto en startups de LATAM antes de fundar Blacknel. Vive en Ciudad de México."
+        "bioParagraphs": [
+          "Ingeniero, operador y antiguo head of marketing de Bufete Manuel Solís (firma de inmigración multi-estado en EE.UU.). Antes de fundar Blacknel, construyó equipos de SEO, paid media y analytics gestionando presencia digital en 10+ ubicaciones.",
+          "Vivió en carne propia el problema que Blacknel resuelve: 30 horas semanales perdidas pegando contenido entre Hootsuite, Sprout y Google Sheets. Vive en Ciudad de México con sus dos perros."
+        ],
+        "contact": "Escribime: carlos@blacknel.com",
+        "contactEmail": "carlos@blacknel.com"
       }
     }
   },

@@ -1,10 +1,7 @@
 import { Check, X } from 'lucide-react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/navigation';
 import { PageHero } from '@/components/layout/page-hero';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 import { FadeInOnScroll } from '@/components/animations/fade-in-on-scroll';
 import {
   Accordion,
@@ -16,7 +13,8 @@ import { CtaSection } from '@/components/home/cta-section';
 import { buildMetadata } from '@/lib/seo';
 import { JsonLd, productSchema, faqSchema } from '@/components/seo/structured-data';
 import { PricingHeroVisual } from '@/components/hero-visuals/pricing';
-import { cn } from '@/lib/utils';
+import { PricingCardsWithToggle } from '@/components/pricing/billing-toggle';
+import { NoChargeExtra } from '@/components/pricing/no-charge-extra';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -31,80 +29,6 @@ export async function generateMetadata({ params }: Props) {
   });
 }
 
-const tiers = ['standard', 'growth', 'enterprise'] as const;
-
-function PricingCards() {
-  const t = useTranslations('pricing');
-  const tc = useTranslations('common');
-
-  return (
-    <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-      {tiers.map((tier, i) => {
-        const features = t.raw(`${tier}.features`) as string[];
-        const highlight = tier === 'growth';
-        return (
-          <FadeInOnScroll key={tier} delay={i * 0.06}>
-            <div
-              className={cn(
-                'relative flex h-full flex-col gap-6 rounded-2xl border p-7 backdrop-blur-md',
-                highlight
-                  ? 'border-white/20 bg-[color:var(--color-card-hover)] shadow-[0_0_80px_-12px_rgba(255,255,255,0.2)]'
-                  : 'border-[color:var(--color-border)] bg-[color:var(--color-card)]',
-              )}
-            >
-              {highlight && (
-                <Badge variant="accent" className="absolute right-7 top-7">
-                  {tc('mostPopular')}
-                </Badge>
-              )}
-              <div>
-                <p className="mono text-xs uppercase tracking-wider text-[color:var(--color-fg-tertiary)]">
-                  {t(`${tier}.name`)}
-                </p>
-                <div className="mt-2 flex items-baseline gap-1.5">
-                  <span className="text-5xl font-semibold tracking-tight text-gradient-strong">
-                    ${t(`${tier}.price`)}
-                  </span>
-                  <span className="mono text-sm text-[color:var(--color-fg-tertiary)]">
-                    {tc('perMonth')}
-                  </span>
-                </div>
-                <p className="mt-3 text-sm text-[color:var(--color-fg-secondary)]">
-                  {t(`${tier}.description`)}
-                </p>
-              </div>
-              <ul className="flex flex-col gap-2.5 text-sm">
-                {features.map((f) => (
-                  <li
-                    key={f}
-                    className="flex items-start gap-2.5 text-[color:var(--color-fg-secondary)]"
-                  >
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400/80" />
-                    <span>{f}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-auto">
-                <Button
-                  asChild
-                  variant={highlight ? 'primary' : 'secondary'}
-                  size="md"
-                  className="w-full"
-                >
-                  {tier === 'enterprise' ? (
-                    <Link href="/contact">{t(`${tier}.cta`)}</Link>
-                  ) : (
-                    <a href="https://app.blacknel.com/signup">{t(`${tier}.cta`)}</a>
-                  )}
-                </Button>
-              </div>
-            </div>
-          </FadeInOnScroll>
-        );
-      })}
-    </div>
-  );
-}
 
 function ComparisonTable() {
   const t = useTranslations('pricing.comparison');
@@ -212,8 +136,10 @@ export default async function PricingPage({ params }: Props) {
       </PageHero>
 
       <section className="container-page py-12 md:py-16">
-        <PricingCards />
+        <PricingCardsWithToggle />
       </section>
+
+      <NoChargeExtra />
 
       <section className="container-page py-16 md:py-24">
         <div className="mb-12 text-center">

@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
-import { Check } from 'lucide-react';
+import { Check, X } from 'lucide-react';
 import { PageHero } from '@/components/layout/page-hero';
 import { CtaSection } from '@/components/home/cta-section';
 import { GlowCard } from '@/components/aceternity/card-hover';
@@ -22,7 +22,8 @@ export async function generateMetadata({ params }: Props) {
   });
 }
 
-const sections = ['inbox', 'publishing', 'reviews', 'ai', 'ads', 'analytics', 'listening'] as const;
+// Reordenado por importancia para la decisión de compra
+const sections = ['ai', 'inbox', 'publishing', 'reviews', 'analytics', 'ads', 'listening'] as const;
 
 function FeatureBlock({ slug, index }: { slug: (typeof sections)[number]; index: number }) {
   const t = useTranslations(`features.${slug}`);
@@ -32,9 +33,9 @@ function FeatureBlock({ slug, index }: { slug: (typeof sections)[number]; index:
   return (
     <FadeInOnScroll>
       <div
-        className={`grid grid-cols-1 items-center gap-10 lg:grid-cols-2 ${reverse ? 'lg:[&>*:first-child]:order-2' : ''}`}
+        className={`grid grid-cols-1 items-start gap-10 lg:grid-cols-2 ${reverse ? 'lg:[&>*:first-child]:order-2' : ''}`}
       >
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-5">
           <Badge variant="mono" className="self-start uppercase">
             {String(index + 1).padStart(2, '0')} · {slug}
           </Badge>
@@ -42,20 +43,39 @@ function FeatureBlock({ slug, index }: { slug: (typeof sections)[number]; index:
             {t('title')}
           </h2>
           <p className="text-base text-[color:var(--color-fg-secondary)] md:text-lg">
-            {t('subtitle')}
+            {t('lead')}
           </p>
-          <p className="text-sm text-[color:var(--color-fg-secondary)]">{t('description')}</p>
-          <ul className="mt-3 flex flex-col gap-2.5 text-sm">
-            {bullets.map((b) => (
-              <li key={b} className="flex items-start gap-2.5 text-[color:var(--color-fg-secondary)]">
-                <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400/80" />
-                <span>{b}</span>
-              </li>
-            ))}
-          </ul>
+
+          <div className="mt-2">
+            <p className="mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-fg-tertiary)]">
+              {t('howTitle')}
+            </p>
+            <p className="mt-2 text-sm text-[color:var(--color-fg-secondary)]">{t('how')}</p>
+          </div>
+
+          <div className="mt-2">
+            <p className="mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-fg-tertiary)]">
+              {t('readyTitle')}
+            </p>
+            <ul className="mt-3 flex flex-col gap-2 text-sm">
+              {bullets.map((b) => (
+                <li key={b} className="flex items-start gap-2.5 text-[color:var(--color-fg-secondary)]">
+                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400/80" />
+                  <span>{b}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="mt-2 rounded-xl border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-4">
+            <p className="mono text-[10px] uppercase tracking-[0.18em] text-[color:var(--color-fg-tertiary)]">
+              {t('forWhomTitle')}
+            </p>
+            <p className="mt-2 text-sm text-[color:var(--color-fg-secondary)]">{t('forWhom')}</p>
+          </div>
         </div>
 
-        <GlowCard className="aspect-[4/3] overflow-hidden">
+        <GlowCard className="aspect-[4/3] overflow-hidden lg:sticky lg:top-24">
           <div className="relative flex h-full w-full items-center justify-center p-8">
             <div className="grid-pattern absolute inset-0 opacity-30" />
             <div className="relative flex flex-col gap-2.5">
@@ -80,6 +100,95 @@ function FeatureBlock({ slug, index }: { slug: (typeof sections)[number]; index:
   );
 }
 
+function CompareTable() {
+  const t = useTranslations('features.compareTable');
+  const columns = t.raw('columns') as string[];
+  const rows = t.raw('rows') as { label: string; values: string[] }[];
+
+  const renderCell = (value: string, isBlacknel: boolean) => {
+    if (value === '✓') {
+      return (
+        <Check
+          aria-label="yes"
+          className={`mx-auto h-4 w-4 ${isBlacknel ? 'text-emerald-400' : 'text-emerald-400/60'}`}
+        />
+      );
+    }
+    if (value === '—' || value === '-') {
+      return <X aria-label="no" className="mx-auto h-4 w-4 text-[color:var(--color-fg-tertiary)]" />;
+    }
+    return (
+      <span
+        className={`text-xs ${isBlacknel ? 'font-medium text-[color:var(--color-fg)]' : 'text-[color:var(--color-fg-secondary)]'}`}
+      >
+        {value}
+      </span>
+    );
+  };
+
+  return (
+    <FadeInOnScroll>
+      <div className="mt-8 overflow-hidden rounded-2xl border border-[color:var(--color-border)] bg-[color:var(--color-card)] backdrop-blur">
+        <div className="overflow-x-auto">
+          <table className="w-full min-w-[640px] border-collapse">
+            <thead>
+              <tr className="border-b border-[color:var(--color-border)] bg-white/[0.02]">
+                {columns.map((col, i) => (
+                  <th
+                    key={i}
+                    className={`px-4 py-4 text-left mono text-[10px] uppercase tracking-wider text-[color:var(--color-fg-tertiary)] ${
+                      i === 1 ? 'bg-white/[0.03] text-[color:var(--color-fg)]' : ''
+                    } ${i > 0 ? 'text-center' : ''}`}
+                  >
+                    {col || ' '}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((row) => (
+                <tr key={row.label} className="border-b border-[color:var(--color-border)] last:border-0">
+                  <td className="px-4 py-3 text-sm text-[color:var(--color-fg)]">{row.label}</td>
+                  {row.values.map((v, vi) => (
+                    <td
+                      key={vi}
+                      className={`px-4 py-3 text-center ${vi === 0 ? 'bg-white/[0.02]' : ''}`}
+                    >
+                      {renderCell(v, vi === 0)}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p className="mt-4 text-center mono text-[10px] text-[color:var(--color-fg-tertiary)]">
+        {t('footnote')}
+      </p>
+    </FadeInOnScroll>
+  );
+}
+
+function CompareSection() {
+  const t = useTranslations('features.compareTable');
+  return (
+    <section className="container-page py-20">
+      <FadeInOnScroll>
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-balance text-3xl font-semibold tracking-tight text-gradient md:text-4xl">
+            {t('title')}
+          </h2>
+          <p className="mt-3 text-sm text-[color:var(--color-fg-secondary)] md:text-base">
+            {t('subtitle')}
+          </p>
+        </div>
+      </FadeInOnScroll>
+      <CompareTable />
+    </section>
+  );
+}
+
 export default async function FeaturesPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
@@ -99,6 +208,7 @@ export default async function FeaturesPage({ params }: Props) {
           <FeatureBlock key={s} slug={s} index={i} />
         ))}
       </section>
+      <CompareSection />
       <CtaSection />
     </>
   );
