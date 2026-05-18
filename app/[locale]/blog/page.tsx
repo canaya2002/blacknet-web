@@ -28,7 +28,7 @@ export default async function BlogIndex({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'blog' });
-  const posts = await getAllPosts();
+  const posts = await getAllPosts(locale);
   const [featured, ...rest] = posts;
 
   return (

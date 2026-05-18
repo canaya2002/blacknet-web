@@ -25,15 +25,29 @@ const staticPaths = [
   '/dpa',
 ];
 
+function priorityFor(path: string): number {
+  if (path === '') return 1.0;
+  if (path === '/features' || path === '/pricing') return 0.9;
+  if (path === '/customers' || path === '/integrations' || path === '/security' || path === '/about')
+    return 0.8;
+  if (path === '/blog' || path === '/changelog' || path === '/contact' || path === '/docs')
+    return 0.7;
+  if (path === '/careers' || path === '/press' || path === '/status') return 0.6;
+  return 0.5;
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const posts = await getAllPosts();
+  // Load posts for both locales (some may only exist in one language).
+  const postsPerLocale = await Promise.all(
+    routing.locales.map(async (l) => ({ locale: l, posts: await getAllPosts(l) })),
+  );
 
   const staticEntries: MetadataRoute.Sitemap = routing.locales.flatMap((locale) =>
     staticPaths.map((p) => ({
       url: `${base}/${locale}${p}`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
-      priority: p === '' ? 1 : 0.7,
+      priority: priorityFor(p),
       alternates: {
         languages: Object.fromEntries(
           routing.locales.map((l) => [l === 'es' ? 'es-MX' : 'en-US', `${base}/${l}${p}`]),
@@ -42,12 +56,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
   );
 
-  const postEntries: MetadataRoute.Sitemap = routing.locales.flatMap((locale) =>
+  const postEntries: MetadataRoute.Sitemap = postsPerLocale.flatMap(({ locale, posts }) =>
     posts.map((p) => ({
       url: `${base}/${locale}/blog/${p.slug}`,
       lastModified: new Date(p.frontmatter.date),
       changeFrequency: 'monthly' as const,
-      priority: 0.5,
+      priority: 0.6,
     })),
   );
 

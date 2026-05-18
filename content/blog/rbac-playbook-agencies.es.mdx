@@ -1,0 +1,90 @@
+---
+title: 'RBAC para agencias multi-cliente: el manual completo'
+description: 'Cómo las agencias que operan 10+ marcas deberían estructurar roles, permisos y audit trails — sin tener que inventar un equipo de seguridad.'
+date: '2026-04-08'
+author: 'Carlos Anaya Ruiz'
+tags: ['rbac', 'agencias', 'seguridad', 'playbook']
+coverImage: '/og/blog-rbac.png'
+locale: 'es'
+---
+
+Si gestionás una agencia con múltiples clientes, tenés un problema de RBAC, lo hayas admitido o no. La pregunta es si lo encodeás o lo dejás escapar a través de screenshots de Slack y logins compartidos.
+
+Este es el playbook que recomendamos a cada agencia que cruza los 10 clientes activos.
+
+## Por qué RBAC importa más en agencias que en marcas in-house
+
+Los equipos de marca in-house tienen un solo tenant: sus propios datos. Si un junior ve accidentalmente analytics de un ejecutivo, es incómodo pero no catastrófico.
+
+Las agencias tienen N tenants — uno por cliente. Si un junior de la agencia manda accidentalmente una respuesta desde la cuenta del Cliente A al cliente del Cliente B, tenés un breach. Si un ex-empleado retuvo acceso a dos cuentas de cliente, tenés liability. Si tu audit log no puede mostrar quién respondió a una queja a las 3 AM, tenés una conversación imposible de ganar con el legal team del cliente.
+
+RBAC en agencias no es productividad — es supervivencia.
+
+## Los cinco roles que toda agencia necesita
+
+La mayoría de herramientas vienen con roles genéricos como "Admin" y "Member". Eso es insuficiente. Acá va la taxonomía de roles que recomendamos:
+
+### 1. Owner (1-2 personas)
+
+Founder / managing partner. Control total sobre todos los tenants, incluyendo billing y deletion de la cuenta. Este rol queda reservado.
+
+### 2. Account Director (por cliente)
+
+La persona senior que owns la relación con el cliente. Control total sobre su(s) brand(s) asignada(s), puede publicar sin aprobación, puede modificar settings.
+
+### 3. Account Manager (por cliente o por pod)
+
+Operador día-a-día. Puede publicar (con approval workflow si está configurado), responder inbox, responder reviews. No puede modificar settings a nivel org.
+
+### 4. Creative / Junior (por pod)
+
+Draftea contenido. Envía para aprobación. Responde en inbox bajo supervisión. No puede publicar sin approval.
+
+### 5. Read-only / Client viewer (por cliente)
+
+El propio cliente, viendo sus dashboards y reportes. Sin acceso write.
+
+Estos cinco cubren el 95% de los workflows reales de agencia. Custom roles solo valen la complejidad a escala Enterprise.
+
+## Anti-patterns que vemos en cada auditoría
+
+### Anti-pattern 1: Un solo "Agency Login" compartido
+
+Sí, incluso en 2026. Auditamos agencias donde el equipo creativo entero comparte un solo login para publicar. No hay audit trail, no hay accountability individual, y si esa cuenta se compromete, cada cliente queda expuesto.
+
+Fix: cada individuo tiene su propio usuario. Siempre.
+
+### Anti-pattern 2: Herencia de permisos por canales de Slack
+
+"Quien sea que esté en #cliente-x puede publicar por ese cliente." Eso no son permisos. Es esperanza.
+
+Fix: encodeá rol + asignación en la herramienta, no en el chat. Si querés usar Slack para *notificación*, OK. Para *autorización*, no.
+
+### Anti-pattern 3: Sin audit trail para acciones cross-client
+
+Cuando un creative que trabaja en el Cliente A taggea accidentalmente a la audiencia del Cliente B, necesitás un registro de exactamente qué pasó, quién lo hizo, y cuándo. La mayoría de equipos no tiene ninguno.
+
+Fix: elegí una herramienta con audit logs inmutables a nivel de acción. Exportalos mensualmente.
+
+### Anti-pattern 4: Acceso filtrado de ex-empleados
+
+Seis meses después de que Juan se fue, su cuenta sigue activa porque nadie lo removió de ninguna herramienta. Sigue recibiendo notificaciones.
+
+Fix: offboarding checklist que revoca cada acceso a herramienta el mismo día. Probalo.
+
+## Cómo Blacknel encara esto
+
+Construimos Blacknel asumiendo que el RBAC de agencia tiene que ser granular sin ser complicado. Específicamente:
+
+- **Marcas como tenants:** cada cliente es una marca con datos aislados. Row-Level Security a nivel base de datos lo enforza. Ni un bug de software puede cruzar marcas.
+- **Asignación de rol por marca:** un Account Manager en el Cliente A puede ser Read-only viewer en el Cliente B. La matriz es explícita y visible.
+- **Audit logs por default:** cada acción se loggea con user, timestamp, IP y diff. Append-only. Export on demand.
+- **Approval workflows configurables por marca:** el Cliente A puede requerir revisión legal antes de publicar. El Cliente B no. Ambos viven en la misma herramienta con workflows distintos.
+
+La meta es que lo correcto — RBAC granular, acciones auditables, offboarding limpio — sea también lo default.
+
+## Cierre
+
+RBAC es el tipo de trabajo que no recibe aplausos hasta que algo falla. Las agencias que invierten en él antes de necesitarlo corren operaciones más limpias, ganan clientes más grandes y duermen mejor.
+
+Las agencias que no invierten en él eventualmente descubren por qué.

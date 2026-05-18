@@ -15,7 +15,7 @@ import { JsonLd, articleSchema } from '@/components/seo/structured-data';
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
 export async function generateStaticParams() {
-  const posts = await getAllPosts();
+  const posts = await getAllPosts('en');
   return posts.flatMap((p) => [
     { locale: 'es', slug: p.slug },
     { locale: 'en', slug: p.slug },
@@ -24,7 +24,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props) {
   const { locale, slug } = await params;
-  const post = await getPostBySlug(slug);
+  const post = await getPostBySlug(slug, locale);
   if (!post) return {};
   return buildMetadata({
     title: post.frontmatter.title,
@@ -40,10 +40,10 @@ export const revalidate = 3600;
 export default async function BlogPost({ params }: Props) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
-  const post = await getPostBySlug(slug);
+  const post = await getPostBySlug(slug, locale);
   if (!post) notFound();
   const t = await getTranslations({ locale, namespace: 'blog' });
-  const all = await getAllPosts();
+  const all = await getAllPosts(locale);
   const related = all.filter((p) => p.slug !== slug).slice(0, 2);
 
   return (

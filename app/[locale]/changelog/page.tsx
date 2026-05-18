@@ -29,7 +29,7 @@ export default async function ChangelogPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'changelog.hero' });
-  const entries = await getAllChangelog();
+  const entries = await getAllChangelog(locale);
 
   return (
     <>

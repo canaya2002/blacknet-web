@@ -1,0 +1,61 @@
+---
+title: '5 errores que las agencias cometen gestionando marcas multi-cliente'
+description: 'Tras auditar 40 agencias operando 200+ marcas, los mismos cinco errores operativos se repiten. Acá va el playbook para evitarlos.'
+date: '2026-03-14'
+author: 'Carlos Anaya Ruiz'
+tags: ['agencias', 'operaciones', 'playbook']
+coverImage: '/og/blog-agency.png'
+locale: 'es'
+---
+
+Las agencias que gestionan social y reputación para 5+ clientes chocan contra una pared alrededor del mes 18. El equipo está quemado, el tooling es un patchwork, y las cuentas se empiezan a caer. Auditamos 40 agencias en el último año. Los mismos cinco errores aparecen en el 90% de ellas.
+
+## Error 1: Una caja de herramientas por agencia, no por cliente
+
+La mayoría de agencias elige "la herramienta de agencia" una vez, y después fuerza a todos los clientes a entrar ahí. Mal movimiento. A los clientes no les importa tu herramienta — les importan resultados en su contexto específico.
+
+Lo que funciona: elegí una plataforma central de operaciones (inbox, publishing, reviews) para la agencia. Después agregás herramientas client-specific solo cuando el ROI sea claro (ej: una cadena de hoteles de lujo podría necesitar una plataforma de reviews especializada). La mayoría sobre-toolea. Las más fuertes corren lean.
+
+## Error 2: Sin aislamiento de datos multi-tenant
+
+Esto es un security issue disfrazado de productividad. Cuando un agente del equipo puede accidentalmente ver datos del Cliente B mientras responde al Cliente A, tenés un leak esperando pasar.
+
+Las agencias que escalan más allá de 20 clientes construyen RBAC desde el día uno: marcas como tenants, roles por marca, audit logs para cada acción cross-brand. Las que no lo hacen eventualmente se queman con un breach de NDA, una respuesta mal direccionada, o un cliente que se da cuenta del leak.
+
+## Error 3: Workflows de aprobación pegados con cinta por Slack
+
+Perdimos la cuenta de cuántas agencias aprueban contenido de cliente vía un thread de Slack con screenshots. Eso no es aprobación. Eso es teatro.
+
+Un approval workflow real necesita tres cosas:
+
+1. El contenido exacto que el cliente va a ver.
+2. Un registro timestamped de quién aprobó y cuándo.
+3. Un rollback si algo rompe post-publicación.
+
+Slack te da cero de estas. Construí approval dentro de tu herramienta, no en tu chat.
+
+## Error 4: Reporting que no sobrevive el QBR
+
+El primer QBR con un cliente suele ir muy bien. El segundo, menos. Para el tercero, los clientes preguntan "¿qué pagamos exactamente?"
+
+El problema usualmente no es tu trabajo — es tu reporting. Las agencias más fuertes construyen dashboards a los que el cliente puede acceder en cualquier momento. No PDFs. No screenshots. Datos en vivo con contexto.
+
+Si tu historia de reporting termina con "te mando un deck el lunes", tenés tarea.
+
+## Error 5: Sin memoria de brand voice
+
+Este es el error más caro porque compone. Cada nuevo account manager reescribe el brand voice doc. Cada nuevo junior escribe en su propio estilo. Seis meses adentro, la voz de tu cliente derivó, y el cliente lo nota.
+
+El fix es encodear brand voice en algún lugar al que el equipo — y tu IA — puedan llegar. Específicamente:
+
+- Un brand voice document vivo, owned por el client lead.
+- Ejemplos sample-driven (pares do/don't).
+- Un asistente IA entrenado en los últimos 200 posts de la marca.
+
+Es la inversión de mayor leverage que cualquier agencia puede hacer en 2026. No escala contratando más humanos.
+
+## Cierre
+
+Estos cinco errores no son exóticos. Son predecibles, comunes y solucionables. La mayoría de agencias los tolera demasiado tiempo porque cada uno se siente sobrevivible en aislamiento. Juntos, te ponen un techo en 8-12 clientes.
+
+Las agencias que arreglan los cinco corren rutinariamente 25-40 clientes por equipo de diez personas. La matemática es brutal pero confiable.
