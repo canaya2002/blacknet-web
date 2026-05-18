@@ -10,17 +10,25 @@ const KEY = 'blacknel-cookie-ack';
 
 export function CookieBanner() {
   const t = useTranslations('cookies.banner');
-  const [show, setShow] = useState(false);
+  // We start with `null` (unknown) so server-render matches the
+  // first client render (banner hidden). After mount we read localStorage
+  // and only flip to `true` if the user hasn't acknowledged.
+  const [show, setShow] = useState<boolean | null>(null);
 
   useEffect(() => {
+    // Reading localStorage is a browser-only side effect; we deliberately
+    // sync external storage state into React on mount.
+    let acknowledged = true;
     try {
-      if (!localStorage.getItem(KEY)) setShow(true);
+      acknowledged = Boolean(localStorage.getItem(KEY));
     } catch {
       // no localStorage available; do not show banner
     }
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setShow(!acknowledged);
   }, []);
 
-  if (!show) return null;
+  if (show !== true) return null;
 
   const dismiss = () => {
     try {

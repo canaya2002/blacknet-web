@@ -1236,16 +1236,38 @@
     "hero": {
       "eyebrow": "Prensa",
       "title": "Kit de prensa Blacknel",
-      "subtitle": "Recursos para medios, partners y eventos. ¿Cobertura específica? Escríbenos a press@blacknel.com"
+      "subtitle": "Recursos para medios, partners y eventos. ¿Cobertura específica? Escribinos a press@blacknel.com"
     },
     "logos": {
       "title": "Logos",
-      "description": "Descarga nuestro logo en SVG y PNG. Respeta clear space mínimo igual al símbolo.",
+      "description": "Descargá nuestro logo en SVG y PNG. Respetá clear space mínimo igual al símbolo.",
       "download": "Descargar pack"
     },
     "brand": {
       "title": "Brand guidelines",
-      "description": "Paleta, tipografía y tono. PDF de 8 páginas."
+      "description": "Paleta, tipografía y tono. PDF de 8 páginas con do/don't."
+    },
+    "boilerplate": {
+      "title": "Boilerplate",
+      "shortLabel": "Versión corta",
+      "short": "Blacknel es la plataforma AI-native que reúne inbox, publicación, reviews, anuncios y analítica en un solo plano de control. Construida para agencias, marcas multi-location y franquicias en LATAM y EE.UU.",
+      "longLabel": "Versión completa",
+      "long": "Blacknel es el sistema nervioso central para operaciones de marca digital. La plataforma unifica inbox, publicación, reviews y anuncios — con IA que respeta el tono de cada marca. Construida para agencias, marcas multi-location y franquicias en LATAM y EE.UU., Blacknel reemplaza herramientas como Hootsuite, Sprout Social y Birdeye en un solo workspace. Fundada en 2026 por Carlos Anaya Ruiz, la empresa tiene base en Ciudad de México."
+    },
+    "facts": {
+      "title": "Datos clave",
+      "items": [
+        { "label": "Fundada", "value": "Enero 2026" },
+        { "label": "Sede", "value": "Ciudad de México" },
+        { "label": "Founder", "value": "Carlos Anaya Ruiz" },
+        { "label": "Categoría", "value": "Marketing software · B2B SaaS" },
+        { "label": "Stage", "value": "Beta abierta · 40 cuentas piloto" },
+        { "label": "Contacto media", "value": "press@blacknel.com" }
+      ]
+    },
+    "coverage": {
+      "title": "Coverage",
+      "empty": "Próximamente. Si nos cubriste, escribinos para sumarte a esta sección."
     },
     "releases": {
       "title": "Comunicados",
@@ -1259,7 +1281,7 @@
     },
     "founder": {
       "title": "Bio del founder",
-      "body": "Carlos Anaya Ruiz, founder y CEO de Blacknel. Ingeniero con 10+ años construyendo producto en startups de LATAM. Vive en Ciudad de México."
+      "body": "Carlos Anaya Ruiz, founder y CEO de Blacknel. Ingeniero, operador y antiguo head of marketing de Bufete Manuel Solís (firma de inmigración multi-estado en EE.UU.). Antes de fundar Blacknel construyó equipos de SEO, paid media y analytics gestionando presencia digital en 10+ ubicaciones. Vive en Ciudad de México."
     }
   },
   "integrations": {
@@ -1358,20 +1380,72 @@
   "status": {
     "hero": {
       "eyebrow": "Status",
-      "title": "Todos los sistemas operativos",
+      "title": "Todos los sistemas funcionando",
       "subtitle": "Uptime de los últimos 90 días, actualizado en tiempo real."
     },
     "uptime": "Uptime",
+    "lastCheck": "Última verificación: hace 2 minutos",
+    "disclaimer": "Datos representativos hasta la integración completa con BetterStack en Q2 2026.",
     "components": {
       "api": "API",
       "app": "Aplicación web",
       "publishing": "Cola de publicación",
       "inbox": "Inbox (webhooks de redes)",
       "ai": "Gateway de IA",
-      "auth": "Autenticación"
+      "auth": "Autenticación",
+      "webhooks": "Webhooks delivery"
+    },
+    "uptimes": {
+      "api": "99.95%",
+      "app": "99.97%",
+      "publishing": "99.92%",
+      "inbox": "99.88%",
+      "ai": "99.99%",
+      "auth": "99.99%",
+      "webhooks": "99.92%"
     },
     "operational": "Operativo",
-    "history": "Historial reciente",
-    "noIncidents": "Sin incidentes en los últimos 90 días."
+    "history": "Incidentes recientes",
+    "noIncidents": "Sin incidentes en los últimos 30 días.",
+    "maintenance": "Próximas tareas de mantenimiento",
+    "noMaintenance": "Sin mantenimiento programado.",
+    "subscribe": {
+      "title": "Suscribite a alertas",
+      "body": "Para recibir notificaciones de incidentes y mantenimientos programados.",
+      "cta": "status-updates@blacknel.com"
+    }
+  },
+  "docs": {
+    "hero": {
+      "eyebrow": "Documentación",
+      "title": "Documentación pronto",
+      "subtitle": "Estamos terminando el SDK público y la documentación de API. Si necesitás acceso temprano, escribinos."
+    },
+    "cta": "Solicitar acceso a docs",
+    "what": {
+      "title": "Lo que llega en Q3 2026",
+      "items": [
+        "REST API reference completa — +50 endpoints documentados con ejemplos en cURL, TypeScript, Python",
+        "Webhooks guide — todos los events disponibles con payloads",
+        "SDK TypeScript — @blacknel/sdk instalable via npm",
+        "SDK Python — blacknel-python instalable via pip",
+        "Postman Collection — importable para testing",
+        "Guides multi-tenant — patterns recomendados para integraciones enterprise"
+      ]
+    },
+    "earlyAccess": {
+      "title": "Acceso early",
+      "body": "Si tu equipo necesita acceso a la API antes de Q3 2026, escribinos a sales@blacknel.com. Damos credentials beta a clientes Enterprise con use case definido."
+    },
+    "operational": {
+      "title": "Mientras tanto · temas operativos del producto",
+      "items": [
+        "Inbox setup — guía paso-a-paso para conectar canales",
+        "Approval workflows — cómo configurar multi-level approvals",
+        "AI brand voice training — best practices para entrenar la IA",
+        "RBAC playbook — patterns para agencies y multi-location chains"
+      ]
+    },
+    "sampleTitle": "Sample code"
   }
 }

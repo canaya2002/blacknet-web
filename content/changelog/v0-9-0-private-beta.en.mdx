@@ -1,0 +1,22 @@
+---
+title: 'v0.9.0 — Private Beta'
+description: 'Closed private beta with 20 pilot accounts. Critical insights from agencies, DTC, and multi-location.'
+date: '2026-05-01'
+author: 'Blacknel Team'
+tags: ['beta']
+locale: 'en'
+---
+
+We closed private beta with 20 pilot accounts (10 agencies, 5 DTC, 5 multi-location). Critical insights:
+
+- Inbox response time dropped 62% on average vs prior tool
+- 15 hours/week recovered at agencies with 8+ brands
+- Crisis detection AI caught 3 incidents before they escalated
+
+## Technical changes
+
+- Migrated from mocks to production Supabase Postgres
+- Full auth with magic links via Supabase Auth
+- Dynamic RLS policies on 4 critical tables
+- Sentry + PostHog in production
+- SLA monitoring activated

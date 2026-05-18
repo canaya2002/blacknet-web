@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   ArrowRight,
   BookOpen,
@@ -39,8 +39,12 @@ export function Header() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  const previousPathnameRef = useRef(pathname);
   useEffect(() => {
-    setOpen(false);
+    if (previousPathnameRef.current !== pathname) {
+      previousPathnameRef.current = pathname;
+      setOpen(false);
+    }
   }, [pathname]);
 
   const productItems = [

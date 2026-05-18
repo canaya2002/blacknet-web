@@ -2,6 +2,7 @@
 
 import { motion } from 'motion/react';
 import { Check } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { VisualFrame } from './frame';
 
 const tiers = [
@@ -26,6 +27,9 @@ const tiers = [
 ];
 
 export function PricingHeroVisual() {
+  const tc = useTranslations('common');
+  const popularLabel = tc('mostPopular');
+  const trialLabel = tc('trial.noCard').includes('14') ? '14-day trial' : tc('trial.noCard');
   return (
     <VisualFrame glow="blue">
       <div className="relative flex flex-col gap-3 rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.04] to-white/[0.01] p-4 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)] backdrop-blur-xl">
@@ -75,9 +79,9 @@ export function PricingHeroVisual() {
             {tier.highlight && (
               <div className="relative mt-3 flex items-center justify-between border-t border-white/[0.06] pt-3">
                 <span className="rounded-full border border-white/15 bg-white/10 px-2 py-0.5 mono text-[9px] uppercase tracking-wider text-white">
-                  Most popular
+                  {popularLabel}
                 </span>
-                <span className="mono text-[10px] text-zinc-400">14-day trial</span>
+                <span className="mono text-[10px] text-zinc-400">{trialLabel}</span>
               </div>
             )}
           </motion.div>

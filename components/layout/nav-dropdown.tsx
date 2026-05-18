@@ -1,7 +1,7 @@
 'use client';
 
 import { ChevronDown } from 'lucide-react';
-import { useState, type ReactNode } from 'react';
+import { useRef, useState, type ReactNode } from 'react';
 import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 
@@ -29,17 +29,17 @@ export function NavDropdown({
   };
 }) {
   const [open, setOpen] = useState(false);
-  let closeTimeout: ReturnType<typeof setTimeout> | undefined;
+  const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const cancelClose = () => {
-    if (closeTimeout) {
-      clearTimeout(closeTimeout);
-      closeTimeout = undefined;
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
     }
   };
   const scheduleClose = () => {
     cancelClose();
-    closeTimeout = setTimeout(() => setOpen(false), 120);
+    closeTimeoutRef.current = setTimeout(() => setOpen(false), 120);
   };
 
   return (

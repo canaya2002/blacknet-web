@@ -78,6 +78,52 @@ function PressBody({ locale }: { locale: string }) {
       </section>
 
       <section className="container-page py-12">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+          <FadeInOnScroll className="lg:col-span-2">
+            <div className="rounded-2xl border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-7 backdrop-blur-md md:p-9">
+              <h3 className="text-lg font-semibold text-[color:var(--color-fg)]">
+                {t('boilerplate.title')}
+              </h3>
+              <div className="mt-5 space-y-5 text-sm">
+                <div>
+                  <p className="mono text-[10px] uppercase tracking-wider text-[color:var(--color-fg-tertiary)]">
+                    {t('boilerplate.shortLabel')}
+                  </p>
+                  <p className="mt-2 text-[color:var(--color-fg)]">{t('boilerplate.short')}</p>
+                </div>
+                <div>
+                  <p className="mono text-[10px] uppercase tracking-wider text-[color:var(--color-fg-tertiary)]">
+                    {t('boilerplate.longLabel')}
+                  </p>
+                  <p className="mt-2 leading-relaxed text-[color:var(--color-fg-secondary)]">
+                    {t('boilerplate.long')}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </FadeInOnScroll>
+
+          <FadeInOnScroll delay={0.05}>
+            <div className="rounded-2xl border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-7 backdrop-blur-md">
+              <h3 className="text-lg font-semibold text-[color:var(--color-fg)]">
+                {t('facts.title')}
+              </h3>
+              <dl className="mt-5 space-y-3 text-sm">
+                {(t.raw('facts.items') as { label: string; value: string }[]).map((f) => (
+                  <div key={f.label} className="flex items-start justify-between gap-3">
+                    <dt className="mono text-[10px] uppercase tracking-wider text-[color:var(--color-fg-tertiary)]">
+                      {f.label}
+                    </dt>
+                    <dd className="text-right text-[color:var(--color-fg)]">{f.value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </FadeInOnScroll>
+        </div>
+      </section>
+
+      <section className="container-page py-12">
         <h2 className="mb-6 text-2xl font-semibold tracking-tight text-[color:var(--color-fg)]">
           {t('releases.title')}
         </h2>
@@ -95,6 +141,15 @@ function PressBody({ locale }: { locale: string }) {
               </GlowCard>
             </FadeInOnScroll>
           ))}
+        </div>
+      </section>
+
+      <section className="container-page py-12">
+        <h2 className="mb-6 text-2xl font-semibold tracking-tight text-[color:var(--color-fg)]">
+          {t('coverage.title')}
+        </h2>
+        <div className="rounded-2xl border border-dashed border-[color:var(--color-border)] bg-[color:var(--color-card)]/50 p-8 text-center backdrop-blur">
+          <p className="text-sm text-[color:var(--color-fg-tertiary)]">{t('coverage.empty')}</p>
         </div>
       </section>
 

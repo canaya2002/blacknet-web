@@ -1245,7 +1245,29 @@
     },
     "brand": {
       "title": "Brand guidelines",
-      "description": "Palette, typography, and tone. 8-page PDF."
+      "description": "Palette, typography, and tone. 8-page PDF with do/don't."
+    },
+    "boilerplate": {
+      "title": "Boilerplate",
+      "shortLabel": "Short version",
+      "short": "Blacknel is the AI-native platform that brings inbox, publishing, reviews, ads, and analytics into a single control plane. Built for agencies, multi-location brands, and franchises across LATAM and the US.",
+      "longLabel": "Full version",
+      "long": "Blacknel is the central nervous system for digital brand operations. The platform unifies inbox, publishing, reviews, and ads — with AI that respects every brand's voice. Built for agencies, multi-location brands, and franchises across LATAM and the US, Blacknel replaces tools like Hootsuite, Sprout Social, and Birdeye in a single workspace. Founded in 2026 by Carlos Anaya Ruiz, the company is based in Mexico City."
+    },
+    "facts": {
+      "title": "Key facts",
+      "items": [
+        { "label": "Founded", "value": "January 2026" },
+        { "label": "Headquarters", "value": "Mexico City" },
+        { "label": "Founder", "value": "Carlos Anaya Ruiz" },
+        { "label": "Category", "value": "Marketing software · B2B SaaS" },
+        { "label": "Stage", "value": "Open beta · 40 pilot accounts" },
+        { "label": "Media contact", "value": "press@blacknel.com" }
+      ]
+    },
+    "coverage": {
+      "title": "Coverage",
+      "empty": "Coming soon. If you covered us, email us to add your piece to this section."
     },
     "releases": {
       "title": "Press releases",
@@ -1259,7 +1281,7 @@
     },
     "founder": {
       "title": "Founder bio",
-      "body": "Carlos Anaya Ruiz, founder and CEO of Blacknel. Engineer with 10+ years building product at LATAM startups. Lives in Mexico City."
+      "body": "Carlos Anaya Ruiz, founder and CEO of Blacknel. Engineer, operator, and former head of marketing at Bufete Manuel Solís (a multi-state US immigration firm). Before founding Blacknel, he built SEO, paid media, and analytics teams managing digital presence across 10+ locations. Based in Mexico City."
     }
   },
   "integrations": {
@@ -1362,16 +1384,68 @@
       "subtitle": "Uptime for the last 90 days, updated in real time."
     },
     "uptime": "Uptime",
+    "lastCheck": "Last check: 2 minutes ago",
+    "disclaimer": "Representative data until full BetterStack integration in Q2 2026.",
     "components": {
       "api": "API",
       "app": "Web application",
       "publishing": "Publishing queue",
       "inbox": "Inbox (network webhooks)",
       "ai": "AI gateway",
-      "auth": "Authentication"
+      "auth": "Authentication",
+      "webhooks": "Webhooks delivery"
+    },
+    "uptimes": {
+      "api": "99.95%",
+      "app": "99.97%",
+      "publishing": "99.92%",
+      "inbox": "99.88%",
+      "ai": "99.99%",
+      "auth": "99.99%",
+      "webhooks": "99.92%"
     },
     "operational": "Operational",
-    "history": "Recent history",
-    "noIncidents": "No incidents in the last 90 days."
+    "history": "Recent incidents",
+    "noIncidents": "No incidents in the last 30 days.",
+    "maintenance": "Scheduled maintenance",
+    "noMaintenance": "No scheduled maintenance.",
+    "subscribe": {
+      "title": "Subscribe to alerts",
+      "body": "Receive notifications for incidents and scheduled maintenance.",
+      "cta": "status-updates@blacknel.com"
+    }
+  },
+  "docs": {
+    "hero": {
+      "eyebrow": "Documentation",
+      "title": "Documentation coming soon",
+      "subtitle": "We're finishing the public SDK and API docs. If you need early access, write us."
+    },
+    "cta": "Request docs access",
+    "what": {
+      "title": "Shipping in Q3 2026",
+      "items": [
+        "Full REST API reference — 50+ endpoints documented with cURL, TypeScript, Python examples",
+        "Webhooks guide — all available events with payloads",
+        "TypeScript SDK — @blacknel/sdk installable via npm",
+        "Python SDK — blacknel-python installable via pip",
+        "Postman Collection — importable for testing",
+        "Multi-tenant guides — recommended patterns for enterprise integrations"
+      ]
+    },
+    "earlyAccess": {
+      "title": "Early access",
+      "body": "If your team needs API access before Q3 2026, email sales@blacknel.com. We give beta credentials to Enterprise customers with a defined use case."
+    },
+    "operational": {
+      "title": "Meanwhile · operational product topics",
+      "items": [
+        "Inbox setup — step-by-step guide to connecting channels",
+        "Approval workflows — how to configure multi-level approvals",
+        "AI brand voice training — best practices for training the AI",
+        "RBAC playbook — patterns for agencies and multi-location chains"
+      ]
+    },
+    "sampleTitle": "Sample code"
   }
 }
