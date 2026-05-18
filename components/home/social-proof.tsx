@@ -5,19 +5,21 @@ import { FadeInOnScroll } from '@/components/animations/fade-in-on-scroll';
 import { Marquee } from '@/components/animations/marquee';
 import { GlowCard } from '@/components/aceternity/card-hover';
 
-const logos = [
-  'Studio Norte',
-  'Cafetería Nube',
-  'Grupo Loma',
-  'Aurum Capital',
-  'Volar Travel',
-  'Naranja Studio',
-  'Magnolia Brands',
-  'Coral Hotels',
-  'Holos Health',
-  'Verde Foods',
-  'Lume Cosmetics',
-  'Norte Logistics',
+type LogoVariant = { name: string; className: string };
+
+const logos: LogoVariant[] = [
+  { name: 'STUDIO·NORTE', className: 'mono font-medium tracking-[0.18em]' },
+  { name: 'Cafetería Nube', className: 'font-serif italic font-light tracking-wide' },
+  { name: 'GRUPO LOMA', className: 'font-bold tracking-tighter' },
+  { name: 'AURUM', className: 'font-serif font-medium tracking-[0.32em] uppercase' },
+  { name: 'volar·travel', className: 'font-light tracking-wide' },
+  { name: 'naranja', className: 'mono font-semibold lowercase' },
+  { name: 'MAGNOLIA', className: 'font-serif font-bold tracking-[0.14em]' },
+  { name: 'CORAL HOTELS', className: 'font-light tracking-[0.22em]' },
+  { name: 'holos health', className: 'font-medium tracking-tight' },
+  { name: 'VERDE FOODS', className: 'mono font-semibold tracking-[0.18em]' },
+  { name: 'Lume', className: 'font-serif font-bold tracking-[0.1em]' },
+  { name: 'NORTE/LOGISTICS', className: 'mono font-light tracking-wider' },
 ];
 
 export function SocialProof() {
@@ -35,10 +37,10 @@ export function SocialProof() {
           <Marquee>
             {logos.map((l) => (
               <span
-                key={l}
-                className="mono whitespace-nowrap text-lg text-[color:var(--color-fg-tertiary)] hover:text-[color:var(--color-fg-secondary)] transition-colors"
+                key={l.name}
+                className={`whitespace-nowrap text-lg text-[color:var(--color-fg-tertiary)] transition-colors hover:text-[color:var(--color-fg)] ${l.className}`}
               >
-                {l}
+                {l.name}
               </span>
             ))}
           </Marquee>

@@ -4,9 +4,11 @@ import { JsonLd, faqSchema } from '@/components/seo/structured-data';
 import { Hero } from '@/components/home/hero';
 import { FeaturesBento } from '@/components/home/features-bento';
 import { HowItWorks } from '@/components/home/how-it-works';
+import { TechStack } from '@/components/home/tech-stack';
 import { SocialProof } from '@/components/home/social-proof';
 import { PricingPreview } from '@/components/home/pricing-preview';
 import { Faq } from '@/components/home/faq';
+import { NewsletterInline } from '@/components/home/newsletter-inline';
 import { CtaSection } from '@/components/home/cta-section';
 
 type Props = { params: Promise<{ locale: string }> };
@@ -34,9 +36,11 @@ export default async function HomePage({ params }: Props) {
       <Hero />
       <FeaturesBento />
       <HowItWorks />
+      <TechStack />
       <SocialProof />
       <PricingPreview />
       <Faq />
+      <NewsletterInline />
       <CtaSection />
     </div>
   );

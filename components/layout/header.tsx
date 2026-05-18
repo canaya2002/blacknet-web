@@ -46,53 +46,53 @@ export function Header() {
   const productItems = [
     {
       title: t('features'),
-      description: 'Inbox, publishing, reviews, ads, AI',
+      description: t('descriptions.features'),
       href: '/features',
       icon: <Sparkles className="h-3.5 w-3.5" />,
     },
     {
       title: t('pricing'),
-      description: 'Plans starting at $69/mo',
+      description: t('descriptions.pricing'),
       href: '/pricing',
       icon: <LineChart className="h-3.5 w-3.5" />,
     },
     {
       title: t('integrations'),
-      description: '32+ official integrations',
+      description: t('descriptions.integrations'),
       href: '/integrations',
       icon: <Plug className="h-3.5 w-3.5" />,
     },
     {
       title: t('changelog'),
-      description: 'Latest releases and ships',
+      description: t('descriptions.changelog'),
       href: '/changelog',
       icon: <Calendar className="h-3.5 w-3.5" />,
-      badge: 'New',
+      badge: t('badges.new'),
     },
   ];
 
   const resourcesItems = [
     {
       title: t('blog'),
-      description: 'Playbooks and field notes',
+      description: t('descriptions.blog'),
       href: '/blog',
       icon: <Newspaper className="h-3.5 w-3.5" />,
     },
     {
       title: t('customers'),
-      description: 'Case studies with real numbers',
+      description: t('descriptions.customers'),
       href: '/customers',
       icon: <Inbox className="h-3.5 w-3.5" />,
     },
     {
       title: t('docs'),
-      description: 'Developer documentation',
+      description: t('descriptions.docs'),
       href: '/docs',
       icon: <BookOpen className="h-3.5 w-3.5" />,
     },
     {
       title: t('security'),
-      description: 'Compliance and architecture',
+      description: t('descriptions.security'),
       href: '/security',
       icon: <ShieldCheck className="h-3.5 w-3.5" />,
     },
@@ -101,25 +101,25 @@ export function Header() {
   const companyItems = [
     {
       title: t('about'),
-      description: 'Mission, vision, team',
+      description: t('descriptions.about'),
       href: '/about',
       icon: <Building2 className="h-3.5 w-3.5" />,
     },
     {
       title: t('careers'),
-      description: '3 open roles · LATAM remote',
+      description: t('descriptions.careers'),
       href: '/careers',
       icon: <Users2 className="h-3.5 w-3.5" />,
     },
     {
       title: t('press'),
-      description: 'Press kit and brand assets',
+      description: t('descriptions.press'),
       href: '/press',
       icon: <ScrollText className="h-3.5 w-3.5" />,
     },
     {
       title: t('contact'),
-      description: 'Sales, support, partnerships',
+      description: t('descriptions.contact'),
       href: '/contact',
       icon: <ArrowRight className="h-3.5 w-3.5" />,
     },
@@ -167,9 +167,11 @@ export function Header() {
               label={t('product')}
               items={productItems}
               cta={{
-                title: t('features'),
-                description: 'Unified inbox, social, reviews, ads, AI — one plane.',
+                title: t('featured.title'),
+                description: t('featured.description'),
                 href: '/features',
+                eyebrow: t('featured.label'),
+                ctaLabel: t('featured.cta'),
               }}
             />
             <NavDropdown label={t('resources')} items={resourcesItems} />

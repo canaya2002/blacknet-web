@@ -20,7 +20,13 @@ export function NavDropdown({
 }: {
   label: string;
   items: Item[];
-  cta?: { title: string; description: string; href: string };
+  cta?: {
+    title: string;
+    description: string;
+    href: string;
+    eyebrow?: string;
+    ctaLabel?: string;
+  };
 }) {
   const [open, setOpen] = useState(false);
   let closeTimeout: ReturnType<typeof setTimeout> | undefined;
@@ -125,7 +131,7 @@ export function NavDropdown({
                 />
                 <div className="relative flex h-full flex-col gap-2">
                   <span className="mono text-[10px] uppercase tracking-wider text-[color:var(--color-fg-tertiary)]">
-                    Featured
+                    {cta.eyebrow ?? 'Featured'}
                   </span>
                   <span className="text-sm font-medium text-[color:var(--color-fg)]">
                     {cta.title}
@@ -134,7 +140,7 @@ export function NavDropdown({
                     {cta.description}
                   </span>
                   <span className="mt-auto mono text-[11px] text-[color:var(--color-fg-secondary)] group-hover:text-white">
-                    Read more →
+                    {cta.ctaLabel ?? 'Read more →'}
                   </span>
                 </div>
               </Link>

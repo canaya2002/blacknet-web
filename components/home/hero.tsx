@@ -8,17 +8,22 @@ import { AnimatedShinyText } from '@/components/magic/animated-shiny-text';
 import { Marquee } from '@/components/animations/marquee';
 import { HeroMockup } from './hero-mockup';
 
-const trustLogos = [
-  'Studio Norte',
-  'Cafetería Nube',
-  'Grupo Loma',
-  'Aurum Capital',
-  'Volar Travel',
-  'Naranja Studio',
-  'Magnolia Brands',
-  'Coral Hotels',
-  'Holos Health',
-  'Verde Foods',
+type TrustLogo = {
+  name: string;
+  className: string;
+};
+
+const trustLogos: TrustLogo[] = [
+  { name: 'STUDIO·NORTE', className: 'mono font-medium tracking-[0.18em]' },
+  { name: 'Cafetería Nube', className: 'font-serif italic font-light tracking-wide' },
+  { name: 'GRUPO LOMA', className: 'font-bold tracking-tighter' },
+  { name: 'AURUM', className: 'font-serif font-medium tracking-[0.32em] uppercase' },
+  { name: 'volar·travel', className: 'font-light tracking-wide' },
+  { name: 'naranja', className: 'mono font-semibold lowercase' },
+  { name: 'MAGNOLIA', className: 'font-serif font-bold tracking-[0.14em]' },
+  { name: 'CORAL HOTELS', className: 'font-light tracking-[0.22em]' },
+  { name: 'holos health', className: 'font-medium tracking-tight' },
+  { name: 'VERDE FOODS', className: 'mono font-semibold tracking-[0.18em]' },
 ];
 
 export function Hero() {
@@ -32,8 +37,8 @@ export function Hero() {
 
       <div className="container-page relative z-10">
         <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
-          <a
-            href="#"
+          <Link
+            href="/changelog"
             className="group inline-flex items-center gap-2 rounded-full border border-[color:var(--color-border)] bg-[color:var(--color-card)] px-3.5 py-1.5 text-xs backdrop-blur-md transition-colors hover:border-[color:var(--color-border-hover)]"
           >
             <span className="relative inline-flex h-1.5 w-1.5">
@@ -42,7 +47,7 @@ export function Hero() {
             </span>
             <AnimatedShinyText>{t('badge')}</AnimatedShinyText>
             <ArrowRight className="h-3 w-3 text-[color:var(--color-fg-tertiary)] transition-transform group-hover:translate-x-0.5" />
-          </a>
+          </Link>
 
           <h1 className="mt-6 text-balance text-5xl font-semibold tracking-[-0.04em] text-gradient md:text-7xl lg:text-[88px] lg:leading-[0.95]">
             {t('title')}
@@ -78,12 +83,12 @@ export function Hero() {
           {t('trustBar')}
         </p>
         <Marquee speed="slow">
-          {trustLogos.map((name) => (
+          {trustLogos.map((logo) => (
             <span
-              key={name}
-              className="mono whitespace-nowrap text-base text-[color:var(--color-fg-tertiary)] hover:text-[color:var(--color-fg-secondary)] transition-colors"
+              key={logo.name}
+              className={`whitespace-nowrap text-lg text-[color:var(--color-fg-tertiary)] transition-colors hover:text-[color:var(--color-fg)] ${logo.className}`}
             >
-              {name}
+              {logo.name}
             </span>
           ))}
         </Marquee>

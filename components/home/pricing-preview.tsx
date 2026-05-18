@@ -34,9 +34,9 @@ export function PricingPreview() {
               <FadeInOnScroll key={tier.key} delay={i * 0.08}>
                 <div
                   className={cn(
-                    'relative flex h-full flex-col gap-6 rounded-2xl border p-7 backdrop-blur-md transition-colors',
+                    'relative flex h-full flex-col gap-6 rounded-2xl border p-7 backdrop-blur-md transition-all',
                     tier.highlight
-                      ? 'border-white/20 bg-[color:var(--color-card-hover)] shadow-[0_0_60px_-12px_rgba(255,255,255,0.18)]'
+                      ? 'z-10 border-white/25 bg-[color:var(--color-card-hover)] shadow-[0_0_60px_-12px_rgba(255,255,255,0.25)] ring-1 ring-white/10 md:scale-[1.03]'
                       : 'border-[color:var(--color-border)] bg-[color:var(--color-card)] hover:border-[color:var(--color-border-hover)]',
                   )}
                 >

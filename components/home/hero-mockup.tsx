@@ -2,6 +2,7 @@
 
 import { motion } from 'motion/react';
 import { Calendar, CheckCircle2, MessageSquare, Sparkles, TrendingUp } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 const channels = [
   { name: 'Instagram', color: 'from-pink-500 to-purple-500', initial: 'IG' },
@@ -18,6 +19,7 @@ const inboxItems = [
 ];
 
 export function HeroMockup() {
+  const t = useTranslations('home.heroMockup');
   return (
     <div
       className="relative mx-auto w-full max-w-5xl"
@@ -65,7 +67,7 @@ export function HeroMockup() {
                   <span className="absolute inset-0 animate-ping rounded-full bg-emerald-400/60" />
                   <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
                 </span>
-                live
+                {t('live')}
               </span>
             </div>
           </div>
@@ -75,7 +77,7 @@ export function HeroMockup() {
             {/* Sidebar */}
             <div className="col-span-3 hidden flex-col gap-1 bg-[#0a0a0a] p-3 md:flex">
               <p className="px-2 pb-2 mono text-[9px] uppercase tracking-wider text-zinc-600">
-                Brands
+                {t('brands')}
               </p>
               {['Studio Norte', 'Cafetería Nube', 'Grupo Loma', 'Aurum Capital'].map((b, i) => (
                 <div
@@ -94,7 +96,7 @@ export function HeroMockup() {
               ))}
               <div className="my-2 h-px bg-white/[0.05]" />
               <p className="px-2 pb-2 mono text-[9px] uppercase tracking-wider text-zinc-600">
-                Channels
+                {t('channels')}
               </p>
               {channels.map((c) => (
                 <div key={c.name} className="flex items-center gap-2 rounded-md px-2 py-1 text-[11px] text-zinc-400">
@@ -111,9 +113,9 @@ export function HeroMockup() {
             {/* Inbox list */}
             <div className="col-span-12 flex flex-col bg-[#0a0a0a] md:col-span-4">
               <div className="flex items-center justify-between border-b border-white/[0.04] px-4 py-3">
-                <p className="text-xs font-medium text-white">Inbox</p>
+                <p className="text-xs font-medium text-white">{t('inbox')}</p>
                 <span className="rounded-full border border-white/10 bg-white/[0.04] px-2 py-0.5 mono text-[9px] text-zinc-400">
-                  3 new
+                  {t('newCount', { n: 3 })}
                 </span>
               </div>
               {inboxItems.map((m, i) => (
@@ -193,7 +195,7 @@ export function HeroMockup() {
                   <div className="mb-1.5 flex items-center gap-1.5">
                     <Sparkles className="h-2.5 w-2.5 text-white" />
                     <span className="mono text-[9px] uppercase tracking-wider text-zinc-400">
-                      AI suggestion · brand voice
+                      {t('aiSuggestion')}
                     </span>
                   </div>
                   <p className="text-[11px] leading-relaxed text-white">
@@ -201,14 +203,14 @@ export function HeroMockup() {
                     envío a todo CDMX. ¿Quieres que te comparta la liga directa? ✨
                   </p>
                   <div className="mt-2 flex gap-1.5">
-                    <button className="rounded-md border border-white/10 bg-white px-2 py-0.5 mono text-[9px] font-semibold text-black">
-                      Send
+                    <button type="button" className="rounded-md border border-white/10 bg-white px-2 py-0.5 mono text-[9px] font-semibold text-black">
+                      {t('send')}
                     </button>
-                    <button className="rounded-md border border-white/10 px-2 py-0.5 mono text-[9px] text-zinc-400">
-                      Edit
+                    <button type="button" className="rounded-md border border-white/10 px-2 py-0.5 mono text-[9px] text-zinc-400">
+                      {t('edit')}
                     </button>
-                    <button className="rounded-md border border-white/10 px-2 py-0.5 mono text-[9px] text-zinc-400">
-                      Regenerate
+                    <button type="button" className="rounded-md border border-white/10 px-2 py-0.5 mono text-[9px] text-zinc-400">
+                      {t('regenerate')}
                     </button>
                   </div>
                 </motion.div>
@@ -216,7 +218,7 @@ export function HeroMockup() {
 
               <div className="border-t border-white/[0.04] px-4 py-2">
                 <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.02] px-3 py-1.5">
-                  <span className="mono text-[10px] text-zinc-600">Type a reply…</span>
+                  <span className="mono text-[10px] text-zinc-600">{t('typeReply')}</span>
                 </div>
               </div>
             </div>
@@ -234,13 +236,13 @@ export function HeroMockup() {
           <div className="flex items-center gap-2">
             <TrendingUp className="h-3 w-3 text-emerald-400" />
             <span className="mono text-[9px] uppercase tracking-wider text-zinc-500">
-              response time
+              {t('responseTime')}
             </span>
           </div>
           <p className="text-2xl font-semibold tracking-tight text-white">
             -62<span className="text-emerald-400">%</span>
           </p>
-          <p className="text-[10px] text-zinc-500">vs. last month</p>
+          <p className="text-[10px] text-zinc-500">{t('vsLastMonth')}</p>
         </motion.div>
 
         {/* Floating publish card — bottom left */}
@@ -254,7 +256,7 @@ export function HeroMockup() {
           <div className="flex items-center gap-2">
             <Calendar className="h-3 w-3 text-sky-400" />
             <span className="mono text-[9px] uppercase tracking-wider text-zinc-500">
-              scheduled today
+              {t('scheduledToday')}
             </span>
           </div>
           <div className="flex items-center gap-1.5">
@@ -272,7 +274,7 @@ export function HeroMockup() {
           </div>
           <div className="flex items-center gap-1.5 rounded-md bg-white/[0.04] px-2 py-1">
             <CheckCircle2 className="h-2.5 w-2.5 text-emerald-400" />
-            <span className="text-[10px] text-zinc-300">12 posts · 7 brands</span>
+            <span className="text-[10px] text-zinc-300">{t('postsAcrossBrands', { posts: 12, brands: 7 })}</span>
           </div>
         </motion.div>
 
@@ -285,7 +287,7 @@ export function HeroMockup() {
           style={{ transform: 'translateY(-50%) translateZ(80px)' }}
         >
           <Sparkles className="h-3 w-3 text-white" />
-          <span className="mono text-[10px] text-white">brand voice · 96%</span>
+          <span className="mono text-[10px] text-white">{t('brandVoiceScore')}</span>
         </motion.div>
 
         {/* Mention chip — top left */}
@@ -297,7 +299,7 @@ export function HeroMockup() {
           style={{ transform: 'translateZ(60px)' }}
         >
           <MessageSquare className="h-3 w-3 text-sky-400" />
-          <span className="mono text-[10px] text-zinc-300">+184 mentions / 24h</span>
+          <span className="mono text-[10px] text-zinc-300">{t('mentions')}</span>
         </motion.div>
       </div>
     </div>

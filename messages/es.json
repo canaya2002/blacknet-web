@@ -46,7 +46,30 @@
     "contact": "Contacto",
     "press": "Prensa",
     "menu": "Menú",
-    "closeMenu": "Cerrar menú"
+    "closeMenu": "Cerrar menú",
+    "descriptions": {
+      "features": "Inbox, publicación, reviews, anuncios e IA",
+      "pricing": "Planes desde $69 USD al mes",
+      "integrations": "+32 integraciones oficiales",
+      "changelog": "Últimos lanzamientos y mejoras",
+      "blog": "Playbooks y notas de campo",
+      "customers": "Casos de estudio con números reales",
+      "docs": "Documentación para desarrolladores",
+      "security": "Compliance y arquitectura",
+      "about": "Misión, visión y equipo",
+      "careers": "3 vacantes abiertas · LATAM remote",
+      "press": "Kit de prensa y assets de marca",
+      "contact": "Ventas, soporte y partnerships"
+    },
+    "featured": {
+      "label": "Destacado",
+      "title": "Funcionalidades",
+      "description": "Inbox, social, reviews, anuncios e IA — un solo plano.",
+      "cta": "Conocer más →"
+    },
+    "badges": {
+      "new": "Nuevo"
+    }
   },
   "footer": {
     "tagline": "Una plataforma para tu presencia digital completa.",
@@ -57,7 +80,7 @@
     "legal": "Legal",
     "connect": "Conectar",
     "rights": "Todos los derechos reservados.",
-    "status": "Todos los sistemas operativos",
+    "status": "Todos los sistemas funcionando",
     "privacy": "Privacidad",
     "terms": "Términos",
     "cookies": "Cookies",
@@ -69,10 +92,28 @@
     "hero": {
       "badge": "Lanzamiento beta abierta",
       "title": "Toda tu presencia digital. Operada con IA.",
-      "subtitle": "Blacknel reúne inbox, publicación, reviews, anuncios y analítica en un solo plano de control. Construido para agencias, cadenas multi-sucursal y marcas en LATAM y EE.UU.",
+      "subtitle": "El sistema nervioso central de tu operación social. Inbox unificado, publicación multi-canal, reputación y anuncios — orquestados por IA que respeta el tono de cada marca.",
       "ctaPrimary": "Empieza gratis por 14 días",
-      "ctaSecondary": "Ver demo",
+      "ctaSecondary": "Solicitar demo",
       "trustBar": "Construido con confianza por equipos en"
+    },
+    "heroMockup": {
+      "live": "en vivo",
+      "brands": "Marcas",
+      "channels": "Canales",
+      "inbox": "Bandeja",
+      "newCount": "{n} nuevos",
+      "aiSuggestion": "Sugerencia IA · tono de marca",
+      "send": "Enviar",
+      "edit": "Editar",
+      "regenerate": "Regenerar",
+      "typeReply": "Escribe una respuesta…",
+      "responseTime": "tiempo de respuesta",
+      "vsLastMonth": "vs. mes pasado",
+      "scheduledToday": "agendado hoy",
+      "postsAcrossBrands": "{posts} publicaciones · {brands} marcas",
+      "brandVoiceScore": "tono de marca · 96%",
+      "mentions": "+184 menciones / 24h"
     },
     "features": {
       "eyebrow": "Plataforma unificada",
@@ -164,31 +205,49 @@
       "questions": [
         {
           "q": "¿Realmente necesito tarjeta para probar?",
-          "a": "No. La prueba de 14 días es totalmente abierta. Si te gusta, eliges plan y pagas. Si no, simplemente expira."
+          "a": "No. Tu trial de 14 días arranca con un email corporativo. Te avisamos 3 días antes del fin del trial para que decidas si suscribís o no. Sin auto-charge, sin sorpresas."
         },
         {
           "q": "¿Soportan WhatsApp Business oficial?",
-          "a": "Sí. Conectamos vía la API oficial de WhatsApp Business Platform (cloud-hosted). Sin números intermediarios ni riesgo de baneo."
+          "a": "Sí. Conectamos vía la WhatsApp Business Cloud API oficial de Meta. Esto significa que vas a poder responder, automatizar y reportar sobre WhatsApp con el mismo nivel de compliance que usa cualquier marca enterprise. Si tu número aún no está en WhatsApp Business, te ayudamos en el onboarding."
         },
         {
           "q": "¿Mi equipo de agencia puede gestionar marcas de varios clientes?",
-          "a": "Sí. Blacknel está construido multi-tenant desde el día uno. Los datos de cada marca viven aislados, con RBAC granular y opciones de white label."
+          "a": "Sí. Blacknel está pensado primero para agencias. Cada cliente vive como una marca aislada con sus propias cuentas conectadas, su propio inbox y sus propios reportes. El plan Growth incluye 10 marcas. Enterprise es ilimitado. Las agencias pueden filtrar dashboards por marca o consolidar la operación multi-cliente desde un solo control central."
         },
         {
           "q": "¿Cómo manejan compliance en México?",
-          "a": "Cumplimos con LFPDPPP (México), GDPR (UE) y CCPA (California). Tenemos DPA disponible, retention policies configurables y residencia de datos en negociación enterprise."
+          "a": "Cumplimos LFPDPPP (México), GDPR (Unión Europea) y CCPA (California). Nuestro contrato standard incluye DPA firmable y SCC (cláusulas contractuales tipo) cuando el cliente requiere transferencia internacional de datos. SOC 2 Type II está en proceso de auditoría con cierre estimado en Q3 2026."
         },
         {
           "q": "¿Tienen API pública?",
-          "a": "El plan Enterprise incluye API REST + webhooks. Por ahora la documentación es bajo NDA mientras estabilizamos endpoints durante la beta."
+          "a": "REST API y Webhooks se incluyen en el plan Enterprise. Para Growth y Standard, exponemos integraciones vía Zapier, Make y n8n. El SDK público en TypeScript y Python está en beta privada — si lo necesitás antes de Q4 2026, escribinos a sales@blacknel.com."
         }
       ]
     },
     "cta": {
-      "title": "Listo para operar tu presencia digital con un solo cerebro",
-      "description": "Empieza en minutos, cancela cuando quieras. Sin contratos, sin sorpresas.",
+      "title": "Tu primera semana sin Hootsuite. Sin Sprout. Sin las 5 hojas de cálculo.",
+      "description": "Conectá tus canales en 10 minutos, invitá a tu equipo, y empezá a operar. Sin contratos, sin sales calls obligatorias.",
       "primary": "Empieza gratis por 14 días",
       "secondary": "Hablar con ventas"
+    },
+    "techStack": {
+      "eyebrow": "Stack confiable",
+      "title": "Construido con la mejor tecnología",
+      "description": "Las mismas piezas que usan Vercel, Linear, Resend y miles de equipos serios.",
+      "partners": {
+        "anthropic": "IA principal — Claude Sonnet/Opus",
+        "vercel": "Hosting y edge global",
+        "supabase": "Postgres multi-tenant + Auth",
+        "stripe": "Pagos y billing",
+        "resend": "Email transaccional"
+      },
+      "stripeNote": "Q3 2026"
+    },
+    "newsletterInline": {
+      "eyebrow": "Newsletter",
+      "title": "Recibe los playbooks de Blacknel",
+      "description": "Una vez al mes. Lo que aprendemos operando marcas en LATAM. Sin spam, sin teasers."
     }
   },
   "features": {
@@ -373,21 +432,43 @@
       "questions": [
         {
           "q": "¿Pagaré IVA?",
-          "a": "Si emites factura en México, sí — 16% IVA aplica. Para clientes US y otros LATAM no aplica."
+          "a": "Si tu empresa está en México, sí. Cobramos 16% IVA sobre la suscripción y emitimos factura electrónica CFDI 4.0. Si estás fuera de México, los precios listados en USD son finales — sin IVA adicional."
         },
         {
           "q": "¿Puedo cambiar de plan?",
-          "a": "Sí, en cualquier momento. Upgrades aplican proporcional. Downgrades aplican al siguiente ciclo."
+          "a": "Sí, en cualquier momento. Upgrades toman efecto inmediato con prorrateo. Downgrades aplican al siguiente ciclo de facturación. Sin penalización por cambio, sin contrato anual obligatorio."
         },
         {
           "q": "¿Cobran por usuario adicional?",
-          "a": "En Growth, $25 USD por usuario extra/mes. En Enterprise, todos los usuarios están incluidos."
+          "a": "Solo si superás el cupo de tu plan. Standard incluye 1 usuario, Growth 5 usuarios, Enterprise ilimitado. Si necesitás más usuarios en Standard o Growth, agregás slots a $19 USD/mes por usuario adicional. Enterprise no tiene este cargo."
         },
         {
           "q": "¿Hay anual con descuento?",
-          "a": "Sí. Pago anual lleva 2 meses gratis en cualquier plan. Habla con ventas para Enterprise."
+          "a": "Sí. Pagando 12 meses por adelantado tenés 20% de descuento en cualquier plan. Para acuerdos plurianuales (24+ meses) con tickets Enterprise, escribinos para condiciones especiales."
+        },
+        {
+          "q": "¿Cobran setup fee?",
+          "a": "Standard y Growth: cero setup fee. Enterprise: incluimos onboarding dedicado con un Customer Success Manager sin costo adicional. No cobramos setup fees aunque el deal sea grande — preferimos que el éxito del cliente sea el ROI."
         }
       ]
+    },
+    "noChargeExtra": {
+      "title": "Lo que NO te cobramos extra",
+      "items": [
+        { "title": "Onboarding y setup", "body": "Incluido en cualquier plan, sin importar el tamaño del equipo." },
+        { "title": "Migración desde Hootsuite/Sprout/Birdeye", "body": "Te ayudamos a mover tus marcas sin costo adicional." },
+        { "title": "Soporte por chat y email", "body": "Incluido en cualquier plan. Sin gating al tier más caro." },
+        { "title": "Actualizaciones de producto", "body": "Automáticas, sin upgrade fees ni licencias por versión." },
+        { "title": "Conectores nuevos cuando lanzan", "body": "Cada integración nueva entra sin upcharge." },
+        { "title": "Storage de assets", "body": "50GB en Standard, 500GB en Growth, ilimitado en Enterprise." }
+      ]
+    },
+    "billing": {
+      "monthly": "Mensual",
+      "annual": "Anual",
+      "annualBadge": "Ahorra 20%",
+      "billedAnnually": "facturado anualmente",
+      "savePerYear": "Ahorra {amount}/año"
     }
   },
   "about": {
