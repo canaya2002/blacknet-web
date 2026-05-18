@@ -18,10 +18,18 @@ export function NumberCounter({
 }) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: '-40px' });
-  const [value, setValue] = useState(0);
+  // Start at the target value so SSR and initial hydration paint the real
+  // number — the counter only resets to 0 and animates after mount + intersection.
+  const [value, setValue] = useState(to);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    if (!inView) return;
+    setMounted(true);
+    setValue(0);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted || !inView) return;
     let raf = 0;
     const start = performance.now();
     const tick = (now: number) => {
@@ -32,15 +40,24 @@ export function NumberCounter({
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [inView, to, duration]);
+  }, [mounted, inView, to, duration]);
+
+  const display = value.toLocaleString('en-US', {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals,
+  });
 
   return (
-    <span ref={ref} className="mono tabular-nums">
-      {prefix}
-      {value.toLocaleString('en-US', {
+    <span
+      ref={ref}
+      className="mono tabular-nums"
+      aria-label={`${prefix}${to.toLocaleString('en-US', {
         minimumFractionDigits: decimals,
         maximumFractionDigits: decimals,
-      })}
+      })}${suffix}`}
+    >
+      {prefix}
+      {display}
       {suffix}
     </span>
   );

@@ -666,44 +666,54 @@
       "faster": "tiempo de respuesta más rápido",
       "growth": "crecimiento en seguidores"
     },
+    "sections": {
+      "background": "Contexto",
+      "challenge": "Reto",
+      "implementation": "Implementación",
+      "results": "Resultados",
+      "afterwords": "Qué dicen hoy"
+    },
     "cases": {
       "studioNorte": {
         "company": "Studio Norte",
-        "industry": "Agencia de marketing · CDMX",
-        "challenge": "12 marcas distribuidas en 4 herramientas, cero visibilidad cross-cliente y un equipo agotado.",
-        "solution": "Migraron 12 marcas a Blacknel en dos semanas. Activaron approval workflows y dashboards white label.",
+        "industry": "Agencia de marketing · Ciudad de México",
+        "background": "Studio Norte es una agencia boutique de Ciudad de México con 12 cuentas activas en clientes que van desde DTC food hasta hoteles boutique. Su equipo de 8 personas operaba publishing, inbox y reviews en 4 herramientas distintas (Hootsuite para publishing, ManyChat para inbox, Birdeye para reviews y Google Sheets para reporting).",
+        "challenge": "12 marcas distribuidas en 4 herramientas, cero visibilidad cross-cliente, y un equipo agotado de cambiar de pestaña 30 veces al día. Los reports mensuales tomaban 8 horas por cliente. Las respuestas en inbox tardaban 3+ horas porque dependían de quién estuviera 'dentro' de la herramienta correcta.",
+        "solution": "Migraron las 12 marcas a Blacknel en dos semanas — usando el migration assistant que importa de Hootsuite directamente. Activaron approval workflows multi-nivel y dashboards white label con el branding de Studio Norte para que clientes finales vieran reports sin saber que usaban Blacknel.",
         "results": [
           { "value": "15", "label": "horas/semana recuperadas" },
           { "value": "62", "suffix": "%", "label": "menos tiempo de respuesta" },
-          { "value": "4", "prefix": "$", "suffix": "K MXN/mes", "label": "ahorro en herramientas" }
+          { "value": "8", "prefix": "$", "suffix": "K MXN/mes", "label": "ahorro consolidado en herramientas" }
         ],
-        "quote": "Pasamos de gestionar 12 marcas en 4 herramientas a tener todo en Blacknel. El cliente final lo nota.",
+        "quote": "El equipo recuperó tiempo que ahora se gasta en estrategia con clientes, no en operaciones. Y el cliente final nota la diferencia en la velocidad de respuesta y la calidad de los reports mensuales.",
         "person": "María Hernández, Founder"
       },
       "cafeteriaNube": {
         "company": "Cafetería Nube",
         "industry": "DTC food brand · México y EE.UU.",
-        "challenge": "Inbox saturado de DMs en seis canales, tiempos de respuesta arriba de 4 horas en horarios pico.",
-        "solution": "Centralizaron mensajes en Blacknel, activaron AI suggestions y reglas de auto-assign por turno.",
+        "background": "Cafetería Nube es una marca DTC de café especializado nacida en Ciudad de México que expandió a EE.UU. en 2024. Vende suscripción mensual de café molido + e-commerce de equipo. Marketing team de 4 personas operando 6 canales en 2 países y 2 idiomas.",
+        "challenge": "Inbox saturado de DMs en seis canales (IG, FB, WhatsApp, Twitter, TikTok comments, contact form), con tiempos de respuesta arriba de 4 horas en horarios pico de campaña. El tono de marca — casual pero cuidado, con humor sutil — se perdía cada vez que contrataban un agente nuevo que no había leído el brand voice doc.",
+        "solution": "Centralizaron mensajes en Blacknel inbox, activaron AI suggestions con brand voice training (subieron su brand book de 12 páginas), y configuraron reglas de auto-assign por idioma (ES → equipo MX, EN → equipo US) y por turno (mañana / tarde / noche).",
         "results": [
-          { "value": "62", "suffix": "%", "label": "más rápido en respuesta" },
-          { "value": "94", "suffix": "%", "label": "CSAT post-implementación" },
-          { "value": "2.4", "suffix": "x", "label": "engagement en stories" }
+          { "value": "62", "suffix": "%", "label": "más rápido en respuesta (4hrs → 1.5hrs)" },
+          { "value": "94", "suffix": "%", "label": "CSAT post-implementación (vs 71% pre)" },
+          { "value": "2.8", "suffix": "x", "label": "engagement en stories" }
         ],
-        "quote": "Las sugerencias de IA respetan nuestro tono mejor que cualquier asistente que probamos.",
+        "quote": "Probamos GPT pelado, probamos ChatGPT con prompts custom, probamos otro 'AI sidekick' que costaba más. Ninguno respetaba nuestro tono. Blacknel sí. Ahora el equipo confía en las sugerencias en lugar de reescribirlas.",
         "person": "Diego Aranda, Head of Growth"
       },
       "grupoLoma": {
         "company": "Grupo Loma",
-        "industry": "Cadena de restaurantes multi-sucursal · 5 países",
-        "challenge": "48 sucursales operando reseñas independientemente, sin gobierno de marca ni control central.",
-        "solution": "Implementaron Blacknel con RBAC granular, dashboards por país y crisis detection global.",
+        "industry": "Cadena de restaurantes · 5 países",
+        "background": "Grupo Loma opera 48 sucursales en México, Colombia, Perú, Chile y Argentina, todas bajo la misma marca pero con presencia digital local: cada sucursal tiene su propio Instagram, Facebook y Google Business Profile. El equipo digital central de 5 personas debe coordinar publishing y reputation con managers de marketing local en cada país.",
+        "challenge": "48 sucursales operando reseñas independientemente, sin gobierno de marca, sin control central de qué se postea, y sin visibilidad de qué pasaba en cada país. Reviews negativas se acumulaban porque cada sucursal tenía que loggearse a Google Business manualmente. Crises locales se enteraban semanas tarde.",
+        "solution": "Implementaron Blacknel con RBAC granular: roles 'Country Manager', 'Local Marketer', 'Brand Guardian' con permisos diferenciados. Custom dashboards por país. Crisis detection global con thresholds por sucursal. Templates de respuesta por idioma y por tipo de review (1★, 5★, complaint específico).",
         "results": [
           { "value": "48", "label": "sucursales bajo un mismo plano" },
-          { "value": "3.8", "suffix": " → 4.6", "label": "rating Google promedio" },
+          { "value": "3.2", "suffix": " → 4.6", "label": "rating Google promedio (6 meses)" },
           { "value": "100", "suffix": "%", "label": "compliance RBAC" }
         ],
-        "quote": "Blacknel fue la primera plataforma que escaló sin pelearse con nuestro RBAC.",
+        "quote": "Antes pasábamos 60% del tiempo del equipo central solo coordinando. Ahora pasamos 60% del tiempo en estrategia y los gerentes locales ejecutan dentro de sus permisos sin necesitar pedir permiso para cada acción.",
         "person": "Sofía Rendón, Director of Digital"
       }
     }
@@ -787,32 +797,199 @@
       "title": "Tu información, tratada como nuestra",
       "subtitle": "Encryption end-to-end, multi-tenancy estricta, RBAC granular y auditoría completa. Compliance LFPDPPP, GDPR y CCPA."
     },
-    "principles": [
+    "sections": [
       {
-        "title": "Encryption at rest y in transit",
-        "body": "AES-256 para datos en reposo. TLS 1.3 para todo lo que cruce la red. Nada en texto plano."
+        "slug": "encryption",
+        "title": "Encryption at rest e in transit",
+        "lead": "Toda la información que toca Blacknel viaja y duerme cifrada. Sin texto plano, sin excepciones.",
+        "subsections": [
+          {
+            "title": "Datos en reposo · AES-256",
+            "body": "Toda la información almacenada en Blacknel se cifra con AES-256 a nivel de columna en Postgres. Nuestro provider de base de datos (Supabase) ejecuta encryption a nivel de disco adicional como defense-in-depth."
+          },
+          {
+            "title": "Datos en tránsito · TLS 1.3",
+            "body": "Toda comunicación entre tu navegador, nuestros servidores y APIs de terceros (Facebook, Google, etc.) pasa por TLS 1.3 con certificate pinning donde el provider lo soporta. HTTP plain no existe en ninguna parte del stack."
+          },
+          {
+            "title": "Secretos y credenciales",
+            "body": "Credenciales de OAuth (tokens de Facebook, Google, etc.) viven encriptadas en Supabase Vault, una bóveda con keys que rotan cada 90 días. Las API keys que vos generás en tu workspace se muestran una sola vez y nunca se almacenan en plaintext."
+          },
+          {
+            "title": "Passwords",
+            "body": "No los manejamos. Usamos Supabase Auth con magic links (passwordless) por default. Para clientes Enterprise con SSO/SAML, el password nunca llega a Blacknel — es el IdP de tu organización quien autentica."
+          }
+        ]
       },
       {
+        "slug": "multitenancy",
         "title": "Multi-tenancy rigurosa",
-        "body": "Cada organización es un tenant aislado. Row-Level Security a nivel base de datos. Sin acceso cruzado posible."
+        "lead": "Cada organización es un tenant aislado a nivel base de datos. No es un filter aplicado en código.",
+        "subsections": [
+          {
+            "title": "Row-Level Security en Postgres",
+            "body": "Cada organización en Blacknel es un tenant aislado a nivel Postgres Row-Level Security (RLS). Es un constraint a nivel base de datos que impide cualquier query cross-tenant, incluso si hay un bug en la app."
+          },
+          {
+            "title": "Qué significa en práctica",
+            "body": "Si un bug en nuestro código intentara ejecutar SELECT * FROM posts sin filter de organización, Postgres devolvería 0 rows — porque las policies de RLS verifican current_setting('app.current_org_id') antes de retornar cualquier row. Sin org_id válido en la sesión, no hay data."
+          },
+          {
+            "title": "Aislamiento de assets",
+            "body": "Cada org tiene su propio bucket de storage para assets (videos, imágenes, PDFs). Buckets son privados por default y se acceden con signed URLs que expiran en 1 hora. No hay forma de listar o acceder assets de otra organización."
+          },
+          {
+            "title": "Audit trail",
+            "body": "Cada acción que toca data sensible (login, post publish, review response, RBAC change) queda en audit_events table con timestamp, user_id, org_id, IP, user-agent y diff de qué cambió. Append-only — no se puede modificar historia."
+          }
+        ]
       },
       {
+        "slug": "rbac",
         "title": "RBAC granular",
-        "body": "Cinco roles default + custom roles en Enterprise. Permisos por marca, por acción, por canal."
+        "lead": "Cinco roles default, custom roles en Enterprise, y permission checks en tres capas de defensa.",
+        "subsections": [
+          {
+            "title": "Roles default",
+            "body": "Owner (control total + billing), Admin (todo excepto billing y deletion), Manager (brands y workflows), Agent (operación día-a-día), Viewer (read-only en todo)."
+          },
+          {
+            "title": "Custom roles en Enterprise",
+            "body": "Podés crear roles custom con matriz de permisos granular: por brand, por acción (read/write/delete/publish), por canal. Permisos se asignan con grants y revokes — el sistema sigue política 'revoke wins' en caso de conflicto."
+          },
+          {
+            "title": "Permission catalog",
+            "body": "50+ permission strings disponibles. Ejemplos: posts:publish, inbox:assign, billing:read, audit:read, team:manage_roles."
+          },
+          {
+            "title": "Defense-in-depth",
+            "body": "Cada permission check ocurre en TRES capas: TypeScript en el Server Action, función SQL al ejecutar la query, y Row-Level Security en la base. Tres capas tienen que fallar simultáneamente para que un permission leak suceda."
+          }
+        ]
       },
       {
+        "slug": "audit",
         "title": "Audit log inmutable",
-        "body": "Cada acción queda registrada con timestamp, usuario, IP y user-agent. Exportable para compliance."
+        "lead": "Cada acción que afecta data o configuración queda registrada de forma inmutable y exportable.",
+        "subsections": [
+          {
+            "title": "Qué se loggea",
+            "body": "Logins, logouts, posts publicados, reviews respondidas, cambios de roles, exports de data, settings de org, cambios de pricing/seats."
+          },
+          {
+            "title": "Qué se guarda por evento",
+            "body": "Timestamp exacto (UTC + zona local), user_id, org_id, session_id, IP origen, user-agent, país (GeoIP), action exacto + diff (antes/después), result (success/failure/partial)."
+          },
+          {
+            "title": "Retention",
+            "body": "Standard: 90 días. Growth: 1 año. Enterprise: hasta 7 años configurable."
+          },
+          {
+            "title": "Inmutabilidad y export",
+            "body": "La tabla audit_events es append-only a nivel Postgres. No hay DELETE permitido — ni con privilegios admin. Audit log exportable en JSON o CSV en cualquier momento, útil para SOC 2, ISO 27001 y auditorías internas."
+          }
+        ]
       },
       {
+        "slug": "compliance",
         "title": "Compliance",
-        "body": "LFPDPPP (México), GDPR (UE), CCPA (California). SOC 2 Type II en proceso de auditoría."
+        "lead": "LFPDPPP, GDPR, CCPA y SOC 2 Type II en proceso de auditoría.",
+        "subsections": [
+          {
+            "title": "LFPDPPP (México)",
+            "body": "Cumplimos los principios de licitud, consentimiento, información, calidad, finalidad, lealtad, proporcionalidad y responsabilidad. Aviso de privacidad alineado con INAI. ARCO rights se ejecutan via privacy@blacknel.com en máximo 20 días hábiles."
+          },
+          {
+            "title": "GDPR (Unión Europea)",
+            "body": "Operamos bajo Article 6.1.b (ejecución de contrato) y 6.1.a (consentimiento) para marketing opt-in. DPO designado. Tu derecho a portabilidad (Art. 20) se ejecuta con export completo en JSON estándar. SCCs firmamos por default para transferencia internacional de datos."
+          },
+          {
+            "title": "CCPA (California)",
+            "body": "Honramos requests de 'Do Not Sell' (aunque no vendemos datos), 'Right to Know' y 'Right to Delete'. Tiempo de respuesta máximo: 45 días."
+          },
+          {
+            "title": "SOC 2 Type II · en proceso",
+            "body": "Audit activo con cierre estimado Q3 2026. Cubre Security, Availability, Processing Integrity, Confidentiality y Privacy. Una vez certificados, el report estará disponible para clientes Enterprise bajo NDA."
+          },
+          {
+            "title": "HIPAA",
+            "body": "No operamos como Business Associate de proveedores de salud por default. Si necesitás HIPAA compliance específico, contactanos para discutir un BAA dedicado en Enterprise."
+          }
+        ]
       },
       {
+        "slug": "bounty",
         "title": "Bug bounty",
-        "body": "Programa privado activo. Si encuentras algo, escríbenos a security@blacknel.com con responsible disclosure."
+        "lead": "Programa privado activo. Si encontrás una vulnerabilidad, escribinos a security@blacknel.com.",
+        "subsections": [
+          {
+            "title": "Lo que recompensamos",
+            "body": "Crítica (RCE, auth bypass, tenant data leak): $1,000 – $5,000 USD. Alta (privilege escalation, sensitive data exposure): $500 – $1,500 USD. Media (XSS, CSRF, IDOR menor): $100 – $500 USD. Baja (info disclosure, configuración): $50 – $200 USD."
+          },
+          {
+            "title": "Reglas",
+            "body": "Encontrá la vuln con tu cuenta, no comprometas accounts ajenos. Sin DoS, brute force ni scanning agresivo. Reportá privada y dame 90 días antes de hacer público. Nada de social engineering al equipo."
+          },
+          {
+            "title": "Hall of fame",
+            "body": "Mantenemos un Hall of Fame público de researchers que reportaron issues válidos. Lo publicaremos cuando tengamos el primer report confirmado — transparencia total, pre-revenue, sin historial inventado."
+          }
+        ]
       }
-    ]
+    ],
+    "architecture": {
+      "eyebrow": "Arquitectura",
+      "title": "Arquitectura en una vista",
+      "subtitle": "Stack moderno, fluido, observable. Cada capa tiene una responsabilidad clara y guardrails de seguridad propios.",
+      "layers": [
+        {
+          "title": "Cliente",
+          "body": "Tu equipo accede vía browser o mobile. Todo HTTPS + TLS 1.3 con HSTS preload."
+        },
+        {
+          "title": "CDN · Cloudflare",
+          "body": "DDoS protection a nivel L3/L4/L7. Cache de assets estáticos. WAF managed rulesets activos."
+        },
+        {
+          "title": "Vercel Edge · Next.js Server Components",
+          "body": "Renderizado en edge global. Server Components ejecutan en Vercel Functions con cold start <100ms gracias a Fluid Compute."
+        },
+        {
+          "title": "Server Actions & API Routes",
+          "body": "Cada mutación pasa por triple permission check (TS + SQL + RLS). Auth via Supabase Magic Links. Rate limiting per-tenant."
+        },
+        {
+          "title": "Supabase Postgres · multi-tenant RLS",
+          "body": "AES-256 encryption at rest, daily backups con PITR (point-in-time recovery), replicación geo-distribuida."
+        },
+        {
+          "title": "Sub-procesadores",
+          "body": "Anthropic (Claude) · OpenAI (GPT) · Resend (email) · Stripe (payments) · Plausible (analytics) · Sentry (errors). Cada uno con DPA firmado + SCC."
+        }
+      ]
+    },
+    "incidents": {
+      "eyebrow": "Incidents",
+      "title": "Cómo respondemos a incidentes",
+      "blocks": [
+        {
+          "title": "Detección",
+          "body": "Sentry alerta sobre errores production en <1 minuto. PostHog tracking de anomalías de uso. Uptime monitoring 24/7 cada 30 segundos. Custom alerts en métricas críticas (auth failure rate, DB errors)."
+        },
+        {
+          "title": "Triage",
+          "body": "Severity 1 (afectando users): page on-call <5 min. Severity 2 (degradación parcial): response <15 min. Severity 3 (no afectando users): next business day."
+        },
+        {
+          "title": "Comunicación",
+          "body": "status.blacknel.com se actualiza en tiempo real. Email a admins de orgs afectadas dentro de 30 minutos. Post-mortem público en blog dentro de 7 días para SEV 1."
+        },
+        {
+          "title": "Aprendizaje",
+          "body": "Cada SEV 1 termina en un post-mortem documentado con timeline, root cause, lo que funcionó, lo que falló y action items. Los publicamos porque creemos en transparencia."
+        }
+      ]
+    }
   },
   "careers": {
     "hero": {

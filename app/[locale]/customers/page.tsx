@@ -29,6 +29,7 @@ type ResultRaw = { value: string; suffix?: string; prefix?: string; label: strin
 
 function CaseStudy({ slug, index }: { slug: (typeof cases)[number]; index: number }) {
   const t = useTranslations(`customers.cases.${slug}`);
+  const ts = useTranslations('customers.sections');
   const results = t.raw('results') as ResultRaw[];
 
   return (
@@ -43,11 +44,12 @@ function CaseStudy({ slug, index }: { slug: (typeof cases)[number]; index: numbe
               {t('company')}
             </h2>
             <p className="text-sm text-[color:var(--color-fg-tertiary)]">{t('industry')}</p>
+
             <div className="mt-4 flex items-start gap-3 rounded-xl border border-[color:var(--color-border)] bg-white/[0.02] p-5">
               <Quote className="h-5 w-5 shrink-0 text-[color:var(--color-fg-tertiary)]" />
               <div>
                 <p className="text-sm leading-relaxed text-[color:var(--color-fg)]">
-                  “{t('quote')}”
+                  &ldquo;{t('quote')}&rdquo;
                 </p>
                 <p className="mt-2 text-xs text-[color:var(--color-fg-tertiary)]">
                   — {t('person')}
@@ -59,7 +61,15 @@ function CaseStudy({ slug, index }: { slug: (typeof cases)[number]; index: numbe
           <div className="md:col-span-7 flex flex-col gap-6">
             <div>
               <p className="mono text-[10px] uppercase tracking-wider text-[color:var(--color-fg-tertiary)]">
-                Challenge
+                {ts('background')}
+              </p>
+              <p className="mt-2 text-sm text-[color:var(--color-fg-secondary)]">
+                {t('background')}
+              </p>
+            </div>
+            <div>
+              <p className="mono text-[10px] uppercase tracking-wider text-[color:var(--color-fg-tertiary)]">
+                {ts('challenge')}
               </p>
               <p className="mt-2 text-sm text-[color:var(--color-fg-secondary)]">
                 {t('challenge')}
@@ -67,13 +77,13 @@ function CaseStudy({ slug, index }: { slug: (typeof cases)[number]; index: numbe
             </div>
             <div>
               <p className="mono text-[10px] uppercase tracking-wider text-[color:var(--color-fg-tertiary)]">
-                Solution
+                {ts('implementation')}
               </p>
               <p className="mt-2 text-sm text-[color:var(--color-fg-secondary)]">{t('solution')}</p>
             </div>
             <div>
               <p className="mono text-[10px] uppercase tracking-wider text-[color:var(--color-fg-tertiary)]">
-                Results
+                {ts('results')}
               </p>
               <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-3">
                 {results.map((r, j) => {
