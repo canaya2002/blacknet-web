@@ -1,0 +1,724 @@
+{
+  "common": {
+    "brand": "Blacknel",
+    "tagline": "Presencia digital AI-native para marcas modernas",
+    "startTrial": "Empieza tu prueba gratis",
+    "talkToSales": "Hablar con ventas",
+    "signIn": "Iniciar sesión",
+    "learnMore": "Conocer más",
+    "viewPricing": "Ver precios",
+    "bookDemo": "Agendar demo",
+    "comingSoon": "Próximamente",
+    "mostPopular": "Más elegido",
+    "billedMonthly": "Facturación mensual",
+    "perMonth": "/mes",
+    "newsletter": {
+      "title": "Suscríbete al newsletter",
+      "description": "Actualizaciones de producto, playbooks de presencia digital y casos reales — una vez al mes, sin spam.",
+      "placeholder": "tu@empresa.com",
+      "cta": "Suscribirme",
+      "success": "Listo. Revisa tu correo para confirmar.",
+      "error": "No pudimos suscribirte. Inténtalo de nuevo."
+    },
+    "trial": {
+      "noCard": "14 días sin tarjeta. Cancela cuando quieras."
+    },
+    "languageSwitcher": {
+      "label": "Idioma",
+      "es": "Español",
+      "en": "English"
+    }
+  },
+  "nav": {
+    "product": "Producto",
+    "features": "Funcionalidades",
+    "pricing": "Precios",
+    "integrations": "Integraciones",
+    "customers": "Clientes",
+    "resources": "Recursos",
+    "blog": "Blog",
+    "changelog": "Changelog",
+    "docs": "Documentación",
+    "security": "Seguridad",
+    "company": "Empresa",
+    "about": "Nosotros",
+    "careers": "Trabajá con nosotros",
+    "contact": "Contacto",
+    "press": "Prensa",
+    "menu": "Menú",
+    "closeMenu": "Cerrar menú"
+  },
+  "footer": {
+    "tagline": "Una plataforma para tu presencia digital completa.",
+    "made": "Hecho en Ciudad de México con foco en LATAM y EE.UU.",
+    "product": "Producto",
+    "resources": "Recursos",
+    "company": "Empresa",
+    "legal": "Legal",
+    "connect": "Conectar",
+    "rights": "Todos los derechos reservados.",
+    "status": "Todos los sistemas operativos",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "cookies": "Cookies",
+    "dpa": "DPA",
+    "security": "Seguridad",
+    "statusPage": "Estado"
+  },
+  "home": {
+    "hero": {
+      "badge": "Lanzamiento beta abierta",
+      "title": "Toda tu presencia digital. Operada con IA.",
+      "subtitle": "Blacknel reúne inbox, publicación, reviews, anuncios y analítica en un solo plano de control. Construido para agencias, cadenas multi-sucursal y marcas en LATAM y EE.UU.",
+      "ctaPrimary": "Empieza gratis por 14 días",
+      "ctaSecondary": "Ver demo",
+      "trustBar": "Construido con confianza por equipos en"
+    },
+    "features": {
+      "eyebrow": "Plataforma unificada",
+      "title": "Todo lo que tu equipo necesita para operar marcas",
+      "description": "Una herramienta para reemplazar Hootsuite, Sprout, Birdeye y cinco hojas de cálculo. Sin curva de aprendizaje innecesaria.",
+      "inbox": {
+        "title": "Inbox unificado",
+        "description": "Mensajes, DMs y correos de cada canal en una sola bandeja con SLA y asignación.",
+        "tag": "Inbox"
+      },
+      "publishing": {
+        "title": "Composer multi-red",
+        "description": "Publica y agenda a 10 canales con previsualización fiel y flujos de aprobación.",
+        "tag": "Publishing"
+      },
+      "ai": {
+        "title": "Copy con IA",
+        "description": "Genera publicaciones, respuestas y reportes alineados al tono de cada marca.",
+        "tag": "AI"
+      },
+      "reviews": {
+        "title": "Reviews & NPS",
+        "description": "Centraliza Google, Yelp, App Store y encuestas embebidas. Detecta crisis antes.",
+        "tag": "Reputation"
+      },
+      "analytics": {
+        "title": "Analítica cross-canal",
+        "description": "Dashboards custom, reportes programados y benchmarks vs competidores.",
+        "tag": "Analytics"
+      },
+      "listening": {
+        "title": "Listening competitivo",
+        "description": "Monitorea menciones, keywords y competidores en tiempo real.",
+        "tag": "Listening"
+      },
+      "ads": {
+        "title": "Anuncios unificados",
+        "description": "Google, Meta, LinkedIn y TikTok con alertas y sugerencias accionables.",
+        "tag": "Ads"
+      }
+    },
+    "howItWorks": {
+      "eyebrow": "Cómo funciona",
+      "title": "De cero a operando en una tarde",
+      "description": "Sin consultoría, sin onboarding de tres meses. Conecta cuentas, invita al equipo y empezá.",
+      "step1": {
+        "title": "Conecta tus canales",
+        "description": "Integra Facebook, Instagram, WhatsApp, Google Business y +20 fuentes con OAuth oficial."
+      },
+      "step2": {
+        "title": "Invita a tu equipo",
+        "description": "Define roles, asigna marcas y arma flujos de aprobación con RBAC granular."
+      },
+      "step3": {
+        "title": "Opera con IA al lado",
+        "description": "Responde, publica y analiza con copilots entrenados para tu tono de marca."
+      }
+    },
+    "social": {
+      "eyebrow": "Confiado por equipos modernos",
+      "title": "El estándar para agencias y cadenas en LATAM",
+      "logos": "Agencias, franquicias y DTC brands eligen Blacknel"
+    },
+    "testimonials": {
+      "1": {
+        "quote": "Pasamos de gestionar 12 marcas en 4 herramientas a tener todo en Blacknel. El equipo recuperó 15 horas a la semana y el cliente final lo nota.",
+        "author": "María Hernández",
+        "role": "Founder, Studio Norte"
+      },
+      "2": {
+        "quote": "Las sugerencias de IA respetan nuestro tono mejor que cualquier asistente que probamos. Nuestro tiempo de respuesta bajó 62%.",
+        "author": "Diego Aranda",
+        "role": "Head of Growth, Cafetería Nube"
+      },
+      "3": {
+        "quote": "Operamos 48 sucursales en cinco países. Blacknel fue la primera plataforma que escaló sin pelearse con nuestro RBAC.",
+        "author": "Sofía Rendón",
+        "role": "Director of Digital, Grupo Loma"
+      }
+    },
+    "pricing": {
+      "eyebrow": "Precios",
+      "title": "Precios sin sorpresas",
+      "description": "Tres planes simples en USD. Prueba 14 días sin tarjeta en cualquiera."
+    },
+    "faq": {
+      "eyebrow": "Preguntas frecuentes",
+      "title": "Lo que más nos preguntan",
+      "questions": [
+        {
+          "q": "¿Realmente necesito tarjeta para probar?",
+          "a": "No. La prueba de 14 días es totalmente abierta. Si te gusta, eliges plan y pagas. Si no, simplemente expira."
+        },
+        {
+          "q": "¿Soportan WhatsApp Business oficial?",
+          "a": "Sí. Conectamos vía la API oficial de WhatsApp Business Platform (cloud-hosted). Sin números intermediarios ni riesgo de baneo."
+        },
+        {
+          "q": "¿Mi equipo de agencia puede gestionar marcas de varios clientes?",
+          "a": "Sí. Blacknel está construido multi-tenant desde el día uno. Los datos de cada marca viven aislados, con RBAC granular y opciones de white label."
+        },
+        {
+          "q": "¿Cómo manejan compliance en México?",
+          "a": "Cumplimos con LFPDPPP (México), GDPR (UE) y CCPA (California). Tenemos DPA disponible, retention policies configurables y residencia de datos en negociación enterprise."
+        },
+        {
+          "q": "¿Tienen API pública?",
+          "a": "El plan Enterprise incluye API REST + webhooks. Por ahora la documentación es bajo NDA mientras estabilizamos endpoints durante la beta."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Listo para operar tu presencia digital con un solo cerebro",
+      "description": "Empieza en minutos, cancela cuando quieras. Sin contratos, sin sorpresas.",
+      "primary": "Empieza gratis por 14 días",
+      "secondary": "Hablar con ventas"
+    }
+  },
+  "features": {
+    "hero": {
+      "eyebrow": "Funcionalidades",
+      "title": "Una sola plataforma para toda tu operación digital",
+      "subtitle": "Inbox, publishing, reputación, IA, anuncios y analítica. Cada módulo diseñado para reemplazar una herramienta cara con algo mejor."
+    },
+    "inbox": {
+      "title": "Inbox unificado",
+      "subtitle": "Conversaciones de cada canal en una sola bandeja",
+      "description": "Centraliza Facebook Messenger, Instagram DM, WhatsApp Business, Twitter/X, LinkedIn, TikTok, Google Business, email y formularios. Asigna por equipo, agrega notas internas, usa respuestas guardadas y monitorea SLA en vivo.",
+      "bullets": [
+        "Asignación automática por reglas o por skill",
+        "Respuestas guardadas con variables dinámicas",
+        "Notas internas y menciones al equipo",
+        "SLA tracking con alertas a Slack",
+        "Historial unificado por cliente"
+      ]
+    },
+    "publishing": {
+      "title": "Social Publishing",
+      "subtitle": "Composer único, 10 canales, cero copy-paste",
+      "description": "Diseña un post, escoge canales y deja que Blacknel adapte formato, dimensiones y previsualización. Flujos de aprobación, calendario visual y reagendar con drag.",
+      "bullets": [
+        "Soporta Feed, Reels, Stories, Shorts y Threads",
+        "Brand voice consistency con AI",
+        "Calendario con drag-to-reschedule",
+        "Aprobaciones multi-nivel",
+        "Bulk import desde Google Sheets"
+      ]
+    },
+    "reviews": {
+      "title": "Reviews & Reputation",
+      "subtitle": "Cada reseña en un panel. Cada crisis, detectada antes.",
+      "description": "Centraliza Google Business, Yelp, TripAdvisor, Trustpilot, Facebook y stores de apps. Responde con plantillas o IA. Detecta caídas de sentimiento antes que se conviertan en crisis.",
+      "bullets": [
+        "Respuestas con IA según brand voice",
+        "Sentiment analysis multilingüe",
+        "NPS embebido en sitio y correos",
+        "Crisis detection con anomaly detection",
+        "Reports de reputación programados"
+      ]
+    },
+    "ai": {
+      "title": "AI nativa",
+      "subtitle": "Copilots entrenados con tu tono y tus reglas",
+      "description": "No es ChatGPT envuelto. Blacknel entrena en tus brand voice docs, tu historial y tus respuestas anteriores. Genera copy, sugiere respuestas y detecta crisis.",
+      "bullets": [
+        "Generación de copy en ES, EN, PT",
+        "Sugerencias contextuales en inbox",
+        "Recomendaciones de optimización de ads",
+        "Detección de crisis automática",
+        "Powered by Claude + GPT con fallback"
+      ]
+    },
+    "ads": {
+      "title": "Ads Management",
+      "subtitle": "Tu media buying con la fricción que se merece — cero",
+      "description": "Conecta Google Ads, Meta, LinkedIn y TikTok. Mira spend, ROAS y CPA cross-channel. Recibe alertas accionables y aplica recomendaciones con un click.",
+      "bullets": [
+        "Dashboard unificado de spend y conversiones",
+        "Alertas de budget overrun y CPA spikes",
+        "Recomendaciones AI con approval humano",
+        "Forecasting de spend a 30 días",
+        "Reports cliente-listos"
+      ]
+    },
+    "analytics": {
+      "title": "Analytics & Reporting",
+      "subtitle": "Datos que ejecutivos entienden y agencias presentan",
+      "description": "Dashboards custom, benchmarks vs competidores, reports en PDF/CSV programados y export a Slack o email. White label para agencias.",
+      "bullets": [
+        "Dashboards drag-and-drop",
+        "Benchmarks por industria",
+        "Reports programados (PDF, email, Slack)",
+        "Export a Excel, CSV, Google Sheets",
+        "White label completo"
+      ]
+    },
+    "listening": {
+      "title": "Listening & Competitors",
+      "subtitle": "Lo que dicen de ti — y de tu competencia",
+      "description": "Monitor de menciones, keywords, hashtags y competidores. Share of voice, sentiment trends y alertas en tiempo real.",
+      "bullets": [
+        "Menciones de marca cross-canal",
+        "Share of voice vs competencia",
+        "Sentiment trends multilingüe",
+        "Alertas en tiempo real",
+        "Topic clustering automático"
+      ]
+    }
+  },
+  "pricing": {
+    "hero": {
+      "eyebrow": "Precios",
+      "title": "Precios que escalan con tu equipo",
+      "subtitle": "Tres planes en USD. Prueba 14 días sin tarjeta. Sin contratos forzados."
+    },
+    "standard": {
+      "name": "Standard",
+      "price": "69",
+      "description": "Para PyMEs y profesionales independientes que están saliendo del caos.",
+      "cta": "Empezar prueba gratis",
+      "features": [
+        "3 marcas",
+        "5 cuentas sociales conectadas",
+        "1 usuario incluido",
+        "Inbox unificado",
+        "Social publishing en 10 canales",
+        "Reviews monitoring (hasta 3 fuentes)",
+        "AI básica (50 generaciones/mes)",
+        "Soporte por email"
+      ]
+    },
+    "growth": {
+      "name": "Growth",
+      "price": "299",
+      "description": "Para negocios en crecimiento y agencias chicas que necesitan escalar sin pelearse con la herramienta.",
+      "cta": "Empezar prueba gratis",
+      "badge": "Más elegido",
+      "features": [
+        "10 marcas",
+        "25 cuentas sociales",
+        "5 usuarios incluidos",
+        "Todo lo de Standard",
+        "Flujos de aprobación",
+        "NPS embebido",
+        "Dashboards custom",
+        "Ads (Google + Meta)",
+        "AI sin límite",
+        "Listening (10 keywords)",
+        "Competitor tracking (3)",
+        "Soporte prioritario"
+      ]
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "price": "1,099",
+      "description": "Para empresas grandes, agencias enterprise y cadenas multi-sucursal con compliance serio.",
+      "cta": "Hablar con ventas",
+      "features": [
+        "Marcas y cuentas ilimitadas",
+        "Usuarios ilimitados",
+        "Todo lo de Growth",
+        "SSO / SAML",
+        "Roles custom",
+        "Audit log avanzado",
+        "Retention policies",
+        "White label",
+        "CSM dedicado",
+        "SLA garantizado",
+        "API access",
+        "Integraciones custom",
+        "Soporte premium 24/7"
+      ]
+    },
+    "comparison": {
+      "title": "Comparación detallada",
+      "subtitle": "Mismo producto, distintos límites. Sin trampas.",
+      "feature": "Funcionalidad",
+      "rows": [
+        { "feature": "Marcas", "standard": "3", "growth": "10", "enterprise": "Ilimitadas" },
+        { "feature": "Usuarios", "standard": "1", "growth": "5", "enterprise": "Ilimitados" },
+        { "feature": "Cuentas sociales", "standard": "5", "growth": "25", "enterprise": "Ilimitadas" },
+        { "feature": "Inbox unificado", "standard": "✓", "growth": "✓", "enterprise": "✓" },
+        { "feature": "Social publishing", "standard": "✓", "growth": "✓", "enterprise": "✓" },
+        { "feature": "Reviews monitoring", "standard": "3 fuentes", "growth": "Todas", "enterprise": "Todas" },
+        { "feature": "AI generations", "standard": "50/mes", "growth": "Ilimitadas", "enterprise": "Ilimitadas" },
+        { "feature": "Ads management", "standard": "—", "growth": "Google + Meta", "enterprise": "Todos" },
+        { "feature": "Listening", "standard": "—", "growth": "10 keywords", "enterprise": "Ilimitado" },
+        { "feature": "Approval workflows", "standard": "—", "growth": "✓", "enterprise": "✓" },
+        { "feature": "Dashboards custom", "standard": "—", "growth": "✓", "enterprise": "✓" },
+        { "feature": "SSO / SAML", "standard": "—", "growth": "—", "enterprise": "✓" },
+        { "feature": "White label", "standard": "—", "growth": "—", "enterprise": "✓" },
+        { "feature": "API + Webhooks", "standard": "—", "growth": "—", "enterprise": "✓" },
+        { "feature": "SLA", "standard": "—", "growth": "Email biz hours", "enterprise": "99.95%" }
+      ]
+    },
+    "faq": {
+      "title": "Sobre precios",
+      "questions": [
+        {
+          "q": "¿Pagaré IVA?",
+          "a": "Si emites factura en México, sí — 16% IVA aplica. Para clientes US y otros LATAM no aplica."
+        },
+        {
+          "q": "¿Puedo cambiar de plan?",
+          "a": "Sí, en cualquier momento. Upgrades aplican proporcional. Downgrades aplican al siguiente ciclo."
+        },
+        {
+          "q": "¿Cobran por usuario adicional?",
+          "a": "En Growth, $25 USD por usuario extra/mes. En Enterprise, todos los usuarios están incluidos."
+        },
+        {
+          "q": "¿Hay anual con descuento?",
+          "a": "Sí. Pago anual lleva 2 meses gratis en cualquier plan. Habla con ventas para Enterprise."
+        }
+      ]
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "Nosotros",
+      "title": "Construimos la presencia digital que las marcas modernas merecen",
+      "subtitle": "Blacknel nació en Ciudad de México con una misión simple: que operar varias marcas en varios canales no se sienta como cargar agua en cestos."
+    },
+    "mission": {
+      "title": "Misión",
+      "body": "Darle a cada agencia, cadena y marca un cerebro único para su presencia digital — con IA que respeta el contexto y precios que respetan el bolsillo."
+    },
+    "vision": {
+      "title": "Visión",
+      "body": "Que en 2030, gestionar marcas multi-canal sea tan natural como mandar un correo. Sin spreadsheets paralelas, sin diez logins, sin contratos enterprise abusivos."
+    },
+    "story": {
+      "title": "Por qué existimos",
+      "body": "Después de ver al equipo de una agencia perder 30 horas a la semana pegando contenido entre Hootsuite, Sprout y Birdeye, decidimos que era ridículo. Blacknel es la herramienta que queríamos para nosotros mismos."
+    },
+    "values": {
+      "title": "Cómo trabajamos",
+      "items": [
+        { "title": "Producto sobre vanity", "body": "No anunciamos lo que no shippeamos. Cada release tiene impacto medible." },
+        { "title": "Multi-tenant en serio", "body": "Aislamiento de datos no es un sticker. Es nuestra arquitectura base." },
+        { "title": "Precios sin sorpresas", "body": "Lo que ves es lo que pagas. Sin contratos forzados ni paywalls escondidos." },
+        { "title": "AI con humano en loop", "body": "Nuestra IA sugiere. Tu equipo decide. No al revés." }
+      ]
+    },
+    "team": {
+      "title": "Equipo",
+      "subtitle": "Estamos contratando. Si crees que encajas, escríbenos.",
+      "founder": {
+        "name": "Carlos Anaya Ruiz",
+        "role": "Founder & CEO",
+        "bio": "Ingeniero y operador. Construyó equipos de producto en startups de LATAM antes de fundar Blacknel. Vive en Ciudad de México."
+      }
+    }
+  },
+  "blog": {
+    "hero": {
+      "eyebrow": "Blog",
+      "title": "Playbooks, investigaciones y notas de campo",
+      "subtitle": "Lo que aprendemos operando marcas en LATAM y EE.UU. Sin filtro."
+    },
+    "readMore": "Leer más",
+    "minRead": "min de lectura",
+    "publishedOn": "Publicado el",
+    "by": "por",
+    "relatedTitle": "Lecturas relacionadas",
+    "share": "Compartir",
+    "tableOfContents": "Contenido"
+  },
+  "customers": {
+    "hero": {
+      "eyebrow": "Casos de éxito",
+      "title": "Equipos reales operando con Blacknel",
+      "subtitle": "Agencias, cadenas y DTC brands que reemplazaron tres herramientas con una."
+    },
+    "readCase": "Leer caso",
+    "metrics": {
+      "saved": "horas semanales recuperadas",
+      "faster": "tiempo de respuesta más rápido",
+      "growth": "crecimiento en seguidores"
+    },
+    "cases": {
+      "studioNorte": {
+        "company": "Studio Norte",
+        "industry": "Agencia de marketing · CDMX",
+        "challenge": "12 marcas distribuidas en 4 herramientas, cero visibilidad cross-cliente y un equipo agotado.",
+        "solution": "Migraron 12 marcas a Blacknel en dos semanas. Activaron approval workflows y dashboards white label.",
+        "results": [
+          { "value": "15", "label": "horas/semana recuperadas" },
+          { "value": "62", "suffix": "%", "label": "menos tiempo de respuesta" },
+          { "value": "4", "prefix": "$", "suffix": "K MXN/mes", "label": "ahorro en herramientas" }
+        ],
+        "quote": "Pasamos de gestionar 12 marcas en 4 herramientas a tener todo en Blacknel. El cliente final lo nota.",
+        "person": "María Hernández, Founder"
+      },
+      "cafeteriaNube": {
+        "company": "Cafetería Nube",
+        "industry": "DTC food brand · México y EE.UU.",
+        "challenge": "Inbox saturado de DMs en seis canales, tiempos de respuesta arriba de 4 horas en horarios pico.",
+        "solution": "Centralizaron mensajes en Blacknel, activaron AI suggestions y reglas de auto-assign por turno.",
+        "results": [
+          { "value": "62", "suffix": "%", "label": "más rápido en respuesta" },
+          { "value": "94", "suffix": "%", "label": "CSAT post-implementación" },
+          { "value": "2.4", "suffix": "x", "label": "engagement en stories" }
+        ],
+        "quote": "Las sugerencias de IA respetan nuestro tono mejor que cualquier asistente que probamos.",
+        "person": "Diego Aranda, Head of Growth"
+      },
+      "grupoLoma": {
+        "company": "Grupo Loma",
+        "industry": "Cadena de restaurantes multi-sucursal · 5 países",
+        "challenge": "48 sucursales operando reseñas independientemente, sin gobierno de marca ni control central.",
+        "solution": "Implementaron Blacknel con RBAC granular, dashboards por país y crisis detection global.",
+        "results": [
+          { "value": "48", "label": "sucursales bajo un mismo plano" },
+          { "value": "3.8", "suffix": " → 4.6", "label": "rating Google promedio" },
+          { "value": "100", "suffix": "%", "label": "compliance RBAC" }
+        ],
+        "quote": "Blacknel fue la primera plataforma que escaló sin pelearse con nuestro RBAC.",
+        "person": "Sofía Rendón, Director of Digital"
+      }
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Contacto",
+      "title": "Hablemos",
+      "subtitle": "¿Tienes una pregunta, una demo en mente o quieres explorar Enterprise? Escríbenos y respondemos en menos de 24 horas hábiles."
+    },
+    "form": {
+      "name": "Nombre completo",
+      "email": "Correo de trabajo",
+      "company": "Empresa",
+      "role": "Tu rol",
+      "rolePlaceholder": "Selecciona tu rol",
+      "roles": {
+        "founder": "Founder / CEO",
+        "marketing": "Marketing / Growth",
+        "ops": "Operaciones",
+        "agency": "Agencia",
+        "other": "Otro"
+      },
+      "useCase": "¿Para qué piensas usar Blacknel?",
+      "useCasePlaceholder": "Cuéntanos un poco sobre tu equipo y objetivo.",
+      "newsletter": "Quiero recibir el newsletter mensual",
+      "submit": "Enviar mensaje",
+      "submitting": "Enviando…",
+      "success": "Recibido. Te respondemos pronto.",
+      "error": "Algo salió mal. Inténtalo de nuevo o escríbenos directo."
+    },
+    "info": {
+      "title": "Información directa",
+      "sales": "Ventas",
+      "support": "Soporte",
+      "office": "Oficina",
+      "officeAddress": "Av. Insurgentes Sur 1234, Piso 6 — Del Valle, Ciudad de México, 03100, México"
+    },
+    "demo": {
+      "title": "Agenda una demo en vivo",
+      "description": "30 minutos con nuestro equipo. Te mostramos Blacknel con tus marcas reales."
+    }
+  },
+  "privacy": {
+    "hero": {
+      "eyebrow": "Legal",
+      "title": "Política de Privacidad",
+      "subtitle": "Vigente desde el 1 de enero de 2026. Cumplimos LFPDPPP (México), GDPR (UE) y CCPA (California)."
+    }
+  },
+  "terms": {
+    "hero": {
+      "eyebrow": "Legal",
+      "title": "Términos de Servicio",
+      "subtitle": "Vigente desde el 1 de enero de 2026. Al usar Blacknel, aceptas estos términos."
+    }
+  },
+  "cookies": {
+    "hero": {
+      "eyebrow": "Legal",
+      "title": "Política de Cookies",
+      "subtitle": "Cómo usamos cookies y tecnologías similares en blacknel.com y la aplicación."
+    },
+    "banner": {
+      "title": "Usamos cookies funcionales",
+      "body": "Para mantener tu sesión y guardar preferencias. No usamos cookies de tracking. Analytics es Plausible (sin cookies, GDPR-friendly).",
+      "accept": "Entendido",
+      "details": "Ver detalles"
+    }
+  },
+  "dpa": {
+    "hero": {
+      "eyebrow": "Legal",
+      "title": "Acuerdo de Procesamiento de Datos (DPA)",
+      "subtitle": "Para clientes en la UE y operaciones que requieren un DPA bajo Artículo 28 GDPR."
+    }
+  },
+  "security": {
+    "hero": {
+      "eyebrow": "Seguridad",
+      "title": "Tu información, tratada como nuestra",
+      "subtitle": "Encryption end-to-end, multi-tenancy estricta, RBAC granular y auditoría completa. Compliance LFPDPPP, GDPR y CCPA."
+    },
+    "principles": [
+      {
+        "title": "Encryption at rest y in transit",
+        "body": "AES-256 para datos en reposo. TLS 1.3 para todo lo que cruce la red. Nada en texto plano."
+      },
+      {
+        "title": "Multi-tenancy rigurosa",
+        "body": "Cada organización es un tenant aislado. Row-Level Security a nivel base de datos. Sin acceso cruzado posible."
+      },
+      {
+        "title": "RBAC granular",
+        "body": "Cinco roles default + custom roles en Enterprise. Permisos por marca, por acción, por canal."
+      },
+      {
+        "title": "Audit log inmutable",
+        "body": "Cada acción queda registrada con timestamp, usuario, IP y user-agent. Exportable para compliance."
+      },
+      {
+        "title": "Compliance",
+        "body": "LFPDPPP (México), GDPR (UE), CCPA (California). SOC 2 Type II en proceso de auditoría."
+      },
+      {
+        "title": "Bug bounty",
+        "body": "Programa privado activo. Si encuentras algo, escríbenos a security@blacknel.com con responsible disclosure."
+      }
+    ]
+  },
+  "careers": {
+    "hero": {
+      "eyebrow": "Trabajá con nosotros",
+      "title": "Construye con un equipo pequeño y serio",
+      "subtitle": "Remoto-friendly desde Ciudad de México. Equity en serio. Cero teatro corporativo."
+    },
+    "culture": {
+      "title": "Cómo trabajamos",
+      "items": [
+        { "title": "Async-first", "body": "Reuniones cuando tienen que existir. Documentamos todo." },
+        { "title": "Ship semanal", "body": "Cada equipo shipea algo cada semana. Visible en changelog." },
+        { "title": "Equity real", "body": "Stock options vestidas en 4 años con cliff de 1. ISO o NSO según país." },
+        { "title": "Salud y vida", "body": "Mejor seguro privado del mercado MX. PTO ilimitado con mínimo de 15 días." }
+      ]
+    },
+    "openRoles": "Posiciones abiertas",
+    "noRoles": "No hay posiciones abiertas justo ahora.",
+    "apply": "Aplicar",
+    "roles": {
+      "engineer": {
+        "title": "Senior Full Stack Engineer",
+        "location": "Remoto · LATAM",
+        "type": "Tiempo completo",
+        "summary": "TypeScript + Next.js + Postgres. Construyes el corazón de la app y el SDK público. Mentor para 1-2 jrs."
+      },
+      "designer": {
+        "title": "Product Designer",
+        "location": "Remoto · LATAM",
+        "type": "Tiempo completo",
+        "summary": "Diseño de producto end-to-end. Diseñas con Figma, prototipas en código (no obligatorio pero valorado)."
+      },
+      "csm": {
+        "title": "Customer Success Manager",
+        "location": "Ciudad de México (híbrido)",
+        "type": "Tiempo completo",
+        "summary": "Onboarding de cuentas Growth y Enterprise. Spanish + English fluent. Experiencia previa en SaaS B2B."
+      }
+    }
+  },
+  "press": {
+    "hero": {
+      "eyebrow": "Prensa",
+      "title": "Kit de prensa Blacknel",
+      "subtitle": "Recursos para medios, partners y eventos. ¿Cobertura específica? Escríbenos a press@blacknel.com"
+    },
+    "logos": {
+      "title": "Logos",
+      "description": "Descarga nuestro logo en SVG y PNG. Respeta clear space mínimo igual al símbolo.",
+      "download": "Descargar pack"
+    },
+    "brand": {
+      "title": "Brand guidelines",
+      "description": "Paleta, tipografía y tono. PDF de 8 páginas."
+    },
+    "releases": {
+      "title": "Comunicados",
+      "items": [
+        {
+          "date": "2026-04-15",
+          "title": "Blacknel lanza beta abierta para agencias y cadenas en LATAM",
+          "excerpt": "La plataforma AI-native para gestión de presencia digital abre acceso público tras seis meses de beta cerrada con 40 cuentas piloto."
+        }
+      ]
+    },
+    "founder": {
+      "title": "Bio del founder",
+      "body": "Carlos Anaya Ruiz, founder y CEO de Blacknel. Ingeniero con 10+ años construyendo producto en startups de LATAM. Vive en Ciudad de México."
+    }
+  },
+  "integrations": {
+    "hero": {
+      "eyebrow": "Integraciones",
+      "title": "Conecta cada canal que tu equipo ya usa",
+      "subtitle": "30+ integraciones nativas. APIs oficiales. Sin scrapers, sin bots de tercera mano."
+    },
+    "searchPlaceholder": "Buscar integración…",
+    "categories": {
+      "all": "Todas",
+      "social": "Redes sociales",
+      "messaging": "Mensajería",
+      "reviews": "Reseñas",
+      "ads": "Anuncios",
+      "crm": "CRM",
+      "communication": "Comunicación"
+    }
+  },
+  "changelog": {
+    "hero": {
+      "eyebrow": "Changelog",
+      "title": "Qué shippeamos",
+      "subtitle": "Cada release con su impacto. Sin emojis aleatorios, sin patch notes vacías."
+    }
+  },
+  "docs": {
+    "hero": {
+      "eyebrow": "Documentación",
+      "title": "Documentación pronto",
+      "subtitle": "Estamos terminando el SDK público y la documentación de API. Si necesitas acceso temprano, escríbenos."
+    },
+    "cta": "Solicitar acceso a docs"
+  },
+  "status": {
+    "hero": {
+      "eyebrow": "Status",
+      "title": "Todos los sistemas operativos",
+      "subtitle": "Uptime de los últimos 90 días, actualizado en tiempo real."
+    },
+    "uptime": "Uptime",
+    "components": {
+      "api": "API",
+      "app": "Aplicación web",
+      "publishing": "Cola de publicación",
+      "inbox": "Inbox (webhooks de redes)",
+      "ai": "Gateway de IA",
+      "auth": "Autenticación"
+    },
+    "operational": "Operativo",
+    "history": "Historial reciente",
+    "noIncidents": "Sin incidentes en los últimos 90 días."
+  }
+}
