@@ -159,6 +159,18 @@
   }
 }
 
+/* Global keyframes (must live outside @theme so the raw `animation: marquee ...`
+   inline style on <Marquee> resolves — Tailwind v4 only emits these as utility
+   classes when nested inside @theme). */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes marquee-reverse {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
 @layer base {
   * {
     @apply border-[color:var(--color-border)];

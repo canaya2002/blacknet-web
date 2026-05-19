@@ -847,11 +847,11 @@
         "name": "Carlos Anaya Ruiz",
         "role": "Founder & CEO",
         "bioParagraphs": [
-          "Ingeniero, operador y antiguo head of marketing de Bufete Manuel Solís (firma de inmigración multi-estado en EE.UU.). Antes de fundar Blacknel, construyó equipos de SEO, paid media y analytics gestionando presencia digital en 10+ ubicaciones.",
+          "Ingeniero y operador con experiencia construyendo equipos de SEO, paid media y analytics para marcas multi-ubicación en LATAM y Estados Unidos. Antes de fundar Blacknel, lideró marketing digital en firmas con presencia en 10+ ubicaciones.",
           "Vivió en carne propia el problema que Blacknel resuelve: 30 horas semanales perdidas pegando contenido entre Hootsuite, Sprout y Google Sheets. Vive en Ciudad de México con sus dos perros."
         ],
-        "contact": "Escribime: carlos@blacknel.com",
-        "contactEmail": "carlos@blacknel.com"
+        "contact": "Escríbeme: hola@blacknel.com",
+        "contactEmail": "hola@blacknel.com"
       }
     }
   },
@@ -1497,7 +1497,7 @@
     },
     "founder": {
       "title": "Bio del founder",
-      "body": "Carlos Anaya Ruiz, founder y CEO de Blacknel. Ingeniero, operador y antiguo head of marketing de Bufete Manuel Solís (firma de inmigración multi-estado en EE.UU.). Antes de fundar Blacknel construyó equipos de SEO, paid media y analytics gestionando presencia digital en 10+ ubicaciones. Vive en Ciudad de México."
+      "body": "Carlos Anaya Ruiz, founder y CEO de Blacknel. Ingeniero y operador con experiencia construyendo equipos de SEO, paid media y analytics para marcas multi-ubicación en LATAM y Estados Unidos. Antes de fundar Blacknel lideró marketing digital en firmas con presencia en 10+ ubicaciones. Vive en Ciudad de México."
     }
   },
   "integrations": {

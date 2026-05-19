@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -74,6 +75,21 @@ export default async function BlogPost({ params }: Props) {
           ))}
         </div>
       </PageHero>
+
+      {post.frontmatter.coverImage && (
+        <div className="container-page mx-auto max-w-4xl pt-2 pb-10">
+          <div className="relative aspect-video overflow-hidden rounded-2xl border border-[color:var(--color-border)] bg-[color:var(--color-bg-secondary)]">
+            <Image
+              src={post.frontmatter.coverImage}
+              alt={post.frontmatter.title}
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 896px"
+              className="object-cover"
+            />
+          </div>
+        </div>
+      )}
 
       <article className="container-page mx-auto max-w-3xl pb-20">
         <div className="mdx-content">
