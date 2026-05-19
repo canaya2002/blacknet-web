@@ -45,6 +45,7 @@
     "careers": "Trabajá con nosotros",
     "contact": "Contacto",
     "press": "Prensa",
+    "commitments": "Compromisos",
     "menu": "Menú",
     "closeMenu": "Cerrar menú",
     "descriptions": {
@@ -59,7 +60,8 @@
       "about": "Misión, visión y equipo",
       "careers": "3 vacantes abiertas · LATAM remote",
       "press": "Kit de prensa y assets de marca",
-      "contact": "Ventas, soporte y partnerships"
+      "contact": "Ventas, soporte y partnerships",
+      "commitments": "Cinco compromisos públicos, auditables cada año"
     },
     "featured": {
       "label": "Destacado",
@@ -87,6 +89,219 @@
     "dpa": "DPA",
     "security": "Seguridad",
     "statusPage": "Estado"
+  },
+  "commitments": {
+    "shared": {
+      "programsHeading": "Programas y prácticas",
+      "principlesHeading": "Principios",
+      "metricsHeading": "Métricas y avance",
+      "accountabilityHeading": "Rendición de cuentas",
+      "ctaTitle": "¿Quieres hablar con nosotros sobre este compromiso?",
+      "ctaDescription": "Contacto directo con la persona responsable dentro del equipo. Sin filtros, sin respuestas automáticas.",
+      "ctaButton": "Contactar al equipo",
+      "viewAll": "Ver todos los compromisos",
+      "back": "← Volver a compromisos"
+    },
+    "index": {
+      "hero": {
+        "eyebrow": "Compromisos públicos",
+        "title": "Cinco compromisos. Auditables cada año.",
+        "subtitle": "Cómo trabajamos, contratamos y operamos. Cada compromiso es público, con programas concretos, métricas verificables y un equipo responsable. Si fallamos, lo decimos."
+      },
+      "principleBar": [
+        "Sin promesas vacías",
+        "Cada compromiso con métricas",
+        "Reporte anual público"
+      ],
+      "cards": {
+        "professional-development": {
+          "title": "Desarrollo y formación profesional",
+          "tagline": "Crecer junto con la compañía — no a pesar de ella."
+        },
+        "diversity-equity-inclusion": {
+          "title": "Diversidad, igualdad e inclusión",
+          "tagline": "Un equipo que se parece a la gente para la que construimos."
+        },
+        "sustainability": {
+          "title": "Sostenibilidad",
+          "tagline": "Carbono-neutral hoy. Carbono-negativo en 2028."
+        },
+        "social-impact": {
+          "title": "Impacto social",
+          "tagline": "1% de ingresos · 1% de equity · 1% de producto · 1% de tiempo."
+        },
+        "work-life-balance": {
+          "title": "Conciliación laboral",
+          "tagline": "El trabajo se ajusta a la vida — no al revés."
+        }
+      },
+      "explore": "Ver compromiso",
+      "report": {
+        "title": "Reporte anual de compromisos",
+        "body": "Cada enero publicamos una auditoría completa de los cinco compromisos: métricas, programas que funcionaron y los que no.",
+        "cta": "Ver reporte 2026"
+      },
+      "metaTitle": "Compromisos · Blacknel",
+      "metaDescription": "Cinco compromisos públicos de Blacknel: desarrollo profesional, diversidad e inclusión, sostenibilidad, impacto social y conciliación laboral. Auditados cada año."
+    },
+    "items": {
+      "professional-development": {
+        "eyebrow": "Compromiso 01",
+        "title": "Desarrollo y formación profesional",
+        "subtitle": "Invertir en que el equipo crezca técnica y profesionalmente — con presupuesto, tiempo protegido y mentoría — es la base de todo lo demás.",
+        "metaTitle": "Desarrollo y formación profesional · Compromisos Blacknel",
+        "metaDescription": "Cómo Blacknel invierte en el crecimiento de su equipo: presupuesto mensual de aprendizaje, mentoría 1:1, planes individuales de desarrollo y rotaciones cross-funcionales.",
+        "description": [
+          "En Blacknel creemos que las personas crecen cuando tienen autonomía, claridad de camino y tiempo real para aprender. No es un perk — es parte del contrato de trabajo.",
+          "Cada persona del equipo tiene un Plan Individual de Desarrollo (IDP) revisado trimestralmente, presupuesto mensual de formación sin necesidad de aprobación previa, y al menos 10% de su tiempo semanal protegido para aprendizaje aplicado."
+        ],
+        "principles": [
+          { "title": "Tiempo, no sólo dinero", "body": "Cualquiera puede pagar un curso. Pocas compañías protegen el tiempo para terminarlo. Nosotros sí." },
+          { "title": "Carrera dual: IC o manager", "body": "Subir de seniority no requiere gestionar gente. Tenemos tracks paralelos con compensación equivalente." },
+          { "title": "Aprendizaje aplicado", "body": "Lo que aprendés se usa en el siguiente sprint o se enseña al equipo. Conocimiento que no circula, no sirve." }
+        ],
+        "programs": [
+          { "title": "Presupuesto mensual de aprendizaje", "body": "$150 USD/mes por persona para cursos, libros, suscripciones y conferencias — sin aprobación previa. Lo gastás en lo que necesités." },
+          { "title": "Plan Individual de Desarrollo (IDP)", "body": "Revisado cada trimestre con tu manager. Objetivos técnicos, soft-skills, próximo rol y plan concreto para llegar." },
+          { "title": "Mentoría interna 1:1", "body": "Pairing semestral: cada IC senior mentoriza a un junior; cada manager nuevo recibe un coach interno." },
+          { "title": "Conference sponsorship", "body": "Cubrimos boleto + viáticos para asistir a 1 conferencia/año (Next.js Conf, React Summit, AWS re:Invent, Customer.io)." },
+          { "title": "Tech Talks viernes", "body": "Espacio interno de 45 min los viernes para que cualquiera presente algo que aprendió. Grabado y archivado." },
+          { "title": "Rotaciones cross-funcionales", "body": "Después de 18 meses en un rol, podés solicitar una rotación de 3 meses a otra área (eng ↔ design ↔ product)." }
+        ],
+        "metrics": [
+          { "label": "Presupuesto anual de aprendizaje", "value": "$1,800 USD/persona", "hint": "sin aprobación previa" },
+          { "label": "Horas semanales protegidas", "value": "10%+", "hint": "garantizado en calendario" },
+          { "label": "Promociones internas vs. externas (2025)", "value": "73 / 27", "hint": "% de roles cubiertos" },
+          { "label": "NPS interno de carrera", "value": "8.6 / 10", "hint": "encuesta anónima Q4 2025" }
+        ],
+        "accountability": "Responsable: Equipo de Personas. Auditoría pública publicada cada enero."
+      },
+      "diversity-equity-inclusion": {
+        "eyebrow": "Compromiso 02",
+        "title": "Diversidad, igualdad e inclusión",
+        "subtitle": "Construimos para audiencias diversas en LATAM y Estados Unidos. Nuestro equipo debe parecerse a ellas — no a la industria.",
+        "metaTitle": "Diversidad, igualdad e inclusión · Compromisos Blacknel",
+        "metaDescription": "Compromiso de Blacknel con DEI: hiring estructurado, bandas salariales públicas, paridad de género, audit anual independiente y sponsorship de iniciativas LATAM.",
+        "description": [
+          "Construir software para múltiples mercados, idiomas y culturas requiere un equipo que comparta esa pluralidad. La diversidad no es un KPI de marketing — es una condición técnica del producto.",
+          "Aplicamos las mismas prácticas que esperamos de nuestros clientes: hiring estructurado, bandas salariales transparentes, accesibilidad por defecto y rendición de cuentas pública anual."
+        ],
+        "principles": [
+          { "title": "Equidad estructural, no buenas intenciones", "body": "Los sesgos se mitigan con proceso — rúbricas, paneles, datos — no con declaraciones." },
+          { "title": "Compensación pública", "body": "Bandas salariales internas visibles para todo el equipo. Mismo nivel + misma ubicación = misma compensación." },
+          { "title": "Accesibilidad por defecto", "body": "El producto y este sitio cumplen WCAG 2.2 AA. Audit anual con AccessLab." }
+        ],
+        "programs": [
+          { "title": "Hiring estructurado", "body": "Rúbricas de entrevista publicadas, paneles diversos (≥ 1 persona de género subrepresentado), screen de CV anónimo en primera ronda." },
+          { "title": "Bandas salariales públicas", "body": "Banda definida por nivel + ubicación, revisada cada 6 meses contra benchmark (Levels.fyi · Honeit LATAM)." },
+          { "title": "Paridad de género — objetivo 2027", "body": "Hoy: 38% mujeres en el equipo total, 31% en roles técnicos. Objetivo público: 50% / 45% para Q4 2027." },
+          { "title": "Audit DEI anual", "body": "Tercera parte independiente audita compensación, retención y promoción por género, origen y edad. Publicado cada enero." },
+          { "title": "Sponsorship LATAM", "body": "Aporte económico y mentoría a PionerasDev (Colombia), Geek Girls LatAm (México), Laboratoria y MujeresIT." },
+          { "title": "Pronombres opcionales, respetados siempre", "body": "Pronombres opcionales en perfiles, firmas y Slack. Respetados siempre. Nunca obligatorios." }
+        ],
+        "metrics": [
+          { "label": "Mujeres en el equipo total", "value": "38%", "hint": "objetivo 2027: 50%" },
+          { "label": "Mujeres en roles técnicos", "value": "31%", "hint": "objetivo 2027: 45%" },
+          { "label": "Brecha salarial por género", "value": "≤ 2.1%", "hint": "audit Q4 2025" },
+          { "label": "Retención por género", "value": "Paridad", "hint": "diferencia < 3 pp" }
+        ],
+        "accountability": "Responsable: Equipo de Personas + Comité DEI. Audit externo anual publicado cada enero."
+      },
+      "sustainability": {
+        "eyebrow": "Compromiso 03",
+        "title": "Sostenibilidad",
+        "subtitle": "El software tiene huella de carbono. La medimos, la reducimos y compensamos el resto. Carbono-neutral desde 2025. Carbono-negativo para 2028.",
+        "metaTitle": "Sostenibilidad y huella de carbono · Compromisos Blacknel",
+        "metaDescription": "El compromiso de sostenibilidad de Blacknel: regiones cloud 100% renovables, código green-by-design, audit anual GHG y reforestación verificada en el corredor de la Mariposa Monarca.",
+        "description": [
+          "Cada función que se ejecuta, cada imagen que se sirve y cada GB transferido genera emisiones. Las compañías SaaS tradicionalmente no las miden. Nosotros sí.",
+          "Desde 2024 publicamos un balance anual de huella de carbono. En 2025 alcanzamos carbono-neutral. La meta pública es carbono-negativo en 2028 — absorber más de lo que emitimos."
+        ],
+        "principles": [
+          { "title": "Lo que no se mide, no existe", "body": "Cada función serverless tiene un budget de cómputo. Cada deploy publica su delta de emisiones." },
+          { "title": "Reducir primero, compensar después", "body": "La compensación es la última instancia. Primero: arquitectura eficiente, regiones renovables, código optimizado." },
+          { "title": "Transparencia radical", "body": "Reporte anual de huella publicado con metodología abierta y verificación de tercera parte." }
+        ],
+        "programs": [
+          { "title": "Regiones cloud renovables al 100%", "body": "Vercel (Cloudflare power) · AWS us-east-1 y eu-west-1 con renovable contractual. No operamos en regiones no-renovables." },
+          { "title": "Green coding standards", "body": "Budget de cold-start por endpoint, mandato de optimización de imágenes (AVIF/WebP), lazy-loading por defecto, ISR sobre SSR donde aplique." },
+          { "title": "Audit anual de huella", "body": "Calculado con GHG Protocol + Cloud Carbon Footprint. Verificado por Climate Neutral Group cada enero." },
+          { "title": "Compensación verificada", "body": "Compensamos el 110% del residual vía Pacto por el Bosque (México): reforestación en corredor de la Mariposa Monarca. Verra-verified." },
+          { "title": "Remote-first → menos commuting", "body": "100% remoto reduce emisiones de commuting en ~70% vs. modelo presencial. Cálculo per-cápita publicado." },
+          { "title": "Hardware lifecycle", "body": "Refresh cada 4 años (no 2). Equipos reacondicionados y revendidos vía partner certificado." }
+        ],
+        "metrics": [
+          { "label": "Estado actual", "value": "Neutral", "hint": "desde Q1 2025" },
+          { "label": "Emisiones 2025", "value": "32 tCO₂e", "hint": "scope 1 + 2 + 3 (cloud)" },
+          { "label": "Compensación 2025", "value": "35 tCO₂e", "hint": "Verra-verified" },
+          { "label": "Objetivo 2028", "value": "Negativo", "hint": "absorber > emitir" }
+        ],
+        "accountability": "Responsable: VP Engineering + Operaciones. Audit independiente por Climate Neutral Group cada enero."
+      },
+      "social-impact": {
+        "eyebrow": "Compromiso 04",
+        "title": "Impacto social",
+        "subtitle": "El compromiso 1·1·1·1: 1% de ingresos, 1% de equity, 1% de producto y 1% del tiempo del equipo — todo dedicado a iniciativas sociales en LATAM y Estados Unidos.",
+        "metaTitle": "Impacto social · Pledge 1·1·1·1 · Compromisos Blacknel",
+        "metaDescription": "El compromiso 1·1·1·1 de Blacknel: 1% de ingresos, equity, producto y tiempo del equipo dedicados al impacto social. Partners: Techo, Endeavor LATAM, Ashoka México.",
+        "description": [
+          "Existimos para amplificar marcas, pero nuestra misión más profunda es amplificar comunidades. Adoptamos el modelo Pledge 1% extendido a 1·1·1·1 — un compromiso integrado al reporting financiero y al producto.",
+          "Cada trimestre publicamos cuánto se donó, a quién, en qué moneda y con qué resultado. No es CSR de marketing — está auditado por el mismo equipo que audita las finanzas."
+        ],
+        "principles": [
+          { "title": "Estructural, no caritativo", "body": "1·1·1·1 está comprometido en los bylaws de la sociedad. No depende de la voluntad del CEO ni de un buen año fiscal." },
+          { "title": "Foco en LATAM", "body": "70% de la asignación se dirige a iniciativas con presencia en México, Colombia, Chile, Perú y Argentina." },
+          { "title": "Reporte trimestral", "body": "Publicado el primer mes de cada trimestre. Auditado por finanzas externas." }
+        ],
+        "programs": [
+          { "title": "Blacknel 1·1·1·1 pledge", "body": "1% de revenue anual donado a partners verificados: Techo, Endeavor LATAM, Ashoka México, Pro Bono Network." },
+          { "title": "Producto gratis para ONGs", "body": "Plan Growth gratis para 100+ ONGs verificadas en LATAM y EE.UU. Aplicación en blacknel.com/commitments/social-impact." },
+          { "title": "Brands for Good", "body": "5 ONGs por año reciben gestión pro-bono completa de su presencia digital (publicación, inbox, reportes)." },
+          { "title": "Volunteer day pagado", "body": "Cada persona del equipo tiene 1 día pagado por trimestre para voluntariar en una causa de su elección." },
+          { "title": "Equity pledge", "body": "1% del cap-table inicial reservado para Pledge 1% International. Si llegamos a exit, se materializa en endowment de impacto." },
+          { "title": "Partnerships activos", "body": "Techo · Endeavor LATAM · Ashoka México · NetHope · TechSoup LATAM · PionerasDev." }
+        ],
+        "metrics": [
+          { "label": "Donado en 2025", "value": "$48,200 USD", "hint": "1.1% de revenue" },
+          { "label": "ONGs activas en producto", "value": "127", "hint": "plan Growth gratis" },
+          { "label": "Días de voluntariado", "value": "184 días", "hint": "equipo completo 2025" },
+          { "label": "Brands for Good", "value": "5 / 5", "hint": "cohorte 2025 completa" }
+        ],
+        "accountability": "Responsable: COO + Comité Pledge. Auditoría trimestral conjunta finanzas internas + externos."
+      },
+      "work-life-balance": {
+        "eyebrow": "Compromiso 05",
+        "title": "Conciliación laboral",
+        "subtitle": "El trabajo se ajusta a la vida — no al revés. Remoto-first, asíncrono por defecto, medimos resultados y no horas. La salud mental no es un perk.",
+        "metaTitle": "Conciliación laboral y bienestar · Compromisos Blacknel",
+        "metaDescription": "Cómo Blacknel construye un entorno laboral conciliable: remoto-first, asincronía por defecto, vacaciones ilimitadas con mínimo de 25 días, licencia parental de 16 semanas y sabbatical.",
+        "description": [
+          "La conciliación no es flexibilidad horaria — es un sistema completo que respeta la vida fuera del trabajo. Eso significa decisiones de operación, no slogans en LinkedIn.",
+          "Operamos asíncrono por defecto, con un máximo de 2 reuniones por día y miércoles sin reuniones. Las vacaciones tienen un mínimo (no un máximo) porque los mínimos protegen a quien no se anima a tomarlas."
+        ],
+        "principles": [
+          { "title": "Resultados, no horas", "body": "No hay tracking de horas. Cada rol tiene OKRs trimestrales explícitos. Si los cumplís, no nos importa cuándo trabajaste." },
+          { "title": "Asincronía por defecto", "body": "Toda decisión importante se documenta. Si requirió reunión, queda grabada y resumida por escrito." },
+          { "title": "Salud mental al mismo nivel que la física", "body": "Estipendio mensual para terapia, apps de meditación o coaching. Sin justificar, sin recibos." }
+        ],
+        "programs": [
+          { "title": "Remoto-first global", "value": "Cualquier huso horario entre UTC-8 y UTC+2", "body": "100% remoto. Sin horas centrales obligatorias. Cualquier huso horario entre UTC-8 y UTC+2." },
+          { "title": "Vacaciones ilimitadas · mínimo 25 días", "body": "Sí, ilimitadas. Pero también un mínimo público de 25 días/año que el manager debe asegurar que tomes." },
+          { "title": "Licencia parental · 16 semanas", "body": "16 semanas pagas al 100% para todas las personas que se convierten en padres/madres — incluye adopción, sin distinción de género." },
+          { "title": "Miércoles sin reuniones", "body": "Día completo bloqueado en calendarios del equipo. Excepciones requieren aprobación explícita del CEO." },
+          { "title": "Estipendio de bienestar", "body": "$100 USD/mes para terapia, meditación, gym o coaching. Sin justificar, sin recibos." },
+          { "title": "Sabbatical · cada 4 años", "body": "4 semanas pagas extra cada 4 años continuos en la compañía. Acumulables con vacaciones regulares." },
+          { "title": "Piloto semana de 4 días", "body": "Q3 2026: piloto de 6 meses con 80% de la organización. Mismo salario, viernes libres. Resultados públicos al cierre." }
+        ],
+        "metrics": [
+          { "label": "Días de PTO promedio tomados", "value": "28 días", "hint": "equipo full-time 2025" },
+          { "label": "Reuniones promedio por día", "value": "1.7", "hint": "objetivo: ≤ 2" },
+          { "label": "Score de burnout", "value": "Bajo", "hint": "Maslach Inventory · Q4 2025" },
+          { "label": "Adopción estipendio bienestar", "value": "84%", "hint": "del equipo, mensual" }
+        ],
+        "accountability": "Responsable: Equipo de Personas + Founders. Encuesta de burnout trimestral publicada con datos agregados."
+      }
+    }
   },
   "home": {
     "hero": {

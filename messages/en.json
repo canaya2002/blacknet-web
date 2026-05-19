@@ -45,6 +45,7 @@
     "careers": "Careers",
     "contact": "Contact",
     "press": "Press",
+    "commitments": "Commitments",
     "menu": "Menu",
     "closeMenu": "Close menu",
     "descriptions": {
@@ -59,7 +60,8 @@
       "about": "Mission, vision, team",
       "careers": "3 open roles · LATAM remote",
       "press": "Press kit and brand assets",
-      "contact": "Sales, support, partnerships"
+      "contact": "Sales, support, partnerships",
+      "commitments": "Five public commitments, audited every year"
     },
     "featured": {
       "label": "Featured",
@@ -87,6 +89,219 @@
     "dpa": "DPA",
     "security": "Security",
     "statusPage": "Status"
+  },
+  "commitments": {
+    "shared": {
+      "programsHeading": "Programs and practices",
+      "principlesHeading": "Principles",
+      "metricsHeading": "Metrics and progress",
+      "accountabilityHeading": "Accountability",
+      "ctaTitle": "Want to talk to us about this commitment?",
+      "ctaDescription": "Direct contact with the person responsible inside the team. No filters, no auto-responses.",
+      "ctaButton": "Contact the team",
+      "viewAll": "View all commitments",
+      "back": "← Back to commitments"
+    },
+    "index": {
+      "hero": {
+        "eyebrow": "Public commitments",
+        "title": "Five commitments. Audited every year.",
+        "subtitle": "How we work, hire, and operate. Every commitment is public, with concrete programs, verifiable metrics, and a person responsible. If we fail, we say so."
+      },
+      "principleBar": [
+        "No empty promises",
+        "Every commitment has metrics",
+        "Public annual report"
+      ],
+      "cards": {
+        "professional-development": {
+          "title": "Professional development and training",
+          "tagline": "Grow with the company — not in spite of it."
+        },
+        "diversity-equity-inclusion": {
+          "title": "Diversity, equity, and inclusion",
+          "tagline": "A team that looks like the people we build for."
+        },
+        "sustainability": {
+          "title": "Sustainability",
+          "tagline": "Carbon-neutral today. Carbon-negative by 2028."
+        },
+        "social-impact": {
+          "title": "Social impact",
+          "tagline": "1% revenue · 1% equity · 1% product · 1% team time."
+        },
+        "work-life-balance": {
+          "title": "Work-life balance",
+          "tagline": "Work fits life — not the other way around."
+        }
+      },
+      "explore": "View commitment",
+      "report": {
+        "title": "Annual commitments report",
+        "body": "Every January we publish a full audit of the five commitments: metrics, programs that worked, programs that did not.",
+        "cta": "View 2026 report"
+      },
+      "metaTitle": "Commitments · Blacknel",
+      "metaDescription": "Blacknel's five public commitments: professional development, diversity and inclusion, sustainability, social impact, and work-life balance. Audited every year."
+    },
+    "items": {
+      "professional-development": {
+        "eyebrow": "Commitment 01",
+        "title": "Professional development and training",
+        "subtitle": "Investing in our team's technical and professional growth — with budget, protected time, and mentorship — is the foundation for everything else.",
+        "metaTitle": "Professional development and training · Blacknel Commitments",
+        "metaDescription": "How Blacknel invests in its team's growth: monthly learning budget, 1:1 mentorship, Individual Development Plans, and cross-functional rotations.",
+        "description": [
+          "At Blacknel we believe people grow when given autonomy, a clear path, and real time to learn. It's not a perk — it's part of the contract.",
+          "Every team member has an Individual Development Plan (IDP) reviewed quarterly, a monthly learning budget that needs no pre-approval, and at least 10% of their weekly time protected for applied learning."
+        ],
+        "principles": [
+          { "title": "Time, not just money", "body": "Anyone can pay for a course. Few companies protect the time to finish it. We do." },
+          { "title": "Dual track: IC or manager", "body": "Senior progression doesn't require managing people. We have parallel tracks with equivalent compensation." },
+          { "title": "Applied learning", "body": "What you learn ships in the next sprint or gets taught to the team. Knowledge that doesn't circulate doesn't matter." }
+        ],
+        "programs": [
+          { "title": "Monthly learning budget", "body": "$150 USD/month per person for courses, books, subscriptions, and conferences — no pre-approval. Spend it on what you need." },
+          { "title": "Individual Development Plan (IDP)", "body": "Reviewed every quarter with your manager. Technical goals, soft skills, next role, and a concrete plan to get there." },
+          { "title": "Internal 1:1 mentorship", "body": "Bi-annual pairing program: every senior IC mentors a junior; every new manager gets an internal coach." },
+          { "title": "Conference sponsorship", "body": "We cover ticket + travel for one conference per year (Next.js Conf, React Summit, AWS re:Invent, Customer.io)." },
+          { "title": "Friday Tech Talks", "body": "Internal 45-minute slot every Friday for anyone to present something they learned. Recorded and archived." },
+          { "title": "Cross-functional rotations", "body": "After 18 months in a role, you can request a 3-month rotation to another area (eng ↔ design ↔ product)." }
+        ],
+        "metrics": [
+          { "label": "Annual learning budget", "value": "$1,800 USD/person", "hint": "no pre-approval needed" },
+          { "label": "Protected weekly hours", "value": "10%+", "hint": "guaranteed in calendar" },
+          { "label": "Internal vs. external promotions (2025)", "value": "73 / 27", "hint": "% of roles filled" },
+          { "label": "Internal career NPS", "value": "8.6 / 10", "hint": "anonymous survey Q4 2025" }
+        ],
+        "accountability": "Owner: People Team. Public audit published every January."
+      },
+      "diversity-equity-inclusion": {
+        "eyebrow": "Commitment 02",
+        "title": "Diversity, equity, and inclusion",
+        "subtitle": "We build for diverse audiences across LATAM and the US. Our team should look like them — not like the industry.",
+        "metaTitle": "Diversity, equity, and inclusion · Blacknel Commitments",
+        "metaDescription": "Blacknel's commitment to DEI: structured hiring, public salary bands, gender parity targets, independent annual audit, and LATAM sponsorship programs.",
+        "description": [
+          "Building software for multiple markets, languages, and cultures requires a team that shares that plurality. Diversity isn't a marketing KPI — it's a technical condition of the product.",
+          "We apply the same practices we expect from our customers: structured hiring, transparent compensation bands, accessibility by default, and public annual accountability."
+        ],
+        "principles": [
+          { "title": "Structural equity, not good intentions", "body": "Bias is mitigated by process — rubrics, panels, data — not statements." },
+          { "title": "Public compensation", "body": "Internal salary bands visible to the entire team. Same level + same location = same compensation." },
+          { "title": "Accessibility by default", "body": "Product and this site meet WCAG 2.2 AA. Annual audit with AccessLab." }
+        ],
+        "programs": [
+          { "title": "Structured hiring", "body": "Published interview rubrics, diverse panels (≥ 1 underrepresented gender), anonymous CV screen on first round." },
+          { "title": "Public salary bands", "body": "Bands defined by level + location, reviewed every 6 months against benchmarks (Levels.fyi · Honeit LATAM)." },
+          { "title": "Gender parity — 2027 target", "body": "Today: 38% women on the full team, 31% in technical roles. Public target: 50% / 45% by Q4 2027." },
+          { "title": "Annual DEI audit", "body": "Independent third party audits compensation, retention, and promotion by gender, origin, and age. Published every January." },
+          { "title": "LATAM sponsorship", "body": "Financial sponsorship and mentorship for PionerasDev (Colombia), Geek Girls LatAm (Mexico), Laboratoria, and MujeresIT." },
+          { "title": "Pronouns optional, respected always", "body": "Pronouns optional on profiles, signatures, and Slack. Respected always. Never required." }
+        ],
+        "metrics": [
+          { "label": "Women on the full team", "value": "38%", "hint": "2027 target: 50%" },
+          { "label": "Women in technical roles", "value": "31%", "hint": "2027 target: 45%" },
+          { "label": "Gender pay gap", "value": "≤ 2.1%", "hint": "audit Q4 2025" },
+          { "label": "Retention by gender", "value": "Parity", "hint": "difference < 3 pp" }
+        ],
+        "accountability": "Owner: People Team + DEI Committee. External audit published every January."
+      },
+      "sustainability": {
+        "eyebrow": "Commitment 03",
+        "title": "Sustainability",
+        "subtitle": "Software has a carbon footprint. We measure it, reduce it, and offset the rest. Carbon-neutral since 2025. Carbon-negative by 2028.",
+        "metaTitle": "Sustainability and carbon footprint · Blacknel Commitments",
+        "metaDescription": "Blacknel's sustainability commitment: 100% renewable cloud regions, green-by-design code standards, annual GHG audit, and verified reforestation in the Monarch Butterfly corridor.",
+        "description": [
+          "Every function that runs, every image that's served, every GB transferred generates emissions. Most SaaS companies don't measure them. We do.",
+          "We've published an annual carbon footprint balance since 2024. In 2025 we reached carbon-neutral. The public goal is carbon-negative by 2028 — absorbing more than we emit."
+        ],
+        "principles": [
+          { "title": "What isn't measured doesn't exist", "body": "Every serverless function has a compute budget. Every deploy publishes its emissions delta." },
+          { "title": "Reduce first, offset second", "body": "Offsetting is the last resort. First: efficient architecture, renewable regions, optimized code." },
+          { "title": "Radical transparency", "body": "Annual footprint report published with open methodology and third-party verification." }
+        ],
+        "programs": [
+          { "title": "100% renewable cloud regions", "body": "Vercel (Cloudflare-powered) · AWS us-east-1 and eu-west-1 with contractual renewables. We don't operate in non-renewable regions." },
+          { "title": "Green coding standards", "body": "Per-endpoint cold-start budgets, mandatory image optimization (AVIF/WebP), lazy-loading by default, ISR over SSR where applicable." },
+          { "title": "Annual footprint audit", "body": "Calculated with GHG Protocol + Cloud Carbon Footprint. Verified by Climate Neutral Group every January." },
+          { "title": "Verified offsets", "body": "We offset 110% of residual via Pacto por el Bosque (Mexico): reforestation in the Monarch Butterfly corridor. Verra-verified." },
+          { "title": "Remote-first → less commuting", "body": "100% remote cuts commuting emissions by ~70% vs. in-office. Per-capita calculation published." },
+          { "title": "Hardware lifecycle", "body": "Refresh every 4 years (not 2). Equipment refurbished and resold via certified partner." }
+        ],
+        "metrics": [
+          { "label": "Current status", "value": "Neutral", "hint": "since Q1 2025" },
+          { "label": "2025 emissions", "value": "32 tCO₂e", "hint": "scope 1 + 2 + 3 (cloud)" },
+          { "label": "2025 offsets", "value": "35 tCO₂e", "hint": "Verra-verified" },
+          { "label": "2028 target", "value": "Negative", "hint": "absorb > emit" }
+        ],
+        "accountability": "Owner: VP Engineering + Operations. Independent audit by Climate Neutral Group every January."
+      },
+      "social-impact": {
+        "eyebrow": "Commitment 04",
+        "title": "Social impact",
+        "subtitle": "The 1·1·1·1 commitment: 1% of revenue, 1% of equity, 1% of product, and 1% of team time — all dedicated to social initiatives across LATAM and the US.",
+        "metaTitle": "Social impact · 1·1·1·1 Pledge · Blacknel Commitments",
+        "metaDescription": "Blacknel's 1·1·1·1 pledge: 1% of revenue, equity, product, and team time dedicated to social impact. Partners: Techo, Endeavor LATAM, Ashoka Mexico, NetHope.",
+        "description": [
+          "We exist to amplify brands, but our deeper mission is to amplify communities. We've adopted the Pledge 1% model extended to 1·1·1·1 — a commitment embedded in financial reporting and product.",
+          "Every quarter we publish how much was donated, to whom, in which currency, and with what outcome. This isn't marketing CSR — it's audited by the same team that audits the financials."
+        ],
+        "principles": [
+          { "title": "Structural, not charitable", "body": "1·1·1·1 is committed in the company bylaws. It doesn't depend on the CEO's will or a good fiscal year." },
+          { "title": "LATAM focus", "body": "70% of the allocation goes to initiatives operating in Mexico, Colombia, Chile, Peru, and Argentina." },
+          { "title": "Quarterly report", "body": "Published the first month of each quarter. Audited by external finance." }
+        ],
+        "programs": [
+          { "title": "Blacknel 1·1·1·1 pledge", "body": "1% of annual revenue donated to verified partners: Techo, Endeavor LATAM, Ashoka Mexico, Pro Bono Network." },
+          { "title": "Free product for nonprofits", "body": "Free Growth plan for 100+ verified nonprofits across LATAM and the US. Apply at blacknel.com/commitments/social-impact." },
+          { "title": "Brands for Good", "body": "5 nonprofits per year receive full pro-bono management of their digital presence (publishing, inbox, reports)." },
+          { "title": "Paid volunteer day", "body": "Each team member gets 1 paid day per quarter to volunteer for a cause of their choice." },
+          { "title": "Equity pledge", "body": "1% of the initial cap-table reserved for Pledge 1% International. On exit, materializes as an impact endowment." },
+          { "title": "Active partnerships", "body": "Techo · Endeavor LATAM · Ashoka Mexico · NetHope · TechSoup LATAM · PionerasDev." }
+        ],
+        "metrics": [
+          { "label": "Donated in 2025", "value": "$48,200 USD", "hint": "1.1% of revenue" },
+          { "label": "Nonprofits on the product", "value": "127", "hint": "free Growth plan" },
+          { "label": "Volunteer days taken", "value": "184 days", "hint": "full team 2025" },
+          { "label": "Brands for Good completed", "value": "5 / 5", "hint": "full 2025 cohort" }
+        ],
+        "accountability": "Owner: COO + Pledge Committee. Quarterly audit, joint internal finance + external."
+      },
+      "work-life-balance": {
+        "eyebrow": "Commitment 05",
+        "title": "Work-life balance",
+        "subtitle": "Work fits life — not the other way around. Remote-first, async-by-default, we measure outcomes not hours. Mental health is not a perk.",
+        "metaTitle": "Work-life balance and wellbeing · Blacknel Commitments",
+        "metaDescription": "How Blacknel builds a sustainable work environment: remote-first, async-by-default, unlimited PTO with a 25-day minimum, 16-week parental leave, and sabbatical every 4 years.",
+        "description": [
+          "Work-life balance is not flex hours — it's a complete system that respects life outside of work. That means operating decisions, not LinkedIn slogans.",
+          "We operate async-by-default, with a maximum of 2 meetings/day and meeting-free Wednesdays. PTO has a minimum (not a maximum) because minimums protect the people who don't dare take time off."
+        ],
+        "principles": [
+          { "title": "Outcomes, not hours", "body": "No hour tracking. Every role has explicit quarterly OKRs. If you hit them, we don't care when you worked." },
+          { "title": "Async by default", "body": "Every important decision is documented. If a meeting was required, it's recorded and summarized in writing." },
+          { "title": "Mental health on par with physical", "body": "Monthly stipend for therapy, meditation apps, or coaching. No justification, no receipts." }
+        ],
+        "programs": [
+          { "title": "Remote-first global", "body": "100% remote. No mandatory core hours. Any timezone between UTC-8 and UTC+2." },
+          { "title": "Unlimited PTO · 25-day minimum", "body": "Yes, unlimited. But also a public minimum of 25 days/year your manager must ensure you take." },
+          { "title": "Parental leave · 16 weeks", "body": "16 weeks paid at 100% for anyone becoming a parent — adoption included, no gender distinction." },
+          { "title": "No-meeting Wednesdays", "body": "Full day blocked on team calendars. Exceptions require explicit CEO approval." },
+          { "title": "Wellbeing stipend", "body": "$100 USD/month for therapy, meditation, gym, or coaching. No justification, no receipts." },
+          { "title": "Sabbatical · every 4 years", "body": "4 extra paid weeks every 4 continuous years at the company. Stackable with regular PTO." },
+          { "title": "4-day workweek pilot", "body": "Q3 2026: 6-month pilot with 80% of the org. Same salary, Fridays off. Results published at close." }
+        ],
+        "metrics": [
+          { "label": "Average PTO days taken", "value": "28 days", "hint": "full-time team, 2025" },
+          { "label": "Average meetings/day", "value": "1.7", "hint": "target: ≤ 2" },
+          { "label": "Burnout score", "value": "Low", "hint": "Maslach Inventory · Q4 2025" },
+          { "label": "Wellbeing stipend adoption", "value": "84%", "hint": "of team, monthly" }
+        ],
+        "accountability": "Owner: People Team + Founders. Quarterly burnout survey with aggregated data published."
+      }
+    }
   },
   "home": {
     "hero": {

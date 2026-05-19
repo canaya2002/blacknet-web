@@ -51,6 +51,7 @@ const columns = [
       { href: '/about', key: 'about' },
       { href: '/careers', key: 'careers' },
       { href: '/press', key: 'press' },
+      { href: '/commitments', key: 'commitments' },
       { href: '/contact', key: 'contact' },
     ],
   },

@@ -4,6 +4,14 @@ import { routing } from '@/i18n/routing';
 
 const base = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://blacknel.com';
 
+const commitmentSlugs = [
+  'professional-development',
+  'diversity-equity-inclusion',
+  'sustainability',
+  'social-impact',
+  'work-life-balance',
+];
+
 const staticPaths = [
   '',
   '/features',
@@ -19,6 +27,8 @@ const staticPaths = [
   '/security',
   '/careers',
   '/press',
+  '/commitments',
+  ...commitmentSlugs.map((s) => `/commitments/${s}`),
   '/privacy',
   '/terms',
   '/cookies',
@@ -32,6 +42,8 @@ function priorityFor(path: string): number {
     return 0.8;
   if (path === '/blog' || path === '/changelog' || path === '/contact' || path === '/docs')
     return 0.7;
+  if (path === '/commitments') return 0.7;
+  if (path.startsWith('/commitments/')) return 0.65;
   if (path === '/careers' || path === '/press' || path === '/status') return 0.6;
   return 0.5;
 }
