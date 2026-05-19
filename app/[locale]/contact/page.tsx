@@ -123,7 +123,7 @@ export default async function ContactPage({ params }: Props) {
                 </p>
                 <div className="mt-4 overflow-hidden rounded-xl border border-[color:var(--color-border)] bg-black/40">
                   <iframe
-                    src="https://calendly.com/blacknel/demo?embed_domain=blacknel.com&background_color=0a0a0a&text_color=ffffff&primary_color=ffffff"
+                    src="https://calendly.com/canaya917/blacknel-demo?embed_domain=blacknel.com&background_color=0a0a0a&text_color=ffffff&primary_color=ffffff"
                     title="Blacknel demo calendar"
                     loading="lazy"
                     className="h-[640px] w-full"
