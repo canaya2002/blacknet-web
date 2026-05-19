@@ -40,7 +40,10 @@ function PressBody({ locale }: { locale: string }) {
                   <div className="text-[color:var(--color-fg-tertiary)]">Blacknel</div>
                 </div>
                 <Button asChild variant="secondary" size="md">
-                  <a href="#" download>
+                  <a
+                    href="/press/blacknel-logo-pack.zip"
+                    download="blacknel-logo-pack.zip"
+                  >
                     <Download className="h-4 w-4" />
                     {t('logos.download')}
                   </a>
@@ -66,9 +69,12 @@ function PressBody({ locale }: { locale: string }) {
                   </div>
                 </div>
                 <Button asChild variant="secondary" size="md">
-                  <a href="#" download>
+                  <a
+                    href="/press/blacknel-brand-guidelines.pdf"
+                    download="blacknel-brand-guidelines.pdf"
+                  >
                     <Download className="h-4 w-4" />
-                    {t('logos.download')}
+                    {t('brand.download')}
                   </a>
                 </Button>
               </div>

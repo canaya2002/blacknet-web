@@ -1460,7 +1460,8 @@
     },
     "brand": {
       "title": "Brand guidelines",
-      "description": "Paleta, tipografía y tono. PDF de 8 páginas con do/don't."
+      "description": "Paleta, tipografía y tono. PDF de 7 páginas con do/don't.",
+      "download": "Descargar PDF"
     },
     "boilerplate": {
       "title": "Boilerplate",

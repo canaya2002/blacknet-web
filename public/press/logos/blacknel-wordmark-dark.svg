@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 192" width="720" height="192">
+  <title>Blacknel wordmark — dark (use on light backgrounds)</title>
+  <g transform="translate(24, 32)">
+    <path d="M40 0 H88 a24 24 0 0 1 0 48 H40 Z M40 48 H94 a24 24 0 0 1 0 48 H40 Z M40 0 V128" fill="none" stroke="#0a0a0a" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="172" y="124" font-family="Geist, Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="112" font-weight="600" letter-spacing="-4" fill="#0a0a0a">Blacknel</text>
+</svg>

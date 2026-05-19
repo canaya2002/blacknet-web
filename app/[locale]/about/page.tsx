@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import { ArrowRight, Mail, Quote } from 'lucide-react';
@@ -153,10 +154,18 @@ function TeamSection() {
         <div className="rounded-2xl border border-[color:var(--color-border)] bg-[color:var(--color-card)] p-8 backdrop-blur md:p-12">
           <div className="flex flex-col items-start gap-8 md:flex-row">
             <div
-              aria-hidden="true"
-              className="h-24 w-24 shrink-0 rounded-2xl border border-[color:var(--color-border-strong)] bg-[radial-gradient(circle_at_30%_30%,#ffffff,#52525b_55%,#0a0a0a)]"
-              style={{ boxShadow: '0 0 60px rgba(255,255,255,0.18)' }}
-            />
+              className="relative h-28 w-28 shrink-0 overflow-hidden rounded-2xl border border-[color:var(--color-border-strong)] bg-[color:var(--color-bg-secondary)]"
+              style={{ boxShadow: '0 0 60px rgba(255,255,255,0.12)' }}
+            >
+              <Image
+                src="/team/fundador.jpg"
+                alt={t('team.founder.name')}
+                fill
+                sizes="112px"
+                className="object-cover"
+                priority
+              />
+            </div>
             <div className="flex-1">
               <p className="mono text-[10px] uppercase tracking-wider text-[color:var(--color-fg-tertiary)]">
                 {t('team.title')}

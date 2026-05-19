@@ -24,6 +24,10 @@ const trustLogos: TrustLogo[] = [
   { name: 'CORAL HOTELS', className: 'font-light tracking-[0.22em]' },
   { name: 'holos health', className: 'font-medium tracking-tight' },
   { name: 'VERDE FOODS', className: 'mono font-semibold tracking-[0.18em]' },
+  { name: 'SYTHIO', className: 'mono font-semibold tracking-[0.28em] uppercase' },
+  { name: 'Florion', className: 'font-serif font-light tracking-[0.12em]' },
+  { name: 'Kintsugi Lab', className: 'font-light italic tracking-[0.06em]' },
+  { name: 'mar·adentro', className: 'mono font-medium lowercase tracking-wide' },
 ];
 
 export function Hero() {

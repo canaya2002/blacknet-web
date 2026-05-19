@@ -1460,7 +1460,8 @@
     },
     "brand": {
       "title": "Brand guidelines",
-      "description": "Palette, typography, and tone. 8-page PDF with do/don't."
+      "description": "Palette, typography, and tone. 7-page PDF with do/don't.",
+      "download": "Download PDF"
     },
     "boilerplate": {
       "title": "Boilerplate",

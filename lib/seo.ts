@@ -52,7 +52,8 @@ export function buildMetadata({
       title,
       description,
       images: [image],
-      creator: '@blacknel',
+      creator: '@blacknelapp',
+      site: '@blacknelapp',
     },
     robots: {
       index: true,
