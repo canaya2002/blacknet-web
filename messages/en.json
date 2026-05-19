@@ -1012,6 +1012,10 @@
       "eyebrow": "Legal",
       "title": "Data Deletion Request",
       "subtitle": "Effective January 1, 2026. Three ways to request full deletion of your data under LFPDPPP, GDPR, and CCPA."
+    },
+    "meta": {
+      "title": "Blacknel Data Deletion Instructions",
+      "description": "Instructions for requesting deletion of data associated with Meta integrations in Blacknel."
     }
   },
   "terms": {

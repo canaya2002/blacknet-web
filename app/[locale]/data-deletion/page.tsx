@@ -8,10 +8,10 @@ type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'dataDeletion.hero' });
+  const t = await getTranslations({ locale, namespace: 'dataDeletion.meta' });
   return buildMetadata({
     title: t('title'),
-    description: t('subtitle'),
+    description: t('description'),
     path: '/data-deletion',
     locale,
   });
