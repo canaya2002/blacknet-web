@@ -30,6 +30,7 @@ const staticPaths = [
   '/commitments',
   ...commitmentSlugs.map((s) => `/commitments/${s}`),
   '/privacy',
+  '/data-deletion',
   '/terms',
   '/cookies',
   '/dpa',

@@ -59,6 +59,7 @@ const columns = [
 
 const legalLinks = [
   { href: '/privacy', key: 'privacy' as const },
+  { href: '/data-deletion', key: 'dataDeletion' as const },
   { href: '/terms', key: 'terms' as const },
   { href: '/cookies', key: 'cookies' as const },
   { href: '/dpa', key: 'dpa' as const },

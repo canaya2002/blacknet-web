@@ -221,6 +221,17 @@ export default async function PrivacyPage({ params }: Props) {
           id="data-deletion"
           title={es ? '8. Solicitud de Eliminación de Datos' : '8. Data Deletion Request'}
         >
+          <p>
+            {es ? 'Para detalles completos sobre cómo solicitar la eliminación de tus datos, visitá nuestra página dedicada: ' : 'For full details on how to request deletion of your data, visit our dedicated page: '}
+            <a
+              href={es ? 'https://blacknel.com/es/data-deletion' : 'https://blacknel.com/en/data-deletion'}
+              className="text-[color:var(--color-fg)] underline underline-offset-2"
+            >
+              {es ? 'https://blacknel.com/es/data-deletion' : 'https://blacknel.com/en/data-deletion'}
+            </a>
+            {es ? '. El resumen a continuación se mantiene como referencia.' : '. The summary below is kept for reference.'}
+          </p>
+
           <h3 className="mt-4 text-base font-semibold text-[color:var(--color-fg)]">
             {es ? 'Tus derechos de eliminación' : 'Your deletion rights'}
           </h3>
