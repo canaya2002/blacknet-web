@@ -27,7 +27,7 @@ export function NewsletterInline() {
             {t('description')}
           </p>
           <div className="mt-6 max-w-md">
-            <NewsletterForm />
+            <NewsletterForm sourceLocation="home_inline" />
           </div>
         </div>
       </FadeInOnScroll>

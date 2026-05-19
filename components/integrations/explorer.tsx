@@ -3,12 +3,14 @@
 import { useMemo, useState } from 'react';
 import { ArrowUpRight, Plug, Search, Sparkles } from 'lucide-react';
 import { motion } from 'motion/react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { FadeInOnScroll } from '@/components/animations/fade-in-on-scroll';
 import { GlowCard } from '@/components/aceternity/card-hover';
 import { cn } from '@/lib/utils';
+import { pickLocale, trackEvent } from '@/lib/analytics';
+import type { IntegrationCategory } from '@/types/analytics';
 import { integrationLogoMap } from './logos';
 
 type Category = 'social' | 'ads' | 'reviews' | 'messaging' | 'crm' | 'communication';
@@ -70,8 +72,17 @@ const categoryOrder: Category[] = ['social', 'ads', 'reviews', 'messaging', 'crm
 export function IntegrationsExplorer() {
   const t = useTranslations('integrations');
   const tDesc = useTranslations('integrations.descriptions');
+  const locale = pickLocale(useLocale());
   const [query, setQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState<'all' | Category>('all');
+
+  const fireIntegrationClick = (integration: Integration) => {
+    trackEvent('integration_clicked', {
+      integration: integration.name,
+      category: integration.category as IntegrationCategory,
+      locale,
+    });
+  };
 
   const describe = (name: string): string => {
     try {
@@ -149,7 +160,13 @@ export function IntegrationsExplorer() {
         <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {featured.map((item, i) => (
             <FadeInOnScroll key={item.name} delay={i * 0.05}>
-              <FeaturedCard integration={item} description={describe(item.name)} liveLabel={t('stats.liveOfficial')} />
+              <button
+                type="button"
+                onClick={() => fireIntegrationClick(item)}
+                className="block w-full text-left"
+              >
+                <FeaturedCard integration={item} description={describe(item.name)} liveLabel={t('stats.liveOfficial')} />
+              </button>
             </FadeInOnScroll>
           ))}
         </div>
@@ -215,12 +232,18 @@ export function IntegrationsExplorer() {
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {items.map((item, i) => (
                   <FadeInOnScroll key={item.name} delay={(i % 8) * 0.03}>
-                    <IntegrationCard
-                      integration={item}
-                      description={describe(item.name)}
-                      comingSoonTooltip={t('stats.comingSoonTooltip')}
-                      soonLabel={t('stats.soon')}
-                    />
+                    <button
+                      type="button"
+                      onClick={() => fireIntegrationClick(item)}
+                      className="block w-full text-left"
+                    >
+                      <IntegrationCard
+                        integration={item}
+                        description={describe(item.name)}
+                        comingSoonTooltip={t('stats.comingSoonTooltip')}
+                        soonLabel={t('stats.soon')}
+                      />
+                    </button>
                   </FadeInOnScroll>
                 ))}
               </div>

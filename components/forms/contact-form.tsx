@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useTransition } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Check, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -15,9 +15,16 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import { pickLocale, trackEvent } from '@/lib/analytics';
+import type { ContactRole, InquiryType } from '@/types/analytics';
 
-type InquiryKey = 'demo' | 'pricing' | 'support' | 'enterprise' | 'press' | 'partnership' | 'other';
+type InquiryKey = InquiryType;
 const inquiries: InquiryKey[] = ['demo', 'pricing', 'support', 'enterprise', 'press', 'partnership', 'other'];
+const roleValues: readonly ContactRole[] = ['founder', 'marketing', 'ops', 'agency', 'other'];
+
+function normalizeRole(value: string): ContactRole {
+  return (roleValues as readonly string[]).includes(value) ? (value as ContactRole) : 'other';
+}
 
 export function ContactForm({
   onInquiryChange,
@@ -25,11 +32,13 @@ export function ContactForm({
   onInquiryChange?: (value: InquiryKey | '') => void;
 }) {
   const t = useTranslations('contact.form');
+  const locale = pickLocale(useLocale());
   const [hp, setHp] = useState('');
   const [inquiry, setInquiry] = useState<InquiryKey | ''>('');
   const [role, setRole] = useState<string>('');
   const [newsletter, setNewsletter] = useState(false);
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [isPending, startTransition] = useTransition();
 
   const handleInquiryChange = (value: string) => {
@@ -42,10 +51,10 @@ export function ContactForm({
     e.preventDefault();
     if (hp) return;
     const fd = new FormData(e.currentTarget);
-    const payload = Object.fromEntries(fd.entries());
-    payload.newsletter = String(newsletter);
+    const payload = Object.fromEntries(fd.entries()) as Record<string, unknown>;
+    payload.newsletter = newsletter;
     payload.role = role;
-    payload.inquiry = inquiry;
+    payload.inquiry = inquiry || 'other';
 
     startTransition(async () => {
       try {
@@ -54,9 +63,35 @@ export function ContactForm({
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload),
         });
-        if (!res.ok) throw new Error();
-        setStatus('success');
+
+        if (res.ok) {
+          setStatus('success');
+          setErrorMessage(null);
+          trackEvent('contact_form_submitted', {
+            inquiry_type: (inquiry || 'other') as InquiryType,
+            role: normalizeRole(role),
+            locale,
+          });
+          return;
+        }
+
+        let reason: 'validation' | 'server_error' | 'rate_limit' = 'server_error';
+        let field = '';
+        if (res.status === 429) reason = 'rate_limit';
+        else if (res.status === 400) reason = 'validation';
+
+        try {
+          const data = (await res.json()) as { field?: string; message?: string };
+          if (data?.field) field = String(data.field);
+          if (data?.message) setErrorMessage(data.message);
+        } catch {
+          // ignore JSON parse failure
+        }
+
+        trackEvent('contact_form_failed', { reason, field, locale });
+        setStatus('error');
       } catch {
+        trackEvent('contact_form_failed', { reason: 'network', field: '', locale });
         setStatus('error');
       }
     });
@@ -109,6 +144,7 @@ export function ContactForm({
             id="name"
             name="name"
             required
+            minLength={2}
             autoComplete="name"
             placeholder={t('namePlaceholder')}
           />
@@ -162,6 +198,7 @@ export function ContactForm({
           name="useCase"
           placeholder={t('useCasePlaceholder')}
           required
+          minLength={10}
           rows={5}
         />
         <p className="text-[11px] text-[color:var(--color-fg-tertiary)]">{t('useCaseHelper')}</p>
@@ -188,7 +225,7 @@ export function ContactForm({
         </Button>
         {status === 'error' && (
           <span className="text-sm text-red-300" role="alert">
-            {t('error')}
+            {errorMessage ? `${t('error')} (${errorMessage})` : t('error')}
           </span>
         )}
       </div>

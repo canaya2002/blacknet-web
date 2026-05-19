@@ -21,6 +21,7 @@ import { Link, usePathname } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { AuthCtaAnchor } from '@/components/analytics/header-ctas';
 import { Logo } from './logo';
 import { LanguageSwitcher } from './language-switcher';
 import { NavDropdown } from './nav-dropdown';
@@ -198,13 +199,15 @@ export function Header() {
           <LanguageSwitcher />
           <span aria-hidden="true" className="mx-1 h-5 w-px bg-white/10" />
           <Button asChild variant="ghost" size="sm">
-            <a href="https://app.blacknel.com/login">{tc('signIn')}</a>
+            <AuthCtaAnchor variant="sign_in" sourceLocation="nav">
+              {tc('signIn')}
+            </AuthCtaAnchor>
           </Button>
           <Button asChild variant="primary" size="sm">
-            <a href="https://app.blacknel.com/signup">
+            <AuthCtaAnchor variant="start_trial" sourceLocation="nav">
               {tc('startTrial')}
               <ArrowRight className="h-3.5 w-3.5" />
-            </a>
+            </AuthCtaAnchor>
           </Button>
         </div>
 
@@ -261,10 +264,14 @@ export function Header() {
             <div className="mt-auto flex flex-col gap-3">
               <LanguageSwitcher />
               <Button asChild variant="primary" size="lg">
-                <a href="https://app.blacknel.com/signup">{tc('startTrial')}</a>
+                <AuthCtaAnchor variant="start_trial" sourceLocation="mobile_menu">
+                  {tc('startTrial')}
+                </AuthCtaAnchor>
               </Button>
               <Button asChild variant="secondary" size="lg">
-                <a href="https://app.blacknel.com/login">{tc('signIn')}</a>
+                <AuthCtaAnchor variant="sign_in" sourceLocation="mobile_menu">
+                  {tc('signIn')}
+                </AuthCtaAnchor>
               </Button>
             </div>
           </SheetContent>

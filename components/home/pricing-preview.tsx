@@ -5,6 +5,7 @@ import { SectionHeader } from '@/components/magic/section-header';
 import { FadeInOnScroll } from '@/components/animations/fade-in-on-scroll';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { PricingTierAnchor } from '@/components/analytics/pricing-tier-anchor';
 import { cn } from '@/lib/utils';
 
 type Tier = 'standard' | 'growth' | 'enterprise';
@@ -81,7 +82,9 @@ export function PricingPreview() {
                       {tier.key === 'enterprise' ? (
                         <Link href="/contact">{tp(`${tier.key}.cta`)}</Link>
                       ) : (
-                        <a href="https://app.blacknel.com/signup">{tp(`${tier.key}.cta`)}</a>
+                        <PricingTierAnchor tier={tier.key} sourceLocation="pricing">
+                          {tp(`${tier.key}.cta`)}
+                        </PricingTierAnchor>
                       )}
                     </Button>
                   </div>

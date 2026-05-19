@@ -3,6 +3,7 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { FadeInOnScroll } from '@/components/animations/fade-in-on-scroll';
+import { AuthCtaAnchor } from '@/components/analytics/header-ctas';
 
 export function CtaSection() {
   const t = useTranslations('home.cta');
@@ -33,10 +34,10 @@ export function CtaSection() {
 
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Button asChild size="lg" variant="primary">
-                <a href="https://app.blacknel.com/signup">
+                <AuthCtaAnchor variant="start_trial" sourceLocation="cta_section">
                   {t('primary')}
                   <ArrowRight className="h-4 w-4" />
-                </a>
+                </AuthCtaAnchor>
               </Button>
               <Button asChild size="lg" variant="outline">
                 <Link href="/contact">{t('secondary')}</Link>

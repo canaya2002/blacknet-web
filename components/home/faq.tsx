@@ -1,12 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { SectionHeader } from '@/components/magic/section-header';
 import { FadeInOnScroll } from '@/components/animations/fade-in-on-scroll';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion';
+import { TrackedFaqAccordion } from '@/components/analytics/tracked-accordion';
 
 type Q = { q: string; a: string };
 
@@ -23,14 +18,7 @@ export function Faq() {
 
         <FadeInOnScroll delay={0.1}>
           <div className="mx-auto mt-12 max-w-3xl rounded-2xl border border-[color:var(--color-border)] bg-[color:var(--color-card)] px-6 backdrop-blur md:px-8">
-            <Accordion type="single" collapsible>
-              {questions.map((q, i) => (
-                <AccordionItem key={i} value={`q-${i}`}>
-                  <AccordionTrigger>{q.q}</AccordionTrigger>
-                  <AccordionContent>{q.a}</AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+            <TrackedFaqAccordion questions={questions} page="home" />
           </div>
         </FadeInOnScroll>
       </div>

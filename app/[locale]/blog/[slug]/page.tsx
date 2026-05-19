@@ -11,6 +11,8 @@ import { formatDate } from '@/lib/utils';
 import { CtaSection } from '@/components/home/cta-section';
 import { buildMetadata, siteUrl } from '@/lib/seo';
 import { JsonLd, articleSchema } from '@/components/seo/structured-data';
+import { BlogReadTracker } from '@/components/analytics/blog-read-tracker';
+import { pickLocale } from '@/lib/analytics';
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -48,6 +50,7 @@ export default async function BlogPost({ params }: Props) {
 
   return (
     <>
+      <BlogReadTracker slug={slug} locale={pickLocale(locale)} />
       <JsonLd
         data={articleSchema({
           title: post.frontmatter.title,

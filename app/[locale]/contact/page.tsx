@@ -5,6 +5,8 @@ import { ContactForm } from '@/components/forms/contact-form';
 import { FadeInOnScroll } from '@/components/animations/fade-in-on-scroll';
 import { ContactHeroVisual } from '@/components/hero-visuals/contact';
 import { buildMetadata } from '@/lib/seo';
+import { CalendlyTracker } from '@/components/analytics/calendly-tracker';
+import { pickLocale } from '@/lib/analytics';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -122,6 +124,7 @@ export default async function ContactPage({ params }: Props) {
                   {t('demo.description')}
                 </p>
                 <div className="mt-4 overflow-hidden rounded-xl border border-[color:var(--color-border)] bg-black/40">
+                  <CalendlyTracker locale={pickLocale(locale)} />
                   <iframe
                     src="https://calendly.com/canaya917/blacknel-demo?embed_domain=blacknel.com&background_color=0a0a0a&text_color=ffffff&primary_color=ffffff"
                     title="Blacknel demo calendar"

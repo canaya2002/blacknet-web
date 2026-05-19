@@ -1,11 +1,13 @@
 import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { AuroraBackground } from '@/components/aceternity/aurora-background';
+import { NotFoundTracker } from '@/components/analytics/not-found-tracker';
 
 export default function NotFound() {
   return (
     <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden py-24">
       <AuroraBackground />
+      <NotFoundTracker />
       <div className="container-page text-center">
         <p className="mono text-xs uppercase tracking-[0.2em] text-[color:var(--color-fg-tertiary)]">
           Error 404

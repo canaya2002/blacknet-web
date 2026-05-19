@@ -5,6 +5,7 @@ import { Globe } from 'lucide-react';
 import { useLocale } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
+import { pickLocale, trackEvent } from '@/lib/analytics';
 import {
   Select,
   SelectContent,
@@ -20,6 +21,15 @@ export function LanguageSwitcher() {
   const [isPending, startTransition] = useTransition();
 
   const onChange = (next: string) => {
+    const to = pickLocale(next);
+    const from = pickLocale(locale);
+    if (from !== to) {
+      trackEvent('language_switched', {
+        from,
+        to,
+        page: typeof window !== 'undefined' ? window.location.pathname : pathname,
+      });
+    }
     startTransition(() => {
       router.replace(pathname, { locale: next as (typeof routing.locales)[number] });
     });

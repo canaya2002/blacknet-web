@@ -13,6 +13,7 @@ import { GlobalBackground } from '@/components/layout/global-background';
 import { JsonLd, organizationSchema, softwareApplicationSchema } from '@/components/seo/structured-data';
 import { SmoothScroll } from '@/components/animations/smooth-scroll';
 import { Plausible } from '@/components/seo/plausible';
+import { Analytics } from '@vercel/analytics/next';
 import '../globals.css';
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://blacknel.com';
@@ -101,6 +102,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <CookieBanner />
         </NextIntlClientProvider>
         <Plausible />
+        <Analytics />
       </body>
     </html>
   );

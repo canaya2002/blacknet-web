@@ -7,6 +7,7 @@ import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { FadeInOnScroll } from '@/components/animations/fade-in-on-scroll';
+import { PricingTierAnchor } from '@/components/analytics/pricing-tier-anchor';
 import { cn } from '@/lib/utils';
 
 type Tier = 'standard' | 'growth' | 'enterprise';
@@ -158,7 +159,13 @@ export function PricingCardsWithToggle() {
                     {tier === 'enterprise' ? (
                       <Link href="/contact">{cta}</Link>
                     ) : (
-                      <a href="https://app.blacknel.com/signup">{cta}</a>
+                      <PricingTierAnchor
+                        tier={tier}
+                        billing={annual ? 'annual' : 'monthly'}
+                        sourceLocation="pricing_page"
+                      >
+                        {cta}
+                      </PricingTierAnchor>
                     )}
                   </Button>
                 </div>

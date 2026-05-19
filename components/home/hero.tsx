@@ -1,11 +1,11 @@
 import { ArrowRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { Button } from '@/components/ui/button';
 import { AuroraBackground } from '@/components/aceternity/aurora-background';
 import { Spotlight } from '@/components/aceternity/spotlight';
 import { AnimatedShinyText } from '@/components/magic/animated-shiny-text';
 import { Marquee } from '@/components/animations/marquee';
+import { HeroCtas } from '@/components/analytics/hero-ctas';
 import { HeroMockup } from './hero-mockup';
 
 type TrustLogo = {
@@ -57,17 +57,8 @@ export function Hero() {
             {t('subtitle')}
           </p>
 
-          <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row">
-            <Button asChild size="lg" variant="primary">
-              <a href="https://app.blacknel.com/signup">
-                {t('ctaPrimary')}
-                <ArrowRight className="h-4 w-4" />
-              </a>
-            </Button>
-            <Button asChild size="lg" variant="secondary">
-              <Link href="/contact">{t('ctaSecondary')}</Link>
-            </Button>
-          </div>
+          <HeroCtas primaryLabel={t('ctaPrimary')} secondaryLabel={t('ctaSecondary')} />
+
           <p className="mt-4 mono text-xs text-[color:var(--color-fg-tertiary)]">
             {tc('trial.noCard')}
           </p>

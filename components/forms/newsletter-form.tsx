@@ -1,13 +1,20 @@
 'use client';
 
 import { useState, useTransition } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { ArrowRight, Check } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
+import { pickLocale, trackEvent } from '@/lib/analytics';
+import type { CtaSourceLocation } from '@/types/analytics';
 
-export function NewsletterForm() {
+type Props = {
+  sourceLocation?: CtaSourceLocation;
+};
+
+export function NewsletterForm({ sourceLocation = 'footer' }: Props) {
   const t = useTranslations('common.newsletter');
+  const locale = pickLocale(useLocale());
   const [email, setEmail] = useState('');
   const [hp, setHp] = useState('');
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -26,8 +33,18 @@ export function NewsletterForm() {
         if (!res.ok) throw new Error('failed');
         setStatus('success');
         setEmail('');
+        trackEvent('newsletter_subscribed', {
+          source_page: window.location.pathname,
+          source_location: sourceLocation,
+          locale,
+        });
       } catch {
         setStatus('error');
+        trackEvent('form_validation_error', {
+          form_name: 'newsletter',
+          field: 'email',
+          error_type: 'format',
+        });
       }
     });
   };
