@@ -216,6 +216,282 @@ export default async function PrivacyPage({ params }: Props) {
               : 'For privacy matters: privacy@blacknel.com. Maximum response time: 30 calendar days under GDPR; 20 business days under LFPDPPP; 45 days under CCPA.'}
           </p>
         </LegalSection>
+
+        <LegalSection
+          id="data-deletion"
+          title={es ? '8. Solicitud de Eliminación de Datos' : '8. Data Deletion Request'}
+        >
+          <h3 className="mt-4 text-base font-semibold text-[color:var(--color-fg)]">
+            {es ? 'Tus derechos de eliminación' : 'Your deletion rights'}
+          </h3>
+          <p>
+            {es
+              ? 'Bajo LFPDPPP (México), GDPR (UE) y CCPA (California), tenés derecho a solicitar la eliminación completa de tus datos personales almacenados por Blacknel.'
+              : 'Under LFPDPPP (Mexico), GDPR (EU), and CCPA (California), you have the right to request complete deletion of your personal data stored by Blacknel.'}
+          </p>
+
+          <h3 className="mt-6 text-base font-semibold text-[color:var(--color-fg)]">
+            {es ? 'Cómo solicitar la eliminación' : 'How to request deletion'}
+          </h3>
+          <p>
+            {es
+              ? 'Existen tres formas de solicitar la eliminación de tus datos:'
+              : 'Three ways:'}
+          </p>
+
+          <p>
+            <strong className="text-[color:var(--color-fg)]">
+              {es
+                ? '1. Desde tu cuenta Blacknel (más rápido)'
+                : '1. From your Blacknel account (fastest)'}
+            </strong>
+          </p>
+          <p>
+            {es
+              ? 'Si tenés una cuenta activa:'
+              : 'If you have an active account:'}
+          </p>
+          <ol className="list-decimal pl-5 marker:text-white/30">
+            <li>
+              {es ? 'Iniciá sesión en ' : 'Sign in at '}
+              <a
+                href="https://app.blacknel.com"
+                className="text-[color:var(--color-fg)] underline underline-offset-2"
+              >
+                https://app.blacknel.com
+              </a>
+            </li>
+            <li>
+              {es
+                ? 'Andá a Settings → Privacy → Delete my data'
+                : 'Go to Settings → Privacy → Delete my data'}
+            </li>
+            <li>
+              {es
+                ? 'Confirmá con tu contraseña o magic link'
+                : 'Confirm with your password or magic link'}
+            </li>
+            <li>
+              {es
+                ? 'Tus datos se eliminan en 30 días'
+                : 'Your data is deleted within 30 days'}
+            </li>
+          </ol>
+
+          <p>
+            <strong className="text-[color:var(--color-fg)]">
+              {es ? '2. Por email' : '2. By email'}
+            </strong>
+          </p>
+          <p>
+            {es ? 'Enviá un email a ' : 'Send an email to '}
+            <a
+              href="mailto:privacy@blacknel.com"
+              className="text-[color:var(--color-fg)] underline underline-offset-2"
+            >
+              privacy@blacknel.com
+            </a>
+            {es ? ' con:' : ' with:'}
+          </p>
+          <ul className="list-disc pl-5 marker:text-white/30">
+            <li>
+              {es
+                ? 'Asunto: "Solicitud de eliminación de datos"'
+                : 'Subject: "Data deletion request"'}
+            </li>
+            <li>
+              {es
+                ? 'Tu email registrado en Blacknel'
+                : 'Your registered email'}
+            </li>
+            <li>{es ? 'Tu nombre completo' : 'Your full name'}</li>
+            <li>{es ? 'Razón (opcional)' : 'Reason (optional)'}</li>
+          </ul>
+          <p>
+            {es
+              ? 'Respondemos en máximo 5 días hábiles y completamos la eliminación en máximo 30 días.'
+              : 'We respond within 5 business days and complete deletion within 30 days.'}
+          </p>
+
+          <p>
+            <strong className="text-[color:var(--color-fg)]">
+              {es
+                ? '3. Desde aplicaciones de terceros (Facebook, Instagram, WhatsApp)'
+                : '3. From third-party apps (Facebook, Instagram, WhatsApp)'}
+            </strong>
+          </p>
+          <p>
+            {es
+              ? 'Si conectaste tu cuenta de Facebook, Instagram o WhatsApp con Blacknel y querés eliminar los datos que recibimos desde esas plataformas:'
+              : 'If you connected your Facebook, Instagram, or WhatsApp account to Blacknel and want to delete the data we received from those platforms:'}
+          </p>
+          <ol className="list-decimal pl-5 marker:text-white/30">
+            <li>
+              {es
+                ? 'Andá a Facebook → Settings → Apps and Websites → Blacknel'
+                : 'Go to Facebook → Settings → Apps and Websites → Blacknel'}
+            </li>
+            <li>{es ? 'Click "Remove"' : 'Click "Remove"'}</li>
+            <li>
+              {es
+                ? 'Facebook nos enviará automáticamente una solicitud de eliminación de datos'
+                : 'Facebook automatically sends us a data deletion request'}
+            </li>
+            <li>
+              {es
+                ? 'Procesamos la solicitud en máximo 30 días'
+                : 'We process within 30 days'}
+            </li>
+            <li>
+              {es ? 'Podés verificar el estado en: ' : 'You can check status at: '}
+              <code className="mono break-all text-[color:var(--color-fg)]">
+                https://app.blacknel.com/api/meta/data-deletion/
+                {es ? '{tu-codigo-de-confirmación}' : '{your-confirmation-code}'}
+              </code>
+            </li>
+          </ol>
+          <p>
+            {es
+              ? 'El código de confirmación lo recibís de Facebook al hacer "Remove".'
+              : 'You receive the confirmation code from Facebook when clicking "Remove".'}
+          </p>
+
+          <h3 className="mt-6 text-base font-semibold text-[color:var(--color-fg)]">
+            {es ? 'Qué datos se eliminan' : 'What gets deleted'}
+          </h3>
+          <p>
+            {es
+              ? 'Cuando solicitás eliminación, eliminamos permanentemente:'
+              : 'When you request deletion, we permanently remove:'}
+          </p>
+          <ul className="list-disc pl-5 marker:text-white/30">
+            <li>
+              {es
+                ? 'Tu cuenta de usuario y credenciales'
+                : 'Your user account and credentials'}
+            </li>
+            <li>
+              {es
+                ? 'Todos los posts, mensajes y contenido que hayas creado'
+                : 'All posts, messages, and content you created'}
+            </li>
+            <li>
+              {es
+                ? 'Tu historial de actividad y logs'
+                : 'Activity history and logs'}
+            </li>
+            <li>
+              {es
+                ? 'Tus brand voice docs cargados'
+                : 'Uploaded brand voice docs'}
+            </li>
+            <li>
+              {es
+                ? 'Tokens OAuth de plataformas conectadas'
+                : 'OAuth tokens for connected platforms'}
+            </li>
+            <li>
+              {es
+                ? 'Datos derivados (analytics agregadas, sentiment analysis, etc.)'
+                : 'Derived data (aggregated analytics, sentiment analysis, etc.)'}
+            </li>
+          </ul>
+
+          <h3 className="mt-6 text-base font-semibold text-[color:var(--color-fg)]">
+            {es ? 'Qué datos NO podemos eliminar' : 'What we cannot delete'}
+          </h3>
+          <p>
+            {es
+              ? 'Por obligaciones legales mexicanas (SAT), debemos conservar:'
+              : 'Due to Mexican tax law (SAT) obligations, we must retain:'}
+          </p>
+          <ul className="list-disc pl-5 marker:text-white/30">
+            <li>
+              {es
+                ? 'Facturas y comprobantes fiscales: 5 años'
+                : 'Invoices and tax receipts: 5 years'}
+            </li>
+            <li>
+              {es
+                ? 'Logs de seguridad para investigación forense: hasta 1 año'
+                : 'Security logs for forensic investigation: up to 1 year'}
+            </li>
+          </ul>
+          <p>
+            {es
+              ? 'Estos datos quedan en archivo encriptado, sin acceso operativo, hasta cumplir el período legal.'
+              : 'These remain in encrypted archive with no operational access until the legal period expires.'}
+          </p>
+
+          <h3 className="mt-6 text-base font-semibold text-[color:var(--color-fg)]">
+            {es ? 'Tiempo de respuesta' : 'Response time'}
+          </h3>
+          <ul className="list-disc pl-5 marker:text-white/30">
+            <li>
+              {es
+                ? 'LFPDPPP (México): 20 días hábiles para confirmar + 15 días para completar'
+                : 'LFPDPPP (Mexico): 20 business days to confirm + 15 days to complete'}
+            </li>
+            <li>
+              {es
+                ? 'GDPR (UE): 30 días máximo'
+                : 'GDPR (EU): 30 days maximum'}
+            </li>
+            <li>
+              {es
+                ? 'CCPA (California): 45 días máximo'
+                : 'CCPA (California): 45 days maximum'}
+            </li>
+          </ul>
+          <p>
+            {es
+              ? 'Si no recibís respuesta en estos plazos, podés reclamar ante:'
+              : "If you don't receive a response in these timeframes, you can complain to:"}
+          </p>
+          <ul className="list-disc pl-5 marker:text-white/30">
+            <li>
+              {es ? 'INAI (México): ' : 'INAI (Mexico): '}
+              <a
+                href="https://home.inai.org.mx"
+                className="text-[color:var(--color-fg)] underline underline-offset-2"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                https://home.inai.org.mx
+              </a>
+            </li>
+            <li>
+              {es
+                ? 'DPA local (UE): según tu país'
+                : 'Local DPA (EU): per your country'}
+            </li>
+            <li>
+              {es ? 'California AG: ' : 'California AG: '}
+              <a
+                href="https://oag.ca.gov"
+                className="text-[color:var(--color-fg)] underline underline-offset-2"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                https://oag.ca.gov
+              </a>
+            </li>
+          </ul>
+
+          <h3 className="mt-6 text-base font-semibold text-[color:var(--color-fg)]">
+            {es ? 'Contacto' : 'Contact'}
+          </h3>
+          <p>
+            <a
+              href="mailto:privacy@blacknel.com"
+              className="text-[color:var(--color-fg)] underline underline-offset-2"
+            >
+              privacy@blacknel.com
+            </a>
+            <br />
+            {es ? 'DPO de Blacknel SAPI de CV' : 'DPO of Blacknel SAPI de CV'}
+          </p>
+        </LegalSection>
       </LegalDoc>
     </>
   );

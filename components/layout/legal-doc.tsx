@@ -10,13 +10,15 @@ export function LegalDoc({ children }: { children: ReactNode }) {
 
 export function LegalSection({
   title,
+  id,
   children,
 }: {
   title: string;
+  id?: string;
   children: ReactNode;
 }) {
   return (
-    <section className="mt-10">
+    <section id={id} className="mt-10 scroll-mt-24">
       <h2 className="text-2xl font-semibold tracking-tight text-[color:var(--color-fg)]">
         {title}
       </h2>
